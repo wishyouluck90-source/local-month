@@ -458,7 +458,7 @@ let currentRecommendation=null;
 function savePrefs(){
  const prefs={days:$("#prefDays").value,budget:$("#prefBudget").value,pet:$("#prefPet").value,settlement:$("#prefSettlement").value};
  localStorage.setItem("lm_prefs",JSON.stringify(prefs));
- $("#stayDays").value=prefs.days;$("#budget").value=prefs.budget;toast("기본 취향을 저장했어요.");
+ $("#stayDays").value=prefs.days;$("#budget").value=prefs.budget;invalidateRecommendation();toast("기본 취향을 저장했어요.");
 }
 function loadPrefs(){
  try{

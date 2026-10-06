@@ -10,11 +10,11 @@
 <meta name="format-detection" content="telephone=no">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
-<link rel="stylesheet" href="styles.css?v=9.4.0-rc.2">
-<link rel="stylesheet" href="editorial-v8.css?v=9.4.0-rc.2">
+<link rel="stylesheet" href="styles.css?v=9.4.0-rc.3">
+<link rel="stylesheet" href="editorial-v8.css?v=9.4.0-rc.3">
 <title>LOCAL MONTH — 한달살기 Research OS</title>
 
-<link rel="stylesheet" href="rc.css?v=9.4.0-rc.2">
+<link rel="stylesheet" href="rc.css?v=9.4.0-rc.3">
 </head>
 <body>
 <a class="skip-link" href="#main">본문으로 건너뛰기</a>
@@ -50,7 +50,7 @@
 <div class="section-title"><div class="kicker">STAY MATCH</div><h2>나에게 맞는 한 달을 찾기.</h2><p>기간과 취향을 고르면 지금 확보된 근거 안에서 가장 잘 맞는 지역을 정렬합니다.</p></div>
 <div class="match-card"><div class="match-controls"><label><span>기간</span><select class="input" id="stayDays"><option value="7">7일</option><option value="14">14일</option><option value="21">21일</option><option value="30" selected>30일</option></select></label><label><span>예산</span><select class="input" id="budget"><option value="save">가성비</option><option value="balanced" selected>균형</option><option value="experience">경험 우선</option></select></label></div>
 <div class="themes editorial-themes"><button class="theme active" data-theme="culture">문화예술</button><button class="theme" data-theme="nomad">노마드</button><button class="theme" data-theme="nature">자연</button><button class="theme" data-theme="pet">반려견</button><button class="theme" data-theme="wellness">웰니스</button><button class="theme" data-theme="benefit">혜택</button><button class="theme" data-theme="settlement">이주탐색</button><button class="theme" data-theme="community">사람·관계</button></div>
-<button class="editorial-primary" id="runReco">내 한 달 추천받기 <span>→</span></button><div class="reco-result editorial-result" id="recoResult"><div class="small">조건을 선택하면 추천 지역이 나타납니다.</div></div>
+<button class="editorial-primary" id="runReco">내 한 달 추천받기 <span>→</span></button><div class="reco-result editorial-result" id="recoResult" aria-live="polite"><div class="small">조건을 선택하면 추천 지역이 나타납니다.</div></div>
 <div class="result-actions"><button class="text-link" id="savePlan">추천 저장</button><button class="text-link" id="exportPlan">캘린더</button><button class="text-link" id="exportPlanJson">JSON</button></div></div></section>
 
 <section class="editorial-section"><div class="section-index">03</div><div class="section-title"><div class="kicker">LOCAL NOW</div><h2>이번 달에만 있는 이유.</h2><p>지원 접수, 축제, 클래스, 새 혜택처럼 날짜가 지나면 사라지는 정보부터 봅니다.</p></div>
@@ -128,7 +128,7 @@
     <div><strong>REAL LIFE</strong><span>숙소·업무·교통·반려견을 프로그램과 같이 판단</span></div>
     <div><strong>SOURCE</strong><span>요약과 공식 원문 근거를 분리</span></div>
   </div>
-  <div class="program-results" id="programResults"></div>
+  <div class="program-results" id="programResults" aria-live="polite"></div>
 </section>
 <div class="filters"><button class="chip active" onclick="renderEvents('전체')">전체</button><button class="chip" onclick="renderEvents('문화')">문화</button><button class="chip" onclick="renderEvents('체험')">체험</button><button class="chip" onclick="renderEvents('웰니스')">웰니스</button><button class="chip" onclick="renderEvents('배움')">배움</button></div><div class="event-grid" id="eventGrid"></div><section class="section">
   <div class="section-head"><div><div class="eyebrow">ACTION DEADLINES</div><h2>놓치면 달라지는 일정</h2></div><p>신청 오픈 · 마감 · 종료</p></div>
@@ -237,7 +237,7 @@
 <div class="drawer" id="aboutDrawer"><div class="research-lab-note"><span>RESEARCH LAB</span><p>출처·Evidence·업데이트 상태는 사용자 경험과 분리해 운영합니다. 검증되지 않은 정보는 추천에 확정값으로 사용하지 않습니다.</p></div>
   <div class="drawer-head"><strong>LOCAL MONTH</strong><button class="btn" id="aboutClose">닫기</button></div>
   <div class="card" style="margin-top:14px">
-    <div class="eyebrow">VERSION</div><h3 id="appVersion">v9.4.0-rc.2</h3>
+    <div class="eyebrow">VERSION</div><h3 id="appVersion">v9.4.0-rc.3</h3>
     <p>인구감소지역 한달살기 Total Search & Research OS · 검수 후보 · Evidence-backed · Zero Paid API</p>
   </div>
   <div class="card" style="margin-top:12px">
@@ -261,8 +261,8 @@
   </div>
 </div>
 <div class="toast" role="status" aria-live="polite" id="toast"></div>
-<script src="storage.js?v=9.4.0-rc.2"></script>
-<script defer src="app.js?v=9.4.0-rc.2"></script>
-<script defer src="rc.js?v=9.4.0-rc.2"></script>
+<script src="storage.js?v=9.4.0-rc.3"></script>
+<script defer src="app.js?v=9.4.0-rc.3"></script>
+<script defer src="rc.js?v=9.4.0-rc.3"></script>
 <script>if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js").catch(()=>{})}</script>
 </body></html>
