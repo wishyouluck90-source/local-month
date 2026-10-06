@@ -179,8 +179,9 @@ async function renderKoreaMap(){
     const p=document.createElementNS("http://www.w3.org/2000/svg","path");
     p.setAttribute("d",geometryPath(f.geometry));
     p.setAttribute("class",decline?"decline":"normal");
-    const disp=name.replace(/(군|시|구)$/,"");
-    if(decline && REGIONS.some(r=>r.name===disp)) p.classList.add("beta");
+    const match=ALL89.find(r=>r.name===name&&(r.name==="군위군"?"37":provincePrefix(r.province))===code);
+    const disp=match?match.province+" "+match.name:name;
+    if(decline && resolveRegion(disp)) p.classList.add("beta");
     if(decline){
       p.setAttribute("tabindex","0");p.setAttribute("aria-label",name);
       const select=()=>selectMapRegion(disp,p);
@@ -199,11 +200,11 @@ async function renderKoreaMap(){
 function selectMapRegion(name,path){
  $$("#koreaSvg path").forEach(p=>p.classList.remove("selected"));path.classList.add("selected");
  selectedMapRegion=name;
- const r=REGIONS.find(x=>x.name===name);
+ const r=resolveRegion(name);
  $("#mapSelectedTitle").textContent=name;
  $("#mapSelectedMeta").textContent=r?`${r.province} · ${r.strengths.join(" · ")} · ${r.status}`:"인구감소지역 · 상세 데이터 수집 예정";
  $("#mapGoRegion").disabled=false;
- $("#mapGoRegion").onclick=()=>{switchPanel("regions");renderRegions("전체",name)};
+ $("#mapGoRegion").onclick=()=>openRegion(name);
 }
 
 
@@ -228,7 +229,7 @@ const DEVICE_QA_ITEMS=[
  {id:"backup",label:"JSON 백업 다운로드",type:"manual"},
  {id:"storage",label:"localStorage 사용 가능",type:"auto"}
 ];
-function deviceQaState(){return JSON.parse(localStorage.getItem("lm_device_qa")||"{}");}
+function deviceQaState(){return readValidated("lm_device_qa",{});}
 function saveDeviceQaState(s){localStorage.setItem("lm_device_qa",JSON.stringify(s));}
 function autoDeviceChecks(){
  const s=deviceQaState();
@@ -311,11 +312,12 @@ function exportHealth(){
 }
 
 function hadongState(){
-  return JSON.parse(localStorage.getItem("lm_hadong")||'{"expenses":[],"checkins":[]}');
+  return readValidated("lm_hadong",{expenses:[],checkins:[]});
 }
 function saveHadongState(x){localStorage.setItem("lm_hadong",JSON.stringify(x));}
 function addHadongExpense(){
   const amount=prompt("오늘 지출 금액(원)"); if(!amount)return;
+  if(!Number.isFinite(+amount)||+amount<0)return toast("0 이상의 금액을 입력해 주세요.");
   const category=prompt("카테고리: 숙박/체험/보험/식비/교통/기타","체험")||"기타";
   const note=prompt("간단한 메모","");
   const st=hadongState(); st.expenses.unshift({date:new Date().toISOString().slice(0,10),amount:+amount||0,category,note});
@@ -323,6 +325,7 @@ function addHadongExpense(){
 }
 function hadongWeeklyCheckin(){
   const score=prompt("이번 주 생활 적합도 1~5","4"); if(!score)return;
+  if(!Number.isInteger(+score)||+score<1||+score>5)return toast("1부터 5까지 정수를 입력해 주세요.");
   const note=prompt("가장 좋았던 점/불편했던 점","");
   const st=hadongState();st.checkins.unshift({date:new Date().toISOString().slice(0,10),score:+score,note});
   saveHadongState(st);renderHadongLog();toast("주간 체크인을 기록했어요.");
@@ -380,7 +383,7 @@ function renderEvidenceCoverage(){
 
 
 function pretripState(){
- const saved=JSON.parse(localStorage.getItem("lm_pretrip")||"{}");
+ const saved=readValidated("lm_pretrip",{});
  return PRETRIP.items.map(x=>({...x,status:saved[x.id]||x.status}));
 }
 function renderPretrip(){
@@ -390,7 +393,7 @@ function renderPretrip(){
  const done=arr.filter(x=>x.status==="done"||x.status==="ready").length;
  const critical=arr.filter(x=>x.critical&&!["done","ready"].includes(x.status)).length;
  $("#pretripDone").textContent=done;$("#pretripCritical").textContent=critical;$("#pretripPercent").textContent=Math.round(done/arr.length*100)+"%";
- $$(".pretripToggle").forEach(b=>b.onclick=()=>{const s=JSON.parse(localStorage.getItem("lm_pretrip")||"{}");s[b.dataset.id]=b.dataset.status==="done"?"todo":"done";localStorage.setItem("lm_pretrip",JSON.stringify(s));renderPretrip()});
+ $$(".pretripToggle").forEach(b=>b.onclick=()=>{const s=readValidated("lm_pretrip",{});s[b.dataset.id]=b.dataset.status==="done"?"todo":"done";localStorage.setItem("lm_pretrip",JSON.stringify(s));renderPretrip()});
 }
 
 function renderEvidence(filter="전체"){
@@ -409,7 +412,7 @@ function renderComments(){ $("#commentList").innerHTML=state.comments.map((c,i)=
 
 function ingestDiffNotifications(){
   if(!LATEST_DIFF || !LATEST_DIFF.current) return;
-  const seen=JSON.parse(localStorage.getItem("lm_seen_diff_ids")||"[]");
+  const seen=readValidated("lm_seen_diff_ids",[]);
   const seenSet=new Set(seen);
   const additions=[];
   const pushItem=(kind,item)=>{
@@ -442,7 +445,13 @@ function toggleTheme(b){const t=b.dataset.theme;if(b.classList.contains("active"
 function themeLabel(t){return {culture:"문화예술",nomad:"노마드",nature:"자연",pet:"반려견",wellness:"웰니스",benefit:"혜택",settlement:"이주탐색",community:"사람·관계"}[t]}
 
 
-function recoScore(r,days,budget){const m={culture:"culture",nomad:"nomad",nature:"nature",pet:"pet",wellness:"fun",benefit:"benefit",settlement:"settlement",community:"community"};const ts=selectedThemes.reduce((s,t)=>s+(Math.max(score(r,m[t]),0)*evidenceFactor(r.name,t)),0)/selectedThemes.length;const budgetScore=budget==="save"?Math.max(score(r,"price"),0):budget==="experience"?Math.max(score(r,"effort"),0):(Math.max(score(r,"price"),0)+Math.max(score(r,"effort"),0))/2;let d=80;if(days<=7)d=(Math.max(score(r,"culture"),0)+Math.max(score(r,"fun"),0)+Math.max(score(r,"nature"),0))/3;else if(days<=14)d=(Math.max(score(r,"effort"),0)+Math.max(score(r,"community"),0)+Math.max(score(r,"culture"),0))/3;else if(days<=21)d=(Math.max(score(r,"nomad"),0)+Math.max(score(r,"settlement"),0)+Math.max(score(r,"community"),0))/3;else d=(Math.max(score(r,"nomad"),0)+Math.max(score(r,"settlement"),0)+Math.max(score(r,"price"),0)+Math.max(score(r,"effort"),0))/4;return ts*.55+budgetScore*.2+d*.25}
+function recommendationMetric(r,key){
+ if(key==='price')return categoryReady(r.name,'price')&&r.cost&&!/수집|미확인|확인 필요|미정/.test(r.cost)?Math.max(score(r,key),0):0;
+ const theme={fun:'wellness',effort:'wellness'}[key]||key;
+ return Math.max(score(r,key),0)*evidenceFactor(r.name,theme);
+}
+function recoScore(r,days,budget){const m={wellness:'fun'},metric=k=>recommendationMetric(r,k);const ts=selectedThemes.reduce((s,t)=>s+metric(m[t]||t),0)/Math.max(selectedThemes.length,1);const budgetScore=budget==='save'?metric('price'):budget==='experience'?metric('effort'):(metric('price')+metric('effort'))/2;const keys=days<=7?['culture','fun','nature']:days<=14?['effort','community','culture']:days<=21?['nomad','settlement','community']:['nomad','settlement','price','effort'];return ts*.55+budgetScore*.2+keys.reduce((s,k)=>s+metric(k),0)/keys.length*.25}
+
 function plan(days){return days<=7?[["Day 1–2","생활권 적응"],["Day 3–4","대표 문화·자연"],["Day 5–6","로컬 체험"],["Day 7","생활 평가"]]:days<=14?[["1–3일","생활 기반"],["4–6일","문화 탐색"],["7–9일","자연과 쉼"],["10–14일","관계·주거"]]:days<=21?[["1주차","정착"],["2주차","깊이 보기"],["3주차","미래 테스트"]]:[["1주차","생활권 만들기"],["2주차","지역의 문화"],["3주차","관계 만들기"],["4주차","다음 거점 판단"]]}
 
 let currentRecommendation=null;
@@ -453,7 +462,7 @@ function savePrefs(){
 }
 function loadPrefs(){
  try{
-  const p=JSON.parse(localStorage.getItem("lm_prefs")||"null");if(!p)return;
+  const p=readValidated("lm_prefs",null);if(!p)return;
   $("#prefDays").value=p.days||"30";$("#prefBudget").value=p.budget||"balanced";$("#prefPet").value=p.pet||"no";$("#prefSettlement").value=p.settlement||"no";
   $("#stayDays").value=p.days||"30";$("#budget").value=p.budget||"balanced";
   if(p.pet==="yes"&&!selectedThemes.includes("pet")){selectedThemes.push("pet");const b=$('.theme[data-theme="pet"]');if(b)b.classList.add("active");}
