@@ -39,7 +39,7 @@ function applyEditorialVisibility(){
  });
 }
 
-function init(){renderProgramDesk();renderHomeRanks("effort");renderRegions();renderAll89();renderEvents();renderBenefits();renderCompare();renderInbox();renderComments();renderNotifications();renderDaily();renderKoreaMap();renderEvidence();renderDeadlines();renderEvidenceCoverage();renderStrengthRank();renderGateCards();wire();}
+function init(){renderProgramDesk();renderHomeRanks("effort");renderRegions();renderAll89();renderEvents();renderBenefits();renderCompare();renderInbox();renderComments();renderNotifications();renderDaily();renderKoreaMap();renderEvidence();renderDeadlines();renderEvidenceCoverage();renderStrengthRank();renderGateCards();finalProductCleanup();applyEditorialVisibility();wire();}
 function wire(){
   $$(".nav button").forEach(b=>b.onclick=()=>switchPanel(b.dataset.panel));
   $("#searchBtn").onclick=()=>{const q=$("#searchInput").value.trim();switchPanel("regions");const detailed=REGIONS.filter(r=>r.name.includes(q));renderRegions("전체",q);if(!detailed.length&&q){const hits=searchAll89(q),box=$("#all89Grid");box.style.display="grid";box.innerHTML=hits.length?hits.map(r=>`<div class="region"><div class="region-top"><div><div class="small">${r.province} · 인구감소지역</div><div class="region-name">${r.display_name}</div></div><span class="badge">색인</span></div><p class="small" style="margin-top:8px">상세 데이터 수집 예정</p></div>`).join(""):'<div class="note">일치하는 인구감소지역을 찾지 못했습니다.</div>'}};
@@ -90,7 +90,7 @@ function allLocalMonthData(){
 function exportLocalData(){
  const payload={
    product:"LOCAL MONTH",
-   version:"7.2.0",
+   version:"9.3.1",
    schema_version:2,
    exported_at:new Date().toISOString(),
    storage:allLocalMonthData()

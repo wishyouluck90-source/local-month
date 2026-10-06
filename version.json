@@ -1,5 +1,5 @@
 {
-  "version": "9.3.0",
+  "version": "9.3.1",
   "status": "complete-product-baseline",
   "design_system": "Editorial / Nomad / Cultural",
   "core_navigation": [
@@ -24,5 +24,6 @@
   ],
   "review_pulse_model": "source-linked summaries; no protected-platform scraping",
   "dossier_schema": "all 89 regions",
-  "feature_patch": "Program Decision Desk + eligibility uncertainty + real-life fit"
+  "feature_patch": "Program Decision Desk + eligibility uncertainty + real-life fit",
+  "qa_patch": "production version consistency + cache bust + internal ops visibility guard"
 }

@@ -1,0 +1,11 @@
+{
+  "version_json": true,
+  "menu_version": true,
+  "cache_bust": true,
+  "backup_version": true,
+  "internal_cleanup_called": true,
+  "internal_hidden_css": true,
+  "js_syntax": true,
+  "data_check": true,
+  "deploy_script_syntax": true
+}

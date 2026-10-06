@@ -1,0 +1,8 @@
+{
+  "bash_syntax": true,
+  "explicit_gh_git_credential_setup": true,
+  "visible_clone_errors": true,
+  "remote_version_assertion": true,
+  "pages_e2e_assertion": true,
+  "vercel_public_version_assertion": true
+}

@@ -1,0 +1,20 @@
+{
+  "release": "9.3.0",
+  "scope": "Monthler benchmark improvement",
+  "checks": {
+    "five_core_navigation": "PASS",
+    "program_decision_desk_dom": "PASS",
+    "eligibility_uncertainty_guard": "PASS",
+    "benefit_normalization_guard": "PASS",
+    "lifestyle_fit_separated_from_eligibility": "PASS",
+    "action_deadlines_loaded": "PASS",
+    "89_regions": "PASS",
+    "javascript_syntax": "PASS",
+    "css_structure": "PASS",
+    "local_http_index": "PASS",
+    "local_http_89_regions_json": "PASS",
+    "existing_github_pages_validate_deploy_smoke": "PASS"
+  },
+  "deployment": "READY_TO_DEPLOY; not yet pushed to main/production",
+  "principle": "Never infer eligibility or benefit amount when source conditions are incomplete"
+}
