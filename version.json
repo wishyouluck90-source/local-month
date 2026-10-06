@@ -1,6 +1,6 @@
 {
-  "version": "9.3.1",
-  "status": "complete-product-baseline",
+  "version": "9.4.0-rc.1",
+  "status": "local-rc-not-deployed",
   "design_system": "Editorial / Nomad / Cultural",
   "core_navigation": [
     "DISCOVER",
@@ -25,5 +25,6 @@
   "review_pulse_model": "source-linked summaries; no protected-platform scraping",
   "dossier_schema": "all 89 regions",
   "feature_patch": "Program Decision Desk + eligibility uncertainty + real-life fit",
-  "qa_patch": "production version consistency + cache bust + internal ops visibility guard"
+  "qa_patch": "production version consistency + cache bust + internal ops visibility guard",
+  "base_commit": "c2511a9d8f7fd42212b0e3565fa181c6c69a3f0c"
 }

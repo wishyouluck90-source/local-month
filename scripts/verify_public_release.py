@@ -14,6 +14,11 @@ if not base.endswith("/"): base+="/"
 targets={
  "index":"",
  "app.js":"app.js",
+ "rc.js":"rc.js",
+ "storage.js":"storage.js",
+ "rc.css":"rc.css",
+ "editorial":"editorial-v8.css",
+ "version":"version.json",
  "styles.css":"styles.css",
  "manifest":"manifest.json",
  "service_worker":"sw.js",
@@ -69,13 +74,13 @@ all_semantic=all([
 
 report={
  "product":"LOCAL MONTH",
- "release_candidate":"v7.9",
+ "release_candidate":json.loads(bodies.get("version",b"{}" )).get("version","unknown"),
  "public_url":base,
  "verified_at":datetime.now().astimezone().isoformat(),
  "http_checks":results,
  "semantic_checks":semantic,
  "public_web_pass":bool(all_http and all_semantic),
- "next_step":"iPhone ON-DEVICE QA 7/7" if all_http and all_semantic else "fix public deployment"
+ "next_step":"Final review; physical iPhone installation remains unverified" if all_http and all_semantic else "fix candidate"
 }
 print(json.dumps(report,ensure_ascii=False,indent=2))
 with open("PUBLIC_RELEASE_QA.json","w",encoding="utf-8") as f:

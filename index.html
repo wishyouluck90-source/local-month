@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ko">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#f4efe6">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -10,40 +10,31 @@
 <meta name="format-detection" content="telephone=no">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
-<link rel="stylesheet" href="styles.css?v=9.3.1">
-<link rel="stylesheet" href="editorial-v8.css?v=9.3.1">
+<link rel="stylesheet" href="styles.css?v=9.4.0-rc.1">
+<link rel="stylesheet" href="editorial-v8.css?v=9.4.0-rc.1">
 <title>LOCAL MONTH — 한달살기 Research OS</title>
-<script>
-(function(){
-  const KEY="lm_v8_cache_reset_rc2";
-  if(!sessionStorage.getItem(KEY)){
-    sessionStorage.setItem(KEY,"1");
-    if("serviceWorker" in navigator){
-      navigator.serviceWorker.getRegistrations().then(rs=>Promise.all(rs.map(r=>r.unregister()))).finally(()=>{
-        if("caches" in window)caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith("local-month")).map(k=>caches.delete(k))));
-      });
-    }
-  }
-})();
-</script>
+
+<link rel="stylesheet" href="rc.css?v=9.4.0-rc.1">
 </head>
 <body>
+<a class="skip-link" href="#main">본문으로 건너뛰기</a>
 <div class="app">
 <header class="top editorial-top">
 <div class="brand">LOCAL MONTH<small>Live elsewhere, for a while.</small></div>
 <div class="actions editorial-actions">
-<button class="icon quiet-icon utility-word" id="installBtn">INSTALL</button><button class="icon quiet-icon utility-word" id="backupBtn">SAVE</button>
-<button class="icon quiet-icon utility-word" id="notifBtn">UPDATES <span id="notifCount">0</span></button><button class="icon menu-icon" id="aboutBtn">MENU</button>
+<button class="icon quiet-icon utility-word" id="installBtn">설치</button><button class="icon quiet-icon utility-word" id="backupBtn">백업</button>
+<button class="icon quiet-icon utility-word" id="notifBtn">알림 <span id="notifCount">0</span></button><button class="icon menu-icon" id="aboutBtn">안내</button>
 </div></header>
 
-<main>
+<main id="main">
+<div id="loadStatus" role="alert" hidden>데이터를 불러오지 못했습니다. 연결 후 <button onclick="location.reload()">다시 시도</button></div>
 <section id="home" class="panel active editorial-home">
 <div class="editorial-hero">
 <div class="hero-copy"><div class="kicker">MONTH-LIVING · KOREA</div>
 <h1><span>한 달쯤,</span><span><em>다른 곳에서</em></span><span>살아볼까.</span></h1>
-<p class="hero-deck">관광지가 아니라 <strong>내가 살아볼 지역</strong>을 찾는 리서치. 생활비, 문화, 일, 반려견, 지원 혜택과 실제 체류 감각을 한 화면에 정리합니다.</p>
-<div class="editorial-search"><input id="searchInput" placeholder="어디에서 한 달 살아볼까요?  예: 하동"><button class="search-arrow" id="searchBtn">→</button></div>
-<div class="micro-links"><span>89 REGIONS</span><span>DAILY RESEARCH</span><span>ZERO PAID API</span></div></div>
+<p class="hero-deck"><strong>7일부터 한 달까지, 나에게 맞는 지역을 찾으세요.</strong> 기간·취향으로 추천받고, 출처를 확인하고, 비교해서 내 계획에 담습니다.</p>
+<button class="editorial-primary hero-start" onclick="document.querySelector('#stayDays').focus();document.querySelector('.match-section').scrollIntoView()">기간·취향으로 지역 찾기 →</button><div class="editorial-search"><input aria-label="지역 검색" id="searchInput" placeholder="어디에서 한 달 살아볼까요?  예: 하동"><button class="search-arrow" id="searchBtn" aria-label="지역 검색하기">→</button></div>
+<div class="micro-links"><span>89개 지역 탐색</span><span>출처로 확인</span><span>내 기기에 저장</span></div></div>
 <div class="hero-art"><div class="topo a"></div><div class="topo b"></div><div class="topo c"></div><div class="hero-art-label"><span>35°04′N</span><strong>HADONG</strong><span>127°45′E</span></div><div class="hero-art-note">SEOMJIN RIVER<br>JIRISAN · TEA · LITERATURE</div><div class="hero-art-edition">FIELD NOTE 001<br>OCT — NOV 2026</div></div>
 </div>
 
@@ -51,7 +42,7 @@
 <div class="feature-copy"><div class="kicker">FEATURED · HADONG</div><h2>차와 문학,<br>섬진강 옆에서 보내는 한 달.</h2>
 <p>서울의 속도에서 조금 멀어지고 싶은 사람에게. 차 문화, 문학의 장소, 강과 산책, 작은 생활권이 한 달이라는 시간 안에서 천천히 연결됩니다.</p>
 <div class="editorial-tags"><span>문화예술</span><span>노마드</span><span>반려견 일부확인</span><span>정착탐색</span></div>
-<button class="text-link" onclick="document.querySelector('[data-panel=regions]').click();setTimeout(()=>renderRegions('경남','하동'),50)">하동 리서치 보기 ↗</button></div>
+<button class="text-link" onclick="openRegion('하동')">하동 리서치 보기 ↗</button></div>
 <div class="feature-facts"><div><small>STAY</small><strong>30 DAYS</strong><span>10/20 — 11/18</span></div><div><small>WORK</small><strong>LIBRARY</strong><span>열람실 · 디지털정보실</span></div><div><small>CULTURE</small><strong>TEA + BOOKS</strong><span>야생차 · 문학 · 슬로시티</span></div></div>
 </section>
 
@@ -73,8 +64,8 @@
 
 <section class="editorial-section living-section"><div class="section-index">06</div><div class="section-title"><div class="kicker">LIVING POPULATION</div><h2>사람들이 실제로<br>머무는 곳인가.</h2><p>관광 검색량만 보지 않습니다. 행정안전부·국가데이터처 생활인구를 통해 체류일수, 숙박, 재방문과 소비 같은 실제 체류행동을 지역 판단의 보조 근거로 사용합니다.</p></div><div class="living-metrics"><div><small>2026 Q1</small><strong>2,382만</strong><span>월평균 생활인구</span></div><div><small>STAY</small><strong>3.4일</strong><span>평균 체류일수</span></div><div><small>OVERNIGHT</small><strong>3.9일</strong><span>평균 숙박일수</span></div><div><small>SPEND</small><strong>12.7만원</strong><span>체류인구 평균 카드사용</span></div></div></section><div class="engine-hooks"><button id="refreshBtn"></button><span id="refreshText"></span><select id="prefDays"><option selected>30</option></select><select id="prefBudget"><option value="balanced" selected>균형</option></select><select id="prefPet"><option value="no" selected>아니오</option><option value="yes">예</option></select><select id="prefSettlement"><option value="no" selected>관광</option><option value="yes">이주</option></select><button id="savePrefs"></button></div>
 </section>
-<section id="regions" class="panel">
-  <div class="hadong-dossier">
+<section id="regions" class="panel"><div id="regionDetail" hidden></div>
+  <details class="hadong-dossier"><summary>하동 생활 리서치 읽기</summary>
     <div class="dossier-mast">
       <div class="dossier-no">FIELD DOSSIER · 001</div>
       <div class="dossier-title"><div><span>GYEONGNAM · HADONG</span><h1>하동에서<br>한 달을 산다면.</h1></div><p>차밭과 섬진강, 문학과 작은 생활권. 여행지의 체크리스트가 아니라 실제로 30일을 보낼 수 있는지 묻습니다.</p></div>
@@ -82,17 +73,17 @@
     </div>
     <div class="dossier-grid">
       <article class="dossier-lead"><div class="kicker">WHY HADONG</div><h2>느리지만,<br>심심하지 않은 생활.</h2><p>하동의 장점은 유명 관광지가 많다는 데 있지 않습니다. 차와 문학, 강과 산, 도서관과 작은 문화공간이 생활 반경 안에서 이어진다는 데 있습니다. 한 달 동안 일하고 읽고 걷고 지역을 관찰하기 좋은 밀도입니다.</p><div class="quote-line">“관광보다 생활에 가까운 여행.”</div></article>
-      <aside class="dossier-score"><div><small>CULTURE</small><strong>9.2</strong><span>차 · 문학 · 로컬 프로그램</span></div><div><small>NOMAD</small><strong>7.8</strong><span>도서관 업무 기반 확인</span></div><div><small>PET</small><strong>PARTIAL</strong><span>공식 근거 추가 수집중</span></div><div><small>SETTLEMENT</small><strong>8.1</strong><span>정착 탐색 가치</span></div></aside>
+      <aside class="dossier-score"><div><small>CULTURE</small><strong>근거 확인</strong><span>차 · 문학 · 로컬 프로그램</span></div><div><small>NOMAD</small><strong>부분 확인</strong><span>도서관 업무 기반 확인</span></div><div><small>PET</small><strong>PARTIAL</strong><span>공식 근거 추가 수집중</span></div><div><small>SETTLEMENT</small><strong>탐색 후보</strong><span>정착 탐색 가치</span></div></aside>
     </div>
     <div class="dossier-chapter"><div class="chapter-no">01</div><div><div class="kicker">A DAY IN HADONG</div><h2>일하고, 걷고,<br>차를 마시는 하루.</h2></div><div class="dayline"><div><b>08:00</b><span>섬진강 산책</span></div><div><b>10:00</b><span>도서관에서 업무</span></div><div><b>14:00</b><span>차 문화·문학 공간</span></div><div><b>18:00</b><span>동네 장보기와 저녁</span></div></div></div>
     <div class="dossier-chapter"><div class="chapter-no">02</div><div><div class="kicker">WORK BASE</div><h2>노마드의<br>현실적인 자리.</h2></div><div class="fact-list"><div><strong>하동도서관</strong><span>열람실 · 디지털정보실 · 프린트/스캔</span></div><div><strong>열람실</strong><span>화–토 08:00–22:00 공식 확인</span></div><div><strong>Research note</strong><span>카페 작업환경·통신 품질은 현장 검증 예정</span></div></div></div>
     <div class="dossier-chapter"><div class="chapter-no">03</div><div><div class="kicker">CULTURE</div><h2>이곳에서만<br>할 수 있는 것.</h2></div><div class="culture-grid"><div><small>TEA</small><strong>하동야생차문화센터</strong><span>다례 · 다식 · 티소믈리에 · 차와 명상</span></div><div><small>LITERATURE</small><strong>박경리 · 최참판댁</strong><span>문학과 장소가 연결되는 체류 경험</span></div><div><small>LEARNING</small><strong>하동아카데미</strong><span>문화예술 · 평생학습 프로그램 탐색</span></div></div></div>
     <div class="dossier-chapter pet-chapter"><div class="chapter-no">04</div><div><div class="kicker">WITH A DOG</div><h2>6kg 반려견과<br>살 수 있을까.</h2></div><div><div class="pet-status">PARTIALLY VERIFIED</div><p>카페 매너리의 펫존·정원·산책로는 공식 관광정보에서 확인했습니다. 반려견 동반 숙소와 동물병원 접근성은 아직 충분한 공식 근거가 없어 추천점수에 불확실성 보정을 적용합니다.</p><span class="research-rule">확인되지 않은 동반 가능성은 추정하지 않습니다.</span></div></div>
     <div class="dossier-chapter"><div class="chapter-no">05</div><div><div class="kicker">FIELD CHECKLIST</div><h2>도착해서<br>직접 확인할 것.</h2></div><div class="field-checks"><span>□ 반려견 숙소 실제 조건</span><span>□ 동물병원 접근성</span><span>□ 카페 작업환경</span><span>□ 장보기 생활비</span><span>□ 월세·빈집 후보</span><span>□ 책·영어·문화 일거리</span></div></div>
-    <div class="dossier-footer"><span>Evidence-backed · updated daily</span><button class="dossier-cta" onclick="document.querySelector('[data-panel=mystay]').click()">하동 한 달 계획에 담기 →</button></div><section class="flagship-shelf"><div class="shelf-head"><div><div class="kicker">FLAGSHIP DOSSIERS</div><h2>네 가지 방식으로<br>한 달을 살아보기.</h2></div><p>지역을 관광지 이름이 아니라 생활 방식으로 고릅니다.</p></div><div class="flagship-grid"><article><span class="grade">A · HADONG</span><h3>문학 · 차<br>슬로라이프</h3><p>섬진강 옆에서 읽고, 일하고, 차를 마시는 한 달.</p><small>FIELD DOSSIER</small></article><article><span class="grade">B+ · NAMHAE</span><h3>바다 · 걷기<br>워케이션</h3><p>바래길을 걷고, 바다 옆에서 일하는 한 달.</p><small>RESEARCH DOSSIER</small></article><article><span class="grade">B · GURYE</span><h3>지리산 · 도보<br>문화생활</h3><p>차 없이 원도심을 걷고, 계절을 사는 한 달.</p><small>RESEARCH DOSSIER</small></article><article><span class="grade">B · GOHEUNG</span><h3>우주 · 섬<br>정착탐색</h3><p>관광보다 한 걸음 더, 정착 가능성을 시험하는 한 달.</p><small>RESEARCH DOSSIER</small></article></div></section>
-  </div><div class="hero"><div><div class="eyebrow">REGION DIRECTORY</div><h1>한 달 살 지역을<br>생활자의 기준으로.</h1><p>행정안전부 지정 89개 지역 전체를 색인하고, 근거가 강한 15개 지역부터 깊게 다룹니다.</p></div></div><div class="filters"><button class="chip active" onclick="renderRegions('전체')">전체</button><button class="chip" onclick="renderRegions('경남')">경남</button><button class="chip" onclick="renderRegions('강원')">강원</button><button class="chip" onclick="renderRegions('충북')">충북</button><button class="chip" onclick="renderRegions('충남')">충남</button><button class="chip" onclick="renderRegions('경북')">경북</button></div><div class="update" style="margin-bottom:12px"><div><strong>89개 전체 색인</strong><div class="small">상세 데이터가 없는 지역도 검색 가능 · 상세는 순차 확장</div></div><button class="btn" id="toggleAll89">89개 보기</button></div><div class="region-grid" id="regionGrid"></div><div class="region-grid" id="all89Grid" style="display:none;margin-top:12px"></div></section>
+    <div class="dossier-footer"><span>Evidence-backed · updated daily</span><button class="dossier-cta" onclick="saveRegionToMonth('하동')">하동 한 달 계획에 담기 →</button></div><section class="flagship-shelf"><div class="shelf-head"><div><div class="kicker">FLAGSHIP DOSSIERS</div><h2>네 가지 방식으로<br>한 달을 살아보기.</h2></div><p>지역을 관광지 이름이 아니라 생활 방식으로 고릅니다.</p></div><div class="flagship-grid"><article><span class="grade">A · HADONG</span><h3>문학 · 차<br>슬로라이프</h3><p>섬진강 옆에서 읽고, 일하고, 차를 마시는 한 달.</p><small>FIELD DOSSIER</small></article><article><span class="grade">B+ · NAMHAE</span><h3>바다 · 걷기<br>워케이션</h3><p>바래길을 걷고, 바다 옆에서 일하는 한 달.</p><small>RESEARCH DOSSIER</small></article><article><span class="grade">B · GURYE</span><h3>지리산 · 도보<br>문화생활</h3><p>차 없이 원도심을 걷고, 계절을 사는 한 달.</p><small>RESEARCH DOSSIER</small></article><article><span class="grade">B · GOHEUNG</span><h3>우주 · 섬<br>정착탐색</h3><p>관광보다 한 걸음 더, 정착 가능성을 시험하는 한 달.</p><small>RESEARCH DOSSIER</small></article></div></section>
+  </details><div class="hero"><div><div class="eyebrow">REGION DIRECTORY</div><h1>한 달 살 지역을<br>생활자의 기준으로.</h1><p>행정안전부 지정 89개 지역 전체를 색인하고, 근거가 강한 15개 지역부터 깊게 다룹니다.</p></div></div><div class="filters"><button class="chip active" onclick="renderRegions('전체')">전체</button><button class="chip" onclick="renderRegions('경남')">경남</button><button class="chip" onclick="renderRegions('강원')">강원</button><button class="chip" onclick="renderRegions('충북')">충북</button><button class="chip" onclick="renderRegions('충남')">충남</button><button class="chip" onclick="renderRegions('경북')">경북</button></div><div class="update" style="margin-bottom:12px"><div><strong>89개 전체 색인</strong><div class="small">상세 데이터가 없는 지역도 검색 가능 · 상세는 순차 확장</div></div><button class="btn" id="toggleAll89">89개 보기</button></div><div class="region-grid" id="regionGrid"></div><div class="region-grid" id="all89Grid" style="display:none;margin-top:12px"></div></section>
 
-<section id="rankings" class="panel"><div class="final-panel-intro"><span class="final-index">03</span><div><div class="kicker">COMPARE PLACES</div><h1>어디가 더<br>나답게 살 수 있을까.</h1><p>점수 하나로 지역을 고르지 않습니다. 생활비, 문화, 혜택, 노마드 환경과 근거의 강도를 나란히 놓고 봅니다.</p></div></div><div class="section" style="margin-top:20px">
+<section id="rankings" class="panel"><div class="final-panel-intro"><span class="final-index">03</span><div><div class="kicker">COMPARE PLACES</div><h1>어디가 더<br>나답게 살 수 있을까.</h1><p>점수 하나로 지역을 고르지 않습니다. 생활비, 문화, 혜택, 노마드 환경과 근거의 강도를 나란히 놓고 봅니다.</p></div></div><div class="section internal-only" style="margin-top:20px">
   <div class="section-head"><div><div class="eyebrow">SCORE TRANSPARENCY</div><h2>점수보다 근거를 먼저</h2></div><p>최신성 · 근거수 · 신뢰도</p></div>
   <div class="cards">
     <div class="card"><h3>최신성</h3><p>마지막 검증일이 오래될수록 점수보다 ‘재확인 필요’를 먼저 보여줍니다.</p></div>
@@ -100,21 +91,21 @@
     <div class="card"><h3>신뢰도</h3><p>높음/보통/낮음/미확인으로 표시하며 미확인은 점수 활성화에서 제외합니다.</p></div>
     <div class="card"><h3>설명 가능한 추천</h3><p>테마·예산·체류일수 기여도를 추천 결과에서 공개합니다.</p></div>
   </div>
-</div><div class="hero"><div><div class="eyebrow">COMPARE & RANK</div><h1>순위보다 중요한 건<br>왜 그 지역인가.</h1><p>현재 점수는 일부 카테고리의 베타 근거점수이며, 부족한 항목은 ‘—’로 남깁니다.</p></div></div><div class="section-head"><div><div class="eyebrow">COMPARE</div><h2>최대 3곳 비교</h2></div><button class="btn" id="compareClear">비우기</button></div><div class="tablewrap"><table id="compareTable"></table></div><section class="review-pulse"><div class="shelf-head"><div><div class="kicker">REVIEW PULSE</div><h2>사람들은 실제로<br>어떻게 말하고 있을까.</h2></div><p>공식 사실과 리뷰 의견을 섞지 않습니다.</p></div><div class="review-rule"><div><strong>FACT</strong><span>운영시간·가격·정책은 공식 출처</span></div><div><strong>PULSE</strong><span>공개 리뷰의 반복 장단점만 요약</span></div><div><strong>FIELD</strong><span>직접 살아본 사용자의 FIELD NOTE</span></div></div><p class="review-disclaimer">네이버·에어비앤비 등 보호된 리뷰를 무단 복제하지 않습니다. 공개 평판 신호는 출처 링크와 함께 요약하며 표본이 불명확하면 참고 신호로 표시합니다.</p></section><section class="section">
+</div><div class="hero"><div><div class="eyebrow">COMPARE & RANK</div><h1>순위보다 중요한 건<br>왜 그 지역인가.</h1><p>현재 점수는 일부 카테고리의 베타 근거점수이며, 부족한 항목은 ‘—’로 남깁니다.</p></div></div><div class="section-head"><div><div class="eyebrow">COMPARE</div><h2>최대 3곳 비교</h2></div><button class="btn" id="compareClear">비우기</button></div><div class="tablewrap"><table id="compareTable"></table></div><section class="review-pulse"><div class="shelf-head"><div><div class="kicker">REVIEW PULSE</div><h2>사람들은 실제로<br>어떻게 말하고 있을까.</h2></div><p>공식 사실과 리뷰 의견을 섞지 않습니다.</p></div><div class="review-rule"><div><strong>FACT</strong><span>운영시간·가격·정책은 공식 출처</span></div><div><strong>PULSE</strong><span>공개 리뷰의 반복 장단점만 요약</span></div><div><strong>FIELD</strong><span>직접 살아본 사용자의 FIELD NOTE</span></div></div><p class="review-disclaimer">네이버·에어비앤비 등 보호된 리뷰를 무단 복제하지 않습니다. 공개 평판 신호는 출처 링크와 함께 요약하며 표본이 불명확하면 참고 신호로 표시합니다.</p></section><section class="section internal-only">
   <div class="section-head"><div><div class="eyebrow">DATA TRUST RANK</div><h2>Evidence Strength Index</h2></div><p>지역 매력도가 아니라 데이터 신뢰도</p></div>
   <div class="card" id="strengthRank"></div>
   <div class="note" style="margin-top:10px">이 순위는 “어디가 더 좋은가”가 아니라 <strong>현재 LOCAL MONTH가 어느 지역을 더 근거 있게 설명할 수 있는가</strong>를 나타냅니다.</div>
 </section>
-<section class="section">
+<section class="section internal-only">
   <div class="section-head"><div><div class="eyebrow">RANKING GATES</div><h2>근거가 찰 때만 랭킹을 엽니다</h2></div><p>허위 정밀도 방지</p></div>
   <div class="cards" id="gateCards"></div>
-</section><section class="section">
+</section><section class="section internal-only">
   <div class="section-head"><div><div class="eyebrow">PRICE VALUE MATRIX</div><h2>반값여행 조건 비교</h2></div><p>환급률만 보지 않고 조건까지</p></div>
   <div class="tablewrap"><table id="benefitMatrix"></table></div>
   <div class="note" style="margin-top:10px">Opportunity Score는 ‘관광지 매력도’가 아니라 <strong>현재 신청가능성 + 환급구조 + 최소소비 + 인증조건 + 결제 유연성</strong>을 보는 운영용 지표입니다.</div>
 </section>
 
-<section class="section"><div class="section-head"><div><div class="eyebrow">BENEFIT CLUSTER</div><h2>보은·옥천·영동</h2></div><p>혜택+체험 권역</p></div><div class="note">관광주민증 연계로 지역별 최대 9만원, 3개 지역 합산 최대 27만원 규모의 혜택과 공예·와인·원예·목공 등 체험형 가맹점을 함께 볼 수 있는 권역입니다.</div></section></section>
+<section class="section internal-only"><div class="section-head"><div><div class="eyebrow">BENEFIT CLUSTER</div><h2>보은·옥천·영동</h2></div><p>혜택+체험 권역</p></div><div class="note">관광주민증 연계로 지역별 최대 9만원, 3개 지역 합산 최대 27만원 규모의 혜택과 공예·와인·원예·목공 등 체험형 가맹점을 함께 볼 수 있는 권역입니다.</div></section></section>
 
 <section id="monthly" class="panel"><div class="final-panel-intro"><span class="final-index">04</span><div><div class="kicker">LOCAL NOW</div><h1>이번 달에만<br>가능한 것들.</h1><p>축제보다 중요한 건 타이밍입니다. 모집, 지원, 클래스, 공연과 지역 혜택을 마감일과 함께 봅니다.</p></div></div><div class="hero"><div><div class="eyebrow">LOCAL NOW</div><h1>이번 달,<br>놓치면 아까운 것들.</h1><p>축제·공연·전시·강연·원데이 클래스·웰니스·공공교육을 실제 체류기간과 겹쳐 봅니다.</p></div></div><section class="program-desk section" id="programDesk">
   <div class="program-desk-head">
@@ -124,7 +115,7 @@
   <div class="program-checker">
     <div class="checker-copy"><span class="checker-no">01</span><h3>나의 체류 조건</h3><p>정확한 자격조건이 데이터에 없으면 ‘가능’이라고 추측하지 않습니다.</p></div>
     <div class="checker-fields">
-      <label>체류일수<select id="programDays"><option value="7">7일</option><option value="14">14일</option><option value="30" selected>30일</option></select></label>
+      <label>체류일수<select id="programDays"><option value="7">7일</option><option value="14">14일</option><option value="21">21일</option><option value="30" selected>30일</option></select></label>
       <label>반려견<select id="programPet"><option value="no">없음</option><option value="yes">동반</option></select></label>
       <label>차량<select id="programCar"><option value="yes">있음</option><option value="no">없음</option></select></label>
       <label>SNS 미션<select id="programSns"><option value="ok">가능</option><option value="avoid">가급적 피함</option></select></label>
@@ -147,7 +138,7 @@
 
 <section class="section"><div class="section-head"><div><div class="eyebrow">BENEFITS</div><h2>지금 쓸 수 있는 혜택</h2></div><p>최신 공식 근거 우선</p></div><div class="card" id="benefitList"></div></section></section>
 
-<section id="research" class="panel"><div class="hero"><div><div class="eyebrow">RESEARCH & COMMUNITY</div><h1>웹의 흩어진 정보를<br>생활자 관점으로 모읍니다.</h1><p>리뷰 원문을 복제하지 않고 URL·짧은 메모·반복 신호를 저장합니다.</p></div></div><section class="section">
+<section id="research" class="panel"><div class="hero"><div><div class="eyebrow">RESEARCH & COMMUNITY</div><h1>웹의 흩어진 정보를<br>생활자 관점으로 모읍니다.</h1><p>리뷰 원문을 복제하지 않고 URL·짧은 메모·반복 신호를 저장합니다.</p></div></div><section class="section internal-only">
   <div class="section-head"><div><div class="eyebrow">EVIDENCE REGISTRY</div><h2>검증된 근거 보기</h2></div><p>공식 근거 우선</p></div>
   <div class="filters"><button class="chip active" data-evidence="전체">전체</button><button class="chip" data-evidence="하동">하동</button><button class="chip" data-evidence="안동">안동</button><button class="chip" data-evidence="산청">산청</button><button class="chip" data-evidence="밀양">밀양</button><button class="chip" data-evidence="보은·옥천·영동">옥보영</button></div>
   <div class="update" style="margin-bottom:10px"><div><strong>베타 지역 공식 근거 커버리지</strong><div class="small" id="evidenceCoverage">계산중</div></div><span class="badge ok">15/15 목표</span></div>
@@ -156,7 +147,7 @@
 
 <section class="section"><div class="section-head"><div><div class="eyebrow">RESEARCH INBOX</div><h2>자료 넣기</h2></div><p>로컬 저장</p></div><div class="card"><div class="formgrid"><input class="input" id="rUrl" placeholder="URL"><select class="input" id="rType"><option>네이버/검색</option><option>블로그</option><option>숙박 플랫폼</option><option>공식 관광정보</option><option>지역 커뮤니티</option><option>뉴스/기사</option></select><input class="input" id="rRegion" placeholder="지역"><input class="input" id="rNote" placeholder="메모"></div><button class="primary" id="addResearch" style="margin-top:10px">저장</button><div id="researchList" style="margin-top:13px"></div></div></section><section class="section"><div class="section-head"><div><div class="eyebrow">COMMUNITY</div><h2>한달살러 필드노트</h2></div><p>현재 로컬 데모</p></div><div class="card"><textarea class="input" id="commentInput" rows="3" placeholder="실제경험·질문·팁을 남겨보세요."></textarea><button class="primary" id="addComment" style="margin-top:8px">댓글 남기기</button><div id="commentList" style="margin-top:12px"></div></div></section></section>
 
-<section id="mystay" class="panel"><div class="final-panel-intro"><span class="final-index">05</span><div><div class="kicker">MY MONTH</div><h1>여행을<br>생활로 바꾸기.</h1><p>저장한 지역과 일정, 예산, 현장 확인사항을 한 곳에서 관리합니다. 한 달이 끝나면 다음 지역을 고를 수 있는 나만의 기록이 남습니다.</p></div></div><div class="hero"><div><div class="eyebrow">MY STAY · HADONG FIELD TEST</div><h1>하동 한 달을<br>생활 실험으로 기록합니다.</h1><p>하동을 첫 실제 케이스로 업무·생활·지출·증빙·주거·관계를 축적합니다.</p></div></div><div class="cards"><div class="card"><h3>업무</h3><p>집중시간·작업공간·업무 만족도</p><span class="badge ok">사용 가능</span></div><div class="card"><h3>지출</h3><p>숙박·식비·교통·체험·반려견·지원금</p><span class="badge ok">사용 가능</span></div><div class="card"><h3>증빙</h3><p>영수증·숙박확인서·홍보·결과보고</p><span class="badge ok">사용 가능</span></div><div class="card"><h3>생활 적합도</h3><p>다시 올까·더 살아볼까·이주할까</p><span class="badge">체크인</span></div></div><section class="section">
+<section id="mystay" class="panel"><section class="saved-hub" aria-label="내 저장 목록"><div class="kicker">MY MONTH</div><h1>내가 모은 한 달.</h1><p>이 기기에만 저장됩니다. 중요한 기록은 상단 백업에서 보관하세요.</p><div id="savedHub"></div></section><div class="final-panel-intro"><span class="final-index">05</span><div><div class="kicker">MY MONTH</div><h1>여행을<br>생활로 바꾸기.</h1><p>저장한 지역과 일정, 예산, 현장 확인사항을 한 곳에서 관리합니다. 한 달이 끝나면 다음 지역을 고를 수 있는 나만의 기록이 남습니다.</p></div></div><div class="hero"><div><div class="eyebrow">MY STAY · HADONG FIELD TEST</div><h1>하동 한 달을<br>생활 실험으로 기록합니다.</h1><p>하동을 첫 실제 케이스로 업무·생활·지출·증빙·주거·관계를 축적합니다.</p></div></div><div class="cards"><div class="card"><h3>업무</h3><p>집중시간·작업공간·업무 만족도</p><span class="badge ok">사용 가능</span></div><div class="card"><h3>지출</h3><p>숙박·식비·교통·체험·반려견·지원금</p><span class="badge ok">사용 가능</span></div><div class="card"><h3>증빙</h3><p>영수증·숙박확인서·홍보·결과보고</p><span class="badge ok">사용 가능</span></div><div class="card"><h3>생활 적합도</h3><p>다시 올까·더 살아볼까·이주할까</p><span class="badge">체크인</span></div></div><section class="section">
   <div class="section-head"><div><div class="eyebrow">HADONG FIELDBOOK</div><h2>10/20–11/18 실제 체류 실험</h2></div><p>1인 + 6kg 반려견</p></div>
   <div class="cards">
     <div class="card"><h3>1주차 · 생활 적응</h3><p>장보기·업무공간·산책동선·숙소소음·교통을 확인.</p></div>
@@ -196,11 +187,11 @@
 <div class="card" id="hadongLog" style="margin-top:12px"><div class="small">아직 기록이 없습니다.</div></div>
 </section>
 
-<section class="section">
+<section class="section internal-only">
   <div class="section-head"><div><div class="eyebrow">MOBILE READINESS</div><h2>iPhone / Safari 준비상태</h2></div><p>코드 레벨 자동 점검</p></div>
   <div class="cards" id="mobileHealthCards"></div>
 </section>
-<section class="section">
+<section class="section internal-only">
   <div class="section-head"><div><div class="eyebrow">ON-DEVICE QA</div><h2>iPhone 실기기 최종 점검</h2></div><p>공개 URL에서 1회</p></div>
   <div class="card">
     <div id="deviceQaList"></div>
@@ -216,13 +207,13 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section internal-only">
   <div class="section-head"><div><div class="eyebrow">SYSTEM HEALTH</div><h2>LOCAL MONTH 상태 점검</h2></div><p>앱 자체 점검</p></div>
   <div class="cards" id="healthCards"></div>
   <div class="row-actions"><button class="btn" id="runHealthCheck">다시 점검</button><button class="btn" id="exportHealth">상태 JSON</button></div>
 </section>
 
-<section class="section"><div class="section-head"><div><div class="eyebrow">ZERO-COST ROADMAP</div><h2>돈이 드는 기능은 잠금</h2></div><p>구조는 미리 완성</p></div><div class="cards"><div class="card"><h3>자동 웹 리서치</h3><p>개발중 · 외부 검색비용 없이 가능한 방식 우선</p><span class="badge dev">개발중</span></div><div class="card"><h3>AI 요약</h3><p>개발중 · 현재는 로컬 가중치 추천</p><span class="badge dev">개발중</span></div><div class="card"><h3>실시간 푸시</h3><p>개발중 · 현재 앱 내부 알림</p><span class="badge dev">개발중</span></div><div class="card"><h3>실시간 댓글 서버</h3><p>개발중 · 현재 기기 로컬 저장</p><span class="badge dev">개발중</span></div></div></section></section>
+<section class="section internal-only"><div class="section-head"><div><div class="eyebrow">ZERO-COST ROADMAP</div><h2>돈이 드는 기능은 잠금</h2></div><p>구조는 미리 완성</p></div><div class="cards"><div class="card"><h3>자동 웹 리서치</h3><p>개발중 · 외부 검색비용 없이 가능한 방식 우선</p><span class="badge dev">개발중</span></div><div class="card"><h3>AI 요약</h3><p>개발중 · 현재는 로컬 가중치 추천</p><span class="badge dev">개발중</span></div><div class="card"><h3>실시간 푸시</h3><p>개발중 · 현재 앱 내부 알림</p><span class="badge dev">개발중</span></div><div class="card"><h3>실시간 댓글 서버</h3><p>개발중 · 현재 기기 로컬 저장</p><span class="badge dev">개발중</span></div></div></section></section>
 </main>
 </div>
 
@@ -246,8 +237,8 @@
 <div class="drawer" id="aboutDrawer"><div class="research-lab-note"><span>RESEARCH LAB</span><p>출처·Evidence·업데이트 상태는 사용자 경험과 분리해 운영합니다. 검증되지 않은 정보는 추천에 확정값으로 사용하지 않습니다.</p></div>
   <div class="drawer-head"><strong>LOCAL MONTH</strong><button class="btn" id="aboutClose">닫기</button></div>
   <div class="card" style="margin-top:14px">
-    <div class="eyebrow">VERSION</div><h3 id="appVersion">v9.3.1</h3>
-    <p>인구감소지역 한달살기 Total Search & Research OS · Production · Evidence-backed · Zero Paid API</p>
+    <div class="eyebrow">VERSION</div><h3 id="appVersion">v9.4.0-rc.1</h3>
+    <p>인구감소지역 한달살기 Total Search & Research OS · 검수 후보 · Evidence-backed · Zero Paid API</p>
   </div>
   <div class="card" style="margin-top:12px">
     <div class="eyebrow">DATA PRIVACY</div><h3>개인 기록은 이 기기에 저장</h3>
@@ -269,7 +260,9 @@
     <div class="card"><h3>ZERO-COST 상태</h3><p>유료 API 0 · 서버 DB 0 · 결제 0 · SMS 0 · 백그라운드 푸시 0.</p><span class="badge ok">월 고정비 0원 설계</span></div>
   </div>
 </div>
-<div class="toast" id="toast"></div>
-<script src="app.js?v=9.0.0"></script>
+<div class="toast" role="status" aria-live="polite" id="toast"></div>
+<script src="storage.js?v=9.4.0-rc.1"></script>
+<script defer src="app.js?v=9.4.0-rc.1"></script>
+<script defer src="rc.js?v=9.4.0-rc.1"></script>
 <script>if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js").catch(()=>{})}</script>
 </body></html>
