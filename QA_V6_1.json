@@ -1,0 +1,83 @@
+{
+  "release": "v6.1",
+  "benefit_regions": 9,
+  "matrix_top": [
+    {
+      "region": "안동",
+      "status": "준비중",
+      "travel_period": "2026-10-15~11-30",
+      "apply": "2026-10-12 10:00 예정",
+      "refund_rate": 50,
+      "youth_rate": 70,
+      "max_person": 100000,
+      "max_youth": 140000,
+      "min_spend": null,
+      "payment": "모바일 안동사랑상품권, 숙박 카드/현금영수증 예외",
+      "visit_rule": "관광지 1곳 방문 필수",
+      "source": "KTO 반값여행",
+      "opportunity_score": 76
+    },
+    {
+      "region": "서천",
+      "status": "준비중",
+      "travel_period": "2026-11-01~11-30",
+      "apply": "2026-10-26 10:00 예정",
+      "refund_rate": 50,
+      "youth_rate": 70,
+      "max_person": 100000,
+      "max_youth": 140000,
+      "min_spend": null,
+      "payment": "모바일 서천사랑상품권, 숙박·유료관광지 카드/현금영수증 예외",
+      "visit_rule": "유료관광지 1곳 + 무료관광지 1곳",
+      "source": "KTO 반값여행",
+      "opportunity_score": 76
+    },
+    {
+      "region": "화천",
+      "status": "신청접수중",
+      "travel_period": "2026-09-04~10-31",
+      "apply": "2026-09-01 10:00~",
+      "refund_rate": 50,
+      "youth_rate": 70,
+      "max_person": 100000,
+      "max_youth": 140000,
+      "min_spend": 70000,
+      "payment": "대표자 명의 신용/체크카드, 숙박 현금영수증 예외",
+      "visit_rule": "주요관광지 2곳 이상",
+      "source": "KTO 반값여행",
+      "opportunity_score": 75.0
+    },
+    {
+      "region": "산청",
+      "status": "신청접수중",
+      "travel_period": "2026-10-01~10-31",
+      "apply": "2026-09-21 10:00~10-11",
+      "refund_rate": 50,
+      "youth_rate": 70,
+      "max_person": 100000,
+      "max_youth": 140000,
+      "min_spend": 100000,
+      "payment": "제로페이(비플페이), 숙박은 카드/현금영수증 예외",
+      "visit_rule": "지정관광지 2곳 이상 + 제로페이 가맹점 2곳 이상 소비",
+      "source": "KTO 반값여행",
+      "opportunity_score": 72.0
+    },
+    {
+      "region": "영천",
+      "status": "신청접수중",
+      "travel_period": "2026-10-01~10-31",
+      "apply": "2026-09-22 10:00~",
+      "refund_rate": 50,
+      "youth_rate": 70,
+      "max_person": 100000,
+      "max_youth": 140000,
+      "min_spend": 100000,
+      "payment": "모바일 영천사랑상품권, 숙박은 카드/현금영수증 예외",
+      "visit_rule": "관광지 2곳 이상 방문",
+      "source": "KTO 반값여행",
+      "opportunity_score": 72.0
+    }
+  ],
+  "js": true,
+  "js_stderr": ""
+}

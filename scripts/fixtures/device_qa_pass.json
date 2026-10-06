@@ -1,0 +1,35 @@
+{
+  "product": "LOCAL MONTH",
+  "release": "v7.6",
+  "standalone": true,
+  "checks": [
+    {
+      "id": "safari-load",
+      "passed": true
+    },
+    {
+      "id": "standalone",
+      "passed": true
+    },
+    {
+      "id": "search",
+      "passed": true
+    },
+    {
+      "id": "recommend",
+      "passed": true
+    },
+    {
+      "id": "compare",
+      "passed": true
+    },
+    {
+      "id": "backup",
+      "passed": true
+    },
+    {
+      "id": "storage",
+      "passed": true
+    }
+  ]
+}

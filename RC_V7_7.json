@@ -1,0 +1,11 @@
+{
+  "product": "LOCAL MONTH",
+  "version": "7.7.0-rc",
+  "status": "release-candidate",
+  "promotion_condition": "iPhone ON-DEVICE QA 7/7 PASS",
+  "promotion_command": "PROMOTE_TO_V8.command",
+  "rollback_plan": "ROLLBACK_PLAN.md",
+  "public_repo_required": "local-month",
+  "feature_freeze": true,
+  "paid_api_dependencies": 0
+}

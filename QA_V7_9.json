@@ -1,0 +1,8 @@
+{
+  "release": "v7.9",
+  "js": true,
+  "deploy_shell": true,
+  "verify_shell": true,
+  "verifier_compile": true,
+  "vercel_project_currently_exists": false
+}

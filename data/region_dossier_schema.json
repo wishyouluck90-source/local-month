@@ -1,0 +1,38 @@
+{
+  "$schema": "LOCAL_MONTH_REGION_DOSSIER_V1",
+  "required": [
+    "region",
+    "grade",
+    "archetype",
+    "verified_at",
+    "facts",
+    "gaps"
+  ],
+  "facts": [
+    "stay_programs",
+    "benefits",
+    "culture_now",
+    "work_base",
+    "housing",
+    "cost",
+    "transport",
+    "pet",
+    "jobs_projects",
+    "living_population",
+    "review_pulse"
+  ],
+  "states": [
+    "verified",
+    "recheck",
+    "unverified",
+    "ended",
+    "budget_exhausted"
+  ],
+  "freshness_days": {
+    "current_event": 7,
+    "benefit": 7,
+    "housing_price": 7,
+    "work_base": 30,
+    "structural_policy": 90
+  }
+}

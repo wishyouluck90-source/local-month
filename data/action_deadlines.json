@@ -1,0 +1,83 @@
+[
+  {
+    "region": "산청",
+    "title": "반값여행 2차 신청 마감",
+    "start": "2026-10-11T23:59:00+09:00",
+    "kind": "close",
+    "priority": "high",
+    "status": "open",
+    "source": "KTO 반값여행"
+  },
+  {
+    "region": "안동",
+    "title": "반값여행 2차 접수 오픈",
+    "start": "2026-10-12T10:00:00+09:00",
+    "kind": "open",
+    "priority": "high",
+    "status": "upcoming",
+    "source": "KTO 반값여행"
+  },
+  {
+    "region": "고성",
+    "title": "반값여행 3차 접수 오픈",
+    "start": "2026-10-14T09:00:00+09:00",
+    "kind": "open",
+    "priority": "high",
+    "status": "upcoming",
+    "source": "KTO 반값여행"
+  },
+  {
+    "region": "밀양",
+    "title": "반값여행 접수 오픈",
+    "start": "2026-10-15T10:00:00+09:00",
+    "kind": "open",
+    "priority": "high",
+    "status": "upcoming",
+    "source": "KTO 반값여행"
+  },
+  {
+    "region": "함양",
+    "title": "반값여행 3차 접수 오픈",
+    "start": "2026-10-19T10:00:00+09:00",
+    "kind": "open",
+    "priority": "high",
+    "status": "upcoming",
+    "source": "KTO 반값여행"
+  },
+  {
+    "region": "거창",
+    "title": "반값여행 2차 접수 오픈",
+    "start": "2026-10-22T10:00:00+09:00",
+    "kind": "open",
+    "priority": "medium",
+    "status": "upcoming",
+    "source": "KTO 반값여행"
+  },
+  {
+    "region": "서천",
+    "title": "반값여행 3차 접수 오픈",
+    "start": "2026-10-26T10:00:00+09:00",
+    "kind": "open",
+    "priority": "high",
+    "status": "upcoming",
+    "source": "KTO 반값여행"
+  },
+  {
+    "region": "태안",
+    "title": "반값여행 3차 접수 오픈",
+    "start": "2026-11-02T10:00:00+09:00",
+    "kind": "open",
+    "priority": "high",
+    "status": "upcoming",
+    "source": "KTO 반값여행"
+  },
+  {
+    "region": "보은·옥천·영동",
+    "title": "옥보영 관광주민증 이벤트 종료",
+    "start": "2026-11-30T23:59:00+09:00",
+    "kind": "close",
+    "priority": "medium",
+    "status": "active",
+    "source": "KTO 관광주민증"
+  }
+]

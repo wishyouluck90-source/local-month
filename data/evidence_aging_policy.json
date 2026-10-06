@@ -1,0 +1,17 @@
+{
+  "verified_at": "2026-10-05",
+  "threshold_days": {
+    "fresh": 14,
+    "recheck": 30
+  },
+  "rules": {
+    "fresh": "검증일로부터 14일 이내",
+    "recheck": "15~30일",
+    "stale": "31일 이상 또는 출처가 최신상태를 보장하지 못함"
+  },
+  "effect": {
+    "fresh": 1.0,
+    "recheck": 0.9,
+    "stale": 0.7
+  }
+}

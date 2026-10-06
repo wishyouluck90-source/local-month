@@ -1,0 +1,7 @@
+{
+  "release": "v6.5",
+  "evidence_aging": true,
+  "pretrip_items": 10,
+  "js": true,
+  "js_stderr": ""
+}

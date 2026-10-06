@@ -1,0 +1,21 @@
+{
+  "version": "1.0",
+  "source": "data/diff_latest.json",
+  "types": [
+    "new",
+    "changed",
+    "removed_or_ended"
+  ],
+  "dedupe_key": "<diff current date>:<kind>:<item id>",
+  "retention": {
+    "notifications_max": 80,
+    "seen_keys_max": 500
+  },
+  "behavior": {
+    "new": "알림센터 상단에 신규 표시",
+    "changed": "상태/내용 변경 알림",
+    "removed_or_ended": "종료/삭제 알림",
+    "duplicate": "같은 날짜·같은 item id는 재알림하지 않음"
+  },
+  "privacy": "브라우저 localStorage에만 저장"
+}

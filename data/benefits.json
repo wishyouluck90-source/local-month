@@ -1,0 +1,74 @@
+[
+  {
+    "region": "하동",
+    "name": "금오산 짚와이어",
+    "type": "체험",
+    "value": "3,000원 할인",
+    "status": "확인",
+    "confidence": "높음"
+  },
+  {
+    "region": "하동",
+    "name": "카페노량",
+    "type": "식음료",
+    "value": "10% 할인",
+    "status": "확인",
+    "confidence": "높음"
+  },
+  {
+    "region": "하동",
+    "name": "지리산대박터 고매감",
+    "type": "식음료",
+    "value": "음료 2,000원 제공",
+    "status": "확인",
+    "confidence": "높음"
+  },
+  {
+    "region": "안동",
+    "name": "반값여행",
+    "type": "여행비",
+    "value": "일반 50% / 청년 70%",
+    "status": "10/12 접수",
+    "confidence": "높음"
+  },
+  {
+    "region": "태안",
+    "name": "반값여행 3차",
+    "type": "여행비",
+    "value": "일반 50% / 청년 70%",
+    "status": "11/2 10:00",
+    "confidence": "높음"
+  },
+  {
+    "region": "화천",
+    "name": "반값여행",
+    "type": "여행비",
+    "value": "최대 10만원",
+    "status": "운영 확인",
+    "confidence": "높음"
+  },
+  {
+    "region": "보은",
+    "name": "옥보영 혜택",
+    "type": "쿠폰",
+    "value": "최대 9만원",
+    "status": "11/30까지",
+    "confidence": "높음"
+  },
+  {
+    "region": "옥천",
+    "name": "옥보영 혜택",
+    "type": "쿠폰",
+    "value": "최대 9만원",
+    "status": "11/30까지",
+    "confidence": "높음"
+  },
+  {
+    "region": "영동",
+    "name": "옥보영 혜택",
+    "type": "쿠폰",
+    "value": "최대 9만원",
+    "status": "11/30까지",
+    "confidence": "높음"
+  }
+]

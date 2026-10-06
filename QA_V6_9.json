@@ -1,0 +1,6 @@
+{
+  "release": "v6.9",
+  "health_dashboard": true,
+  "js": true,
+  "js_stderr": ""
+}

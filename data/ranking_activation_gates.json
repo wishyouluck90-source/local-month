@@ -1,0 +1,712 @@
+{
+  "rules": {
+    "price_value": {
+      "label": "가격 메리트",
+      "required": {
+        "benefit": 2
+      },
+      "note": "현재 혜택 공식 근거 2건 이상 + 장기체류비는 별도 확인"
+    },
+    "culture_arts": {
+      "label": "문화예술",
+      "required": {
+        "culture": 1,
+        "monthly": 1
+      },
+      "note": "상설 문화기반 1건 + 현재 월간 프로그램 1건"
+    },
+    "benefits": {
+      "label": "지역 혜택",
+      "required": {
+        "benefit": 2
+      },
+      "note": "현재 사용 가능한 공식 혜택 2건 이상"
+    },
+    "nomad_work": {
+      "label": "노마드 작업",
+      "required": {
+        "nomad": 3
+      },
+      "note": "공공/공식 작업공간·와이파이·장시간 체류 근거 3건 이상"
+    },
+    "pet_friendly": {
+      "label": "반려견",
+      "required": {
+        "pet": 3
+      },
+      "note": "반려견 생활근거 3건 이상 전 미개방"
+    }
+  },
+  "regions": {
+    "하동": {
+      "price_value": {
+        "ready": true,
+        "category_counts": {
+          "benefit": 3,
+          "region": 1,
+          "benefit_status": 1,
+          "pet": 2,
+          "nomad": 3,
+          "culture": 2,
+          "learning": 1
+        },
+        "reason": "활성화 가능"
+      },
+      "culture_arts": {
+        "ready": false,
+        "category_counts": {
+          "benefit": 3,
+          "region": 1,
+          "benefit_status": 1,
+          "pet": 2,
+          "nomad": 3,
+          "culture": 2,
+          "learning": 1
+        },
+        "reason": "상설 문화기반 1건 + 현재 월간 프로그램 1건"
+      },
+      "benefits": {
+        "ready": true,
+        "category_counts": {
+          "benefit": 3,
+          "region": 1,
+          "benefit_status": 1,
+          "pet": 2,
+          "nomad": 3,
+          "culture": 2,
+          "learning": 1
+        },
+        "reason": "활성화 가능"
+      },
+      "nomad_work": {
+        "ready": true,
+        "category_counts": {
+          "benefit": 3,
+          "region": 1,
+          "benefit_status": 1,
+          "pet": 2,
+          "nomad": 3,
+          "culture": 2,
+          "learning": 1
+        },
+        "reason": "활성화 가능"
+      },
+      "pet_friendly": {
+        "ready": false,
+        "category_counts": {
+          "benefit": 3,
+          "region": 1,
+          "benefit_status": 1,
+          "pet": 2,
+          "nomad": 3,
+          "culture": 2,
+          "learning": 1
+        },
+        "reason": "반려견 생활근거 3건 이상 전 미개방"
+      }
+    },
+    "밀양": {
+      "price_value": {
+        "ready": false,
+        "category_counts": {
+          "monthly": 2,
+          "pet": 4,
+          "nomad": 1,
+          "culture": 1
+        },
+        "reason": "현재 혜택 공식 근거 2건 이상 + 장기체류비는 별도 확인"
+      },
+      "culture_arts": {
+        "ready": true,
+        "category_counts": {
+          "monthly": 2,
+          "pet": 4,
+          "nomad": 1,
+          "culture": 1
+        },
+        "reason": "활성화 가능"
+      },
+      "benefits": {
+        "ready": false,
+        "category_counts": {
+          "monthly": 2,
+          "pet": 4,
+          "nomad": 1,
+          "culture": 1
+        },
+        "reason": "현재 사용 가능한 공식 혜택 2건 이상"
+      },
+      "nomad_work": {
+        "ready": false,
+        "category_counts": {
+          "monthly": 2,
+          "pet": 4,
+          "nomad": 1,
+          "culture": 1
+        },
+        "reason": "공공/공식 작업공간·와이파이·장시간 체류 근거 3건 이상"
+      },
+      "pet_friendly": {
+        "ready": true,
+        "category_counts": {
+          "monthly": 2,
+          "pet": 4,
+          "nomad": 1,
+          "culture": 1
+        },
+        "reason": "활성화 가능"
+      }
+    },
+    "산청": {
+      "price_value": {
+        "ready": true,
+        "category_counts": {
+          "benefit": 2,
+          "class": 1
+        },
+        "reason": "활성화 가능"
+      },
+      "culture_arts": {
+        "ready": false,
+        "category_counts": {
+          "benefit": 2,
+          "class": 1
+        },
+        "reason": "상설 문화기반 1건 + 현재 월간 프로그램 1건"
+      },
+      "benefits": {
+        "ready": true,
+        "category_counts": {
+          "benefit": 2,
+          "class": 1
+        },
+        "reason": "활성화 가능"
+      },
+      "nomad_work": {
+        "ready": false,
+        "category_counts": {
+          "benefit": 2,
+          "class": 1
+        },
+        "reason": "공공/공식 작업공간·와이파이·장시간 체류 근거 3건 이상"
+      },
+      "pet_friendly": {
+        "ready": false,
+        "category_counts": {
+          "benefit": 2,
+          "class": 1
+        },
+        "reason": "반려견 생활근거 3건 이상 전 미개방"
+      }
+    },
+    "함양": {
+      "price_value": {
+        "ready": false,
+        "category_counts": {
+          "stay": 1,
+          "culture": 3,
+          "settlement": 1
+        },
+        "reason": "현재 혜택 공식 근거 2건 이상 + 장기체류비는 별도 확인"
+      },
+      "culture_arts": {
+        "ready": false,
+        "category_counts": {
+          "stay": 1,
+          "culture": 3,
+          "settlement": 1
+        },
+        "reason": "상설 문화기반 1건 + 현재 월간 프로그램 1건"
+      },
+      "benefits": {
+        "ready": false,
+        "category_counts": {
+          "stay": 1,
+          "culture": 3,
+          "settlement": 1
+        },
+        "reason": "현재 사용 가능한 공식 혜택 2건 이상"
+      },
+      "nomad_work": {
+        "ready": false,
+        "category_counts": {
+          "stay": 1,
+          "culture": 3,
+          "settlement": 1
+        },
+        "reason": "공공/공식 작업공간·와이파이·장시간 체류 근거 3건 이상"
+      },
+      "pet_friendly": {
+        "ready": false,
+        "category_counts": {
+          "stay": 1,
+          "culture": 3,
+          "settlement": 1
+        },
+        "reason": "반려견 생활근거 3건 이상 전 미개방"
+      }
+    },
+    "안동": {
+      "price_value": {
+        "ready": true,
+        "category_counts": {
+          "benefit": 2,
+          "monthly": 1,
+          "culture": 2
+        },
+        "reason": "활성화 가능"
+      },
+      "culture_arts": {
+        "ready": true,
+        "category_counts": {
+          "benefit": 2,
+          "monthly": 1,
+          "culture": 2
+        },
+        "reason": "활성화 가능"
+      },
+      "benefits": {
+        "ready": true,
+        "category_counts": {
+          "benefit": 2,
+          "monthly": 1,
+          "culture": 2
+        },
+        "reason": "활성화 가능"
+      },
+      "nomad_work": {
+        "ready": false,
+        "category_counts": {
+          "benefit": 2,
+          "monthly": 1,
+          "culture": 2
+        },
+        "reason": "공공/공식 작업공간·와이파이·장시간 체류 근거 3건 이상"
+      },
+      "pet_friendly": {
+        "ready": false,
+        "category_counts": {
+          "benefit": 2,
+          "monthly": 1,
+          "culture": 2
+        },
+        "reason": "반려견 생활근거 3건 이상 전 미개방"
+      }
+    },
+    "태안": {
+      "price_value": {
+        "ready": false,
+        "category_counts": {
+          "class": 1,
+          "pet": 6,
+          "nomad": 3
+        },
+        "reason": "현재 혜택 공식 근거 2건 이상 + 장기체류비는 별도 확인"
+      },
+      "culture_arts": {
+        "ready": false,
+        "category_counts": {
+          "class": 1,
+          "pet": 6,
+          "nomad": 3
+        },
+        "reason": "상설 문화기반 1건 + 현재 월간 프로그램 1건"
+      },
+      "benefits": {
+        "ready": false,
+        "category_counts": {
+          "class": 1,
+          "pet": 6,
+          "nomad": 3
+        },
+        "reason": "현재 사용 가능한 공식 혜택 2건 이상"
+      },
+      "nomad_work": {
+        "ready": true,
+        "category_counts": {
+          "class": 1,
+          "pet": 6,
+          "nomad": 3
+        },
+        "reason": "활성화 가능"
+      },
+      "pet_friendly": {
+        "ready": true,
+        "category_counts": {
+          "class": 1,
+          "pet": 6,
+          "nomad": 3
+        },
+        "reason": "활성화 가능"
+      }
+    },
+    "화천": {
+      "price_value": {
+        "ready": true,
+        "category_counts": {
+          "benefit": 2,
+          "deadline": 1
+        },
+        "reason": "활성화 가능"
+      },
+      "culture_arts": {
+        "ready": false,
+        "category_counts": {
+          "benefit": 2,
+          "deadline": 1
+        },
+        "reason": "상설 문화기반 1건 + 현재 월간 프로그램 1건"
+      },
+      "benefits": {
+        "ready": true,
+        "category_counts": {
+          "benefit": 2,
+          "deadline": 1
+        },
+        "reason": "활성화 가능"
+      },
+      "nomad_work": {
+        "ready": false,
+        "category_counts": {
+          "benefit": 2,
+          "deadline": 1
+        },
+        "reason": "공공/공식 작업공간·와이파이·장시간 체류 근거 3건 이상"
+      },
+      "pet_friendly": {
+        "ready": false,
+        "category_counts": {
+          "benefit": 2,
+          "deadline": 1
+        },
+        "reason": "반려견 생활근거 3건 이상 전 미개방"
+      }
+    },
+    "보은": {
+      "price_value": {
+        "ready": false,
+        "category_counts": {
+          "benefit": 1,
+          "nomad": 3
+        },
+        "reason": "현재 혜택 공식 근거 2건 이상 + 장기체류비는 별도 확인"
+      },
+      "culture_arts": {
+        "ready": false,
+        "category_counts": {
+          "benefit": 1,
+          "nomad": 3
+        },
+        "reason": "상설 문화기반 1건 + 현재 월간 프로그램 1건"
+      },
+      "benefits": {
+        "ready": false,
+        "category_counts": {
+          "benefit": 1,
+          "nomad": 3
+        },
+        "reason": "현재 사용 가능한 공식 혜택 2건 이상"
+      },
+      "nomad_work": {
+        "ready": true,
+        "category_counts": {
+          "benefit": 1,
+          "nomad": 3
+        },
+        "reason": "활성화 가능"
+      },
+      "pet_friendly": {
+        "ready": false,
+        "category_counts": {
+          "benefit": 1,
+          "nomad": 3
+        },
+        "reason": "반려견 생활근거 3건 이상 전 미개방"
+      }
+    },
+    "옥천": {
+      "price_value": {
+        "ready": false,
+        "category_counts": {
+          "benefit": 1
+        },
+        "reason": "현재 혜택 공식 근거 2건 이상 + 장기체류비는 별도 확인"
+      },
+      "culture_arts": {
+        "ready": false,
+        "category_counts": {
+          "benefit": 1
+        },
+        "reason": "상설 문화기반 1건 + 현재 월간 프로그램 1건"
+      },
+      "benefits": {
+        "ready": false,
+        "category_counts": {
+          "benefit": 1
+        },
+        "reason": "현재 사용 가능한 공식 혜택 2건 이상"
+      },
+      "nomad_work": {
+        "ready": false,
+        "category_counts": {
+          "benefit": 1
+        },
+        "reason": "공공/공식 작업공간·와이파이·장시간 체류 근거 3건 이상"
+      },
+      "pet_friendly": {
+        "ready": false,
+        "category_counts": {
+          "benefit": 1
+        },
+        "reason": "반려견 생활근거 3건 이상 전 미개방"
+      }
+    },
+    "영동": {
+      "price_value": {
+        "ready": false,
+        "category_counts": {
+          "benefit": 1,
+          "pet_constraint": 1
+        },
+        "reason": "현재 혜택 공식 근거 2건 이상 + 장기체류비는 별도 확인"
+      },
+      "culture_arts": {
+        "ready": false,
+        "category_counts": {
+          "benefit": 1,
+          "pet_constraint": 1
+        },
+        "reason": "상설 문화기반 1건 + 현재 월간 프로그램 1건"
+      },
+      "benefits": {
+        "ready": false,
+        "category_counts": {
+          "benefit": 1,
+          "pet_constraint": 1
+        },
+        "reason": "현재 사용 가능한 공식 혜택 2건 이상"
+      },
+      "nomad_work": {
+        "ready": false,
+        "category_counts": {
+          "benefit": 1,
+          "pet_constraint": 1
+        },
+        "reason": "공공/공식 작업공간·와이파이·장시간 체류 근거 3건 이상"
+      },
+      "pet_friendly": {
+        "ready": false,
+        "category_counts": {
+          "benefit": 1,
+          "pet_constraint": 1
+        },
+        "reason": "반려견 생활근거 3건 이상 전 미개방"
+      }
+    },
+    "영월": {
+      "price_value": {
+        "ready": false,
+        "category_counts": {
+          "culture": 2,
+          "work": 1,
+          "monthly": 1
+        },
+        "reason": "현재 혜택 공식 근거 2건 이상 + 장기체류비는 별도 확인"
+      },
+      "culture_arts": {
+        "ready": true,
+        "category_counts": {
+          "culture": 2,
+          "work": 1,
+          "monthly": 1
+        },
+        "reason": "활성화 가능"
+      },
+      "benefits": {
+        "ready": false,
+        "category_counts": {
+          "culture": 2,
+          "work": 1,
+          "monthly": 1
+        },
+        "reason": "현재 사용 가능한 공식 혜택 2건 이상"
+      },
+      "nomad_work": {
+        "ready": false,
+        "category_counts": {
+          "culture": 2,
+          "work": 1,
+          "monthly": 1
+        },
+        "reason": "공공/공식 작업공간·와이파이·장시간 체류 근거 3건 이상"
+      },
+      "pet_friendly": {
+        "ready": false,
+        "category_counts": {
+          "culture": 2,
+          "work": 1,
+          "monthly": 1
+        },
+        "reason": "반려견 생활근거 3건 이상 전 미개방"
+      }
+    },
+    "단양": {
+      "price_value": {
+        "ready": false,
+        "category_counts": {
+          "benefit": 1,
+          "experience": 1
+        },
+        "reason": "현재 혜택 공식 근거 2건 이상 + 장기체류비는 별도 확인"
+      },
+      "culture_arts": {
+        "ready": false,
+        "category_counts": {
+          "benefit": 1,
+          "experience": 1
+        },
+        "reason": "상설 문화기반 1건 + 현재 월간 프로그램 1건"
+      },
+      "benefits": {
+        "ready": false,
+        "category_counts": {
+          "benefit": 1,
+          "experience": 1
+        },
+        "reason": "현재 사용 가능한 공식 혜택 2건 이상"
+      },
+      "nomad_work": {
+        "ready": false,
+        "category_counts": {
+          "benefit": 1,
+          "experience": 1
+        },
+        "reason": "공공/공식 작업공간·와이파이·장시간 체류 근거 3건 이상"
+      },
+      "pet_friendly": {
+        "ready": false,
+        "category_counts": {
+          "benefit": 1,
+          "experience": 1
+        },
+        "reason": "반려견 생활근거 3건 이상 전 미개방"
+      }
+    },
+    "고성": {
+      "price_value": {
+        "ready": false,
+        "category_counts": {
+          "benefit": 1
+        },
+        "reason": "현재 혜택 공식 근거 2건 이상 + 장기체류비는 별도 확인"
+      },
+      "culture_arts": {
+        "ready": false,
+        "category_counts": {
+          "benefit": 1
+        },
+        "reason": "상설 문화기반 1건 + 현재 월간 프로그램 1건"
+      },
+      "benefits": {
+        "ready": false,
+        "category_counts": {
+          "benefit": 1
+        },
+        "reason": "현재 사용 가능한 공식 혜택 2건 이상"
+      },
+      "nomad_work": {
+        "ready": false,
+        "category_counts": {
+          "benefit": 1
+        },
+        "reason": "공공/공식 작업공간·와이파이·장시간 체류 근거 3건 이상"
+      },
+      "pet_friendly": {
+        "ready": false,
+        "category_counts": {
+          "benefit": 1
+        },
+        "reason": "반려견 생활근거 3건 이상 전 미개방"
+      }
+    },
+    "영천": {
+      "price_value": {
+        "ready": true,
+        "category_counts": {
+          "benefit": 2
+        },
+        "reason": "활성화 가능"
+      },
+      "culture_arts": {
+        "ready": false,
+        "category_counts": {
+          "benefit": 2
+        },
+        "reason": "상설 문화기반 1건 + 현재 월간 프로그램 1건"
+      },
+      "benefits": {
+        "ready": true,
+        "category_counts": {
+          "benefit": 2
+        },
+        "reason": "활성화 가능"
+      },
+      "nomad_work": {
+        "ready": false,
+        "category_counts": {
+          "benefit": 2
+        },
+        "reason": "공공/공식 작업공간·와이파이·장시간 체류 근거 3건 이상"
+      },
+      "pet_friendly": {
+        "ready": false,
+        "category_counts": {
+          "benefit": 2
+        },
+        "reason": "반려견 생활근거 3건 이상 전 미개방"
+      }
+    },
+    "서천": {
+      "price_value": {
+        "ready": false,
+        "category_counts": {
+          "transport": 1,
+          "benefit": 1
+        },
+        "reason": "현재 혜택 공식 근거 2건 이상 + 장기체류비는 별도 확인"
+      },
+      "culture_arts": {
+        "ready": false,
+        "category_counts": {
+          "transport": 1,
+          "benefit": 1
+        },
+        "reason": "상설 문화기반 1건 + 현재 월간 프로그램 1건"
+      },
+      "benefits": {
+        "ready": false,
+        "category_counts": {
+          "transport": 1,
+          "benefit": 1
+        },
+        "reason": "현재 사용 가능한 공식 혜택 2건 이상"
+      },
+      "nomad_work": {
+        "ready": false,
+        "category_counts": {
+          "transport": 1,
+          "benefit": 1
+        },
+        "reason": "공공/공식 작업공간·와이파이·장시간 체류 근거 3건 이상"
+      },
+      "pet_friendly": {
+        "ready": false,
+        "category_counts": {
+          "transport": 1,
+          "benefit": 1
+        },
+        "reason": "반려견 생활근거 3건 이상 전 미개방"
+      }
+    }
+  }
+}

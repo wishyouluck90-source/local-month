@@ -1,0 +1,25 @@
+{
+  "name": "LOCAL MONTH — 한달살기 Research OS",
+  "short_name": "LOCAL MONTH",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f4efe6",
+  "theme_color": "#f4efe6",
+  "description": "인구감소지역 한달살기 Total Search & Research OS",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "scope": "./",
+  "lang": "ko"
+}

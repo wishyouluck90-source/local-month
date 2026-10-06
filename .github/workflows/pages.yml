@@ -1,0 +1,70 @@
+name: Deploy LOCAL MONTH to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Validate JavaScript
+        run: node --check app.js
+      - name: Validate data
+        run: python3 scripts/check_data.py
+
+  deploy:
+    needs: validate
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  smoke:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for CDN
+        run: sleep 20
+      - name: Check public site
+        env:
+          SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+        run: |
+          set -e
+          echo "Checking $SITE_URL"
+          curl --fail --location --retry 12 --retry-delay 10 "$SITE_URL" -o /tmp/index.html
+          curl --fail --location --retry 12 --retry-delay 10 "${SITE_URL}app.js" -o /tmp/app.js
+          curl --fail --location --retry 12 --retry-delay 10 "${SITE_URL}data/all_regions_89.json" -o /tmp/regions.json
+          grep -q "LOCAL MONTH" /tmp/index.html
+          python3 - <<'PY'
+          import json
+          d=json.load(open('/tmp/regions.json'))
+          assert len(d)==89, len(d)
+          print("PASS: public site + app.js + 89 regions")
+          PY

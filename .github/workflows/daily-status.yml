@@ -1,0 +1,39 @@
+name: Update LOCAL MONTH daily states
+
+on:
+  schedule:
+    - cron: "10 0 * * *"   # 09:10 KST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Recompute daily snapshot and diff
+        run: python3 scripts/run_daily_pipeline.py
+
+      - name: Validate data
+        run: python3 scripts/check_data.py
+
+      - name: Commit state changes
+        run: |
+          if git diff --quiet -- data/; then
+            echo "No daily state changes"
+            exit 0
+          fi
+          git config user.name "local-month-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/
+          git commit -m "chore: refresh daily LOCAL MONTH states"
+          git push

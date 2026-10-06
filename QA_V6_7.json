@@ -1,0 +1,8 @@
+{
+  "release": "v6.7",
+  "daily_github_action": true,
+  "schedule": "09:10 KST",
+  "paid_api_dependencies": 0,
+  "js": true,
+  "pipeline": true
+}

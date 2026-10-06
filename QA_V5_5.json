@@ -1,0 +1,65 @@
+{
+  "evidence_records": 27,
+  "gate_ready": {
+    "price_value": [
+      "하동"
+    ],
+    "culture_arts": [
+      "안동",
+      "영월"
+    ],
+    "benefits": [
+      "하동"
+    ],
+    "nomad_work": [],
+    "pet_friendly": []
+  },
+  "strength_top5": [
+    {
+      "region": "안동",
+      "score": 99,
+      "official_records": 4,
+      "Aplus": 4,
+      "A": 0,
+      "category_breadth": 3,
+      "last_verified": "2026-10-05"
+    },
+    {
+      "region": "영월",
+      "score": 99,
+      "official_records": 4,
+      "Aplus": 4,
+      "A": 0,
+      "category_breadth": 3,
+      "last_verified": "2026-10-05"
+    },
+    {
+      "region": "하동",
+      "score": 61,
+      "official_records": 3,
+      "Aplus": 0,
+      "A": 3,
+      "category_breadth": 2,
+      "last_verified": "2026-10-05"
+    },
+    {
+      "region": "함양",
+      "score": 61,
+      "official_records": 2,
+      "Aplus": 2,
+      "A": 0,
+      "category_breadth": 2,
+      "last_verified": "2026-10-05"
+    },
+    {
+      "region": "화천",
+      "score": 61,
+      "official_records": 2,
+      "Aplus": 2,
+      "A": 0,
+      "category_breadth": 2,
+      "last_verified": "2026-10-05"
+    }
+  ],
+  "js": true
+}

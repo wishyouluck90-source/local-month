@@ -1,0 +1,25 @@
+{
+  "release": "v6.9",
+  "product": "LOCAL MONTH",
+  "status": "operational static PWA",
+  "core": {
+    "regions": 89,
+    "beta_regions": 15
+  },
+  "features": [
+    "explainable recommendation",
+    "evidence registry",
+    "activation gates",
+    "price matrix",
+    "action windows",
+    "daily diff",
+    "diff notifications",
+    "Hadong fieldbook",
+    "pre-trip checklist",
+    "backup/restore",
+    "offline PWA",
+    "system health"
+  ],
+  "paid_api_dependencies": 0,
+  "public_deploy": "pending external repository creation"
+}

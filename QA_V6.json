@@ -1,0 +1,92 @@
+{
+  "release": "v6.0",
+  "evidence_records": 56,
+  "gate_ready": {
+    "price_value": [
+      "하동",
+      "산청",
+      "안동",
+      "화천",
+      "영천"
+    ],
+    "culture_arts": [
+      "밀양",
+      "안동",
+      "영월"
+    ],
+    "benefits": [
+      "하동",
+      "산청",
+      "안동",
+      "화천",
+      "영천"
+    ],
+    "nomad_work": [
+      "태안",
+      "보은"
+    ],
+    "pet_friendly": [
+      "밀양",
+      "태안"
+    ]
+  },
+  "current_benefit_status": {
+    "영천": "신청접수중",
+    "산청": "신청접수중",
+    "화천": "신청접수중",
+    "안동": "준비중 · 10/12 10시 예정",
+    "태안": "준비중",
+    "서천": "준비중 · 10/26 10시 예정",
+    "고성": "준비중",
+    "함양": "준비중",
+    "하동": "마감"
+  },
+  "strength_top5": [
+    {
+      "region": "밀양",
+      "score": 100,
+      "official_records": 8,
+      "Aplus": 7,
+      "A": 1,
+      "category_breadth": 4,
+      "last_verified": "2026-10-05"
+    },
+    {
+      "region": "하동",
+      "score": 100,
+      "official_records": 6,
+      "Aplus": 0,
+      "A": 6,
+      "category_breadth": 4,
+      "last_verified": "2026-10-05"
+    },
+    {
+      "region": "태안",
+      "score": 99,
+      "official_records": 10,
+      "Aplus": 9,
+      "A": 1,
+      "category_breadth": 3,
+      "last_verified": "2026-10-05"
+    },
+    {
+      "region": "안동",
+      "score": 99,
+      "official_records": 5,
+      "Aplus": 4,
+      "A": 1,
+      "category_breadth": 3,
+      "last_verified": "2026-10-05"
+    },
+    {
+      "region": "함양",
+      "score": 99,
+      "official_records": 5,
+      "Aplus": 5,
+      "A": 0,
+      "category_breadth": 3,
+      "last_verified": "2026-10-05"
+    }
+  ],
+  "js": true
+}

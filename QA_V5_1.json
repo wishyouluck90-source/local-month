@@ -1,0 +1,25 @@
+{
+  "js": {
+    "ok": true,
+    "stdout": "",
+    "stderr": ""
+  },
+  "data": {
+    "ok": true,
+    "stdout": "{\"ok\": true, \"regions89\": 89, \"beta\": 15, \"events\": 8, \"benefits\": 9}",
+    "stderr": "ifact_tool/rpc/remote.py\", line 749, in __call__\n  File \"/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/client.py\", line 150, in call\nartifact_tool.rpc.client.RemoteError: hydrateCrdtFromProto requires an empty collaborative document.\n"
+  },
+  "evidence": {
+    "records": 8,
+    "regions": [
+      "밀양",
+      "보은",
+      "산청",
+      "안동",
+      "영동",
+      "옥천",
+      "하동"
+    ],
+    "official_records": 8
+  }
+}

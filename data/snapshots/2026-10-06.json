@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-06",
+  "items": [
+    {
+      "id": "hadong-tourism-card",
+      "region": "하동",
+      "category": "혜택",
+      "status": "active",
+      "title": "디지털 관광주민증 혜택 확인",
+      "value": "가맹점 혜택 3건 이상 확인",
+      "confidence": "높음"
+    },
+    {
+      "id": "andong-half-price",
+      "region": "안동",
+      "category": "혜택",
+      "status": "upcoming",
+      "title": "반값여행 2차",
+      "value": "10/12 10:00 접수",
+      "confidence": "높음"
+    },
+    {
+      "id": "taean-half-price",
+      "region": "태안",
+      "category": "혜택",
+      "status": "upcoming",
+      "title": "반값여행 3차",
+      "value": "11/2 10:00 접수",
+      "confidence": "높음"
+    },
+    {
+      "id": "sancheong-herb-festival",
+      "region": "산청",
+      "category": "이번달",
+      "status": "active",
+      "title": "산청한방약초축제",
+      "value": "10/2~10/11",
+      "confidence": "높음"
+    },
+    {
+      "id": "miryang-autumn",
+      "region": "밀양",
+      "category": "이번달",
+      "status": "active",
+      "title": "가을 체험·교육 프로그램",
+      "value": "10월 운영",
+      "confidence": "높음"
+    },
+    {
+      "id": "oby-coupons",
+      "region": "보은·옥천·영동",
+      "category": "혜택",
+      "status": "active",
+      "title": "옥보영 혜택",
+      "value": "지역별 최대 9만원",
+      "confidence": "높음"
+    },
+    {
+      "id": "hamyang-hanok",
+      "region": "함양",
+      "category": "체류",
+      "status": "upcoming",
+      "title": "살아보다, 한옥",
+      "value": "한옥스테이 로컬체류 프로그램",
+      "confidence": "높음"
+    }
+  ]
+}

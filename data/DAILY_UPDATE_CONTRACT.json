@@ -1,0 +1,22 @@
+{
+  "DailySnapshot": {
+    "date": "YYYY-MM-DD",
+    "items": [
+      {
+        "id": "stable unique id",
+        "region": "string",
+        "category": "혜택|행사|문화|클래스|숙소|주거|노마드|반려견|일자리|교통|생활편의|평판",
+        "status": "active|upcoming|closed|changed|unknown",
+        "title": "string",
+        "value": "string",
+        "start_date": "YYYY-MM-DD|null",
+        "end_date": "YYYY-MM-DD|null",
+        "source_url": "string|null",
+        "source_tier": "A+|A|B|C",
+        "confidence": "높음|보통|낮음|미확인",
+        "verified_at": "ISO8601"
+      }
+    ]
+  },
+  "rule": "동일 id의 필드 변화는 changed, 신규 id는 new, 이전에 있고 현재 없으면 removed_or_ended"
+}

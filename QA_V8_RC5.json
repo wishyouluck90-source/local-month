@@ -1,0 +1,7 @@
+{
+  "release": "8.0.0-rc5",
+  "css_errors": 0,
+  "js": true,
+  "data": true,
+  "deploy": true
+}

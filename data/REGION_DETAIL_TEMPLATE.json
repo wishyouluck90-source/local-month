@@ -1,0 +1,58 @@
+{
+  "region": {
+    "id": "kr-province-region",
+    "name": "지역명",
+    "province": "시도",
+    "is_population_decline_region": true,
+    "summary": "",
+    "hero_tags": [],
+    "data_confidence": "미확인",
+    "last_updated": null
+  },
+  "decision_layer": {
+    "overall_score": null,
+    "estimated_monthly_cost": null,
+    "confirmed_benefit_value": null,
+    "active_month_events": 0,
+    "class_count": 0,
+    "top_strengths": []
+  },
+  "scores": {
+    "price_value": null,
+    "culture_arts": null,
+    "classes_learning": null,
+    "benefits": null,
+    "nomad_work": null,
+    "nature": null,
+    "pet_friendly": null,
+    "daily_convenience": null,
+    "monthly_fun": null,
+    "community": null,
+    "settlement": null,
+    "work_opportunity": null,
+    "tourism_effort": null
+  },
+  "sections": {
+    "why_region": [],
+    "local_now": [],
+    "benefits": [],
+    "accommodations": [],
+    "monthly_cost": {},
+    "work_places": [],
+    "culture": [],
+    "classes": [],
+    "nature": [],
+    "pet": [],
+    "convenience": [],
+    "community": [],
+    "work_opportunities": [],
+    "housing": [],
+    "review_research": [],
+    "sources": []
+  },
+  "scoring_gate": {
+    "ready_categories": [],
+    "blocked_categories": [],
+    "rule": "근거가 부족한 점수는 null"
+  }
+}

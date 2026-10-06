@@ -1,0 +1,9 @@
+{
+  "release": "8.0.0-rc4",
+  "css_parse_errors": [],
+  "css_balanced": true,
+  "js": true,
+  "data": true,
+  "deploy_shell": true,
+  "hero_controlled_lines": true
+}

@@ -1,0 +1,8 @@
+{
+  "release": "v6.4",
+  "uncertainty_penalty": true,
+  "hadong_pet_gate": false,
+  "hadong_pet_confirmed": 1,
+  "js": true,
+  "js_stderr": ""
+}

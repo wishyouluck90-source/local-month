@@ -1,0 +1,29 @@
+{
+  "javascript": {
+    "ok": true,
+    "stderr": ""
+  },
+  "mobile_audit": {
+    "ok": true,
+    "checks": {
+      "viewport": true,
+      "apple_mobile_capable": true,
+      "apple_touch_icon": true,
+      "safe_area": true,
+      "touch_target_44": true,
+      "input_16px": true,
+      "horizontal_overflow_guard": true,
+      "manifest_standalone": true,
+      "manifest_icons": true,
+      "offline_page": true,
+      "service_worker": true
+    }
+  },
+  "release": "v7.0-mobile-ready",
+  "target_widths_px": [
+    320,
+    390,
+    430
+  ],
+  "device_testing_note": "실기기 Safari 확인은 공개 URL 또는 로컬 네트워크 접속 후 1회 필요"
+}

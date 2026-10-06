@@ -1,0 +1,7 @@
+{
+  "release": "v7.8",
+  "deploy_shell": true,
+  "js": true,
+  "vercel_config": true,
+  "github_repo_required": false
+}

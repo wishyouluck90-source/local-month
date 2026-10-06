@@ -1,0 +1,20 @@
+{
+  "js": {
+    "ok": true,
+    "stdout": "",
+    "stderr": ""
+  },
+  "data": {
+    "ok": true,
+    "stdout": "{\"ok\": true, \"regions89\": 89, \"beta\": 15, \"events\": 8, \"benefits\": 9}",
+    "stderr": "e \"/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/remote.py\", line 749, in __call__\n  File \"/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/client.py\", line 150, in call\nartifact_tool.rpc.client.RemoteError: hydrateCrdtFromProto requires an empty collaborative document.\n"
+  },
+  "v5_features": {
+    "explainable_recommendation": true,
+    "freshness_metadata": true,
+    "preference_storage": true,
+    "plan_save": true,
+    "ics_export": true,
+    "json_export": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "release": "v6.6",
+  "pipeline_script": true,
+  "pipeline_run_ok": true,
+  "js": true,
+  "js_stderr": "",
+  "diff_counts": {
+    "new": 71,
+    "changed": 0,
+    "removed": 0
+  }
+}

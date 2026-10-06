@@ -1,0 +1,9 @@
+{
+  "release": "8.1.0",
+  "status": "operational-product",
+  "css_errors": 0,
+  "js": true,
+  "data": true,
+  "deploy": true,
+  "maturity_gates": true
+}

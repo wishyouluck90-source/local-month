@@ -1,0 +1,7 @@
+{
+  "release": "v7.7",
+  "js": true,
+  "promote_shell": true,
+  "tag_shell": true,
+  "promotion_fixture_pass": true
+}

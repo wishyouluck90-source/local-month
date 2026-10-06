@@ -1,0 +1,26 @@
+{
+  "js": {
+    "ok": true,
+    "stdout": ""
+  },
+  "data": {
+    "ok": true,
+    "stdout": "{\"ok\": true, \"regions89\": 89, \"beta\": 15, \"events\": 8, \"benefits\": 9}"
+  },
+  "evidence_records": 14,
+  "evidence_regions": [
+    "고성",
+    "밀양",
+    "보은",
+    "산청",
+    "서천",
+    "안동",
+    "영동",
+    "영천",
+    "옥천",
+    "태안",
+    "하동",
+    "화천"
+  ],
+  "deadlines": 4
+}

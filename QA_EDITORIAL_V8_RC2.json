@@ -1,0 +1,9 @@
+{
+  "release": "8.0.0-rc2",
+  "js": true,
+  "data": true,
+  "cache_busted_css": true,
+  "cache_busted_js": true,
+  "old_sw_cleanup": true,
+  "update_script_syntax": true
+}

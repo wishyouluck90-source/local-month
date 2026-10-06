@@ -1,0 +1,7 @@
+{
+  "release": "v7.5",
+  "publish_script_syntax": true,
+  "js": true,
+  "workflow_present": true,
+  "feature_freeze": true
+}

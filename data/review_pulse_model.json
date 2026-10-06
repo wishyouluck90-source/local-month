@@ -1,0 +1,21 @@
+{
+  "version": "1.0",
+  "principle": "공개 웹 평판은 요약+출처 링크. 로그인 우회·보호 플랫폼 크롤링·리뷰 원문 대량복제 금지.",
+  "sources": [
+    "official",
+    "public_review_page",
+    "user_field_note",
+    "owner_response"
+  ],
+  "display_fields": [
+    "source",
+    "sentiment_summary",
+    "recurring_pros",
+    "recurring_cons",
+    "review_window",
+    "sample_size_if_public",
+    "last_checked",
+    "source_link"
+  ],
+  "confidence_rule": "표본/출처 불명확 시 참고 신호. 사실 데이터와 의견 분리."
+}

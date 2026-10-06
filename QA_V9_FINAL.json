@@ -1,0 +1,8 @@
+{
+  "release": "9.0.0",
+  "css_errors": 0,
+  "js": true,
+  "data": true,
+  "deploy": true,
+  "done_gates": true
+}

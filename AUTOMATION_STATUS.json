@@ -1,0 +1,24 @@
+{
+  "name": "LOCAL MONTH daily state refresh",
+  "schedule": "09:10 KST daily",
+  "cost": "0원 (GitHub Actions free allowance 범위)",
+  "inputs": [
+    "data/evidence_registry.json",
+    "data/action_windows.json"
+  ],
+  "outputs": [
+    "data/snapshots/YYYY-MM-DD.json",
+    "data/diff_latest.json"
+  ],
+  "does_not_do": [
+    "새 웹 리서치",
+    "외부 AI 호출",
+    "숙소 실시간 가격 수집",
+    "플랫폼 크롤링"
+  ],
+  "safety": [
+    "data 폴더 외 파일을 자동 변경하지 않음",
+    "변경 없으면 commit 없음",
+    "비밀키 불필요"
+  ]
+}

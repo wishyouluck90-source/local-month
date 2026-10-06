@@ -1,0 +1,75 @@
+{
+  "release": "v5.8",
+  "evidence_records": 43,
+  "gate_ready": {
+    "price_value": [
+      "하동"
+    ],
+    "culture_arts": [
+      "안동",
+      "영월"
+    ],
+    "benefits": [
+      "하동"
+    ],
+    "nomad_work": [
+      "태안",
+      "보은"
+    ],
+    "pet_friendly": [
+      "밀양",
+      "태안"
+    ]
+  },
+  "negative_pet_constraints": [
+    "영동"
+  ],
+  "strength_top5": [
+    {
+      "region": "태안",
+      "score": 99,
+      "official_records": 10,
+      "Aplus": 9,
+      "A": 1,
+      "category_breadth": 3,
+      "last_verified": "2026-10-05"
+    },
+    {
+      "region": "밀양",
+      "score": 99,
+      "official_records": 6,
+      "Aplus": 5,
+      "A": 1,
+      "category_breadth": 3,
+      "last_verified": "2026-10-05"
+    },
+    {
+      "region": "안동",
+      "score": 99,
+      "official_records": 4,
+      "Aplus": 4,
+      "A": 0,
+      "category_breadth": 3,
+      "last_verified": "2026-10-05"
+    },
+    {
+      "region": "영월",
+      "score": 99,
+      "official_records": 4,
+      "Aplus": 4,
+      "A": 0,
+      "category_breadth": 3,
+      "last_verified": "2026-10-05"
+    },
+    {
+      "region": "보은",
+      "score": 86,
+      "official_records": 4,
+      "Aplus": 3,
+      "A": 1,
+      "category_breadth": 2,
+      "last_verified": "2026-10-05"
+    }
+  ],
+  "js": true
+}

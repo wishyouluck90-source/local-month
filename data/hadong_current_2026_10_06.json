@@ -1,0 +1,23 @@
+{
+  "region": "하동",
+  "verified_at": "2026-10-06",
+  "month_living_program": {
+    "name": "2026 하동에서 한 달 여행하기 2차",
+    "application_status": "모집종료",
+    "stay_window": "2026-10-01~2026-11-20",
+    "stay_length": "3~29박",
+    "lodging_support": "팀당 1일 최대 100,000원",
+    "experience_support": "1인 최대 100,000원(체류기간 기준)",
+    "insurance_support": "1인 20,000원 이내 실비",
+    "settlement": "여행 종료 후 증빙 제출·사후정산",
+    "duplicate_rule": "2026 하동반값여행 및 기타 하동군 관광 보조금과 중복 불가",
+    "status_note": "선정자의 체류·정산 관리 단계"
+  },
+  "culture_now": {
+    "title": "2026 토지문학제",
+    "period": "2026-10-06~2026-10-11",
+    "place": "악양면 평사리 박경리문학관·최참판댁",
+    "theme": "박경리 탄생 100주년 · 『토지』는 미래다",
+    "priority": "NOW 최상단"
+  }
+}

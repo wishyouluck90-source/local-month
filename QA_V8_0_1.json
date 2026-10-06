@@ -1,0 +1,8 @@
+{
+  "release": "8.0.1",
+  "event_present": true,
+  "daily_update_present": true,
+  "js": true,
+  "data": true,
+  "deploy": true
+}

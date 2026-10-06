@@ -1,0 +1,63 @@
+{
+  "js": true,
+  "data": true,
+  "strength_top5": [
+    {
+      "region": "하동",
+      "score": 61,
+      "official_records": 3,
+      "Aplus": 0,
+      "A": 3,
+      "category_breadth": 2,
+      "active_records": 3,
+      "last_verified": "2026-10-05"
+    },
+    {
+      "region": "영월",
+      "score": 61,
+      "official_records": 2,
+      "Aplus": 2,
+      "A": 0,
+      "category_breadth": 2,
+      "active_records": 2,
+      "last_verified": "2026-10-05"
+    },
+    {
+      "region": "함양",
+      "score": 61,
+      "official_records": 2,
+      "Aplus": 2,
+      "A": 0,
+      "category_breadth": 2,
+      "active_records": 0,
+      "last_verified": "2026-10-05"
+    },
+    {
+      "region": "화천",
+      "score": 61,
+      "official_records": 2,
+      "Aplus": 2,
+      "A": 0,
+      "category_breadth": 2,
+      "active_records": 2,
+      "last_verified": "2026-10-05"
+    },
+    {
+      "region": "단양",
+      "score": 51,
+      "official_records": 2,
+      "Aplus": 0,
+      "A": 2,
+      "category_breadth": 2,
+      "active_records": 2,
+      "last_verified": "2026-10-05"
+    }
+  ],
+  "gate_ready_counts": {
+    "price_value": 4,
+    "culture_arts": 0,
+    "benefits": 4,
+    "nomad_work": 0,
+    "pet_friendly": 0
+  }
+}

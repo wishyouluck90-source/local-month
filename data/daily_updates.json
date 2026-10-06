@@ -1,0 +1,89 @@
+[
+  {
+    "date": "2026-10-06",
+    "new": [
+      {
+        "region": "하동",
+        "category": "문화·예술",
+        "title": "2026 토지문학제 오늘 개막",
+        "summary": "10월 6~11일, 악양면 평사리 박경리문학관·최참판댁 일원. 박경리 탄생 100주년 기념.",
+        "status": "진행중",
+        "webapp_location": "NOW > 이번 달 / PLACES > 하동 > CULTURE",
+        "verified": true
+      },
+      {
+        "region": "하동",
+        "category": "한달살기 지원",
+        "title": "2026 하동에서 한 달 여행하기 2차 체류기간 진행중",
+        "summary": "10월 1~11월 20일 중 3~29박. 숙박비 팀당 1일 최대 10만원, 체험비 1인 최대 10만원, 보험료 1인 2만원 이내. 모집은 종료.",
+        "status": "체류기간 진행중 · 모집종료",
+        "webapp_location": "MY MONTH > 지원·정산 / PLACES > 하동 > BENEFITS",
+        "verified": true
+      },
+      {
+        "region": "남해",
+        "category": "문화·축제",
+        "title": "제14회 독일마을 맥주축제",
+        "summary": "10월 9~11일. 남해 독일마을에서 공연·퍼레이드·체험 운영.",
+        "status": "예정",
+        "webapp_location": "NOW / PLACES > 남해",
+        "verified": true
+      },
+      {
+        "region": "남해",
+        "category": "걷기·문화",
+        "title": "10월 남해바래길 작은 소풍",
+        "summary": "10월 17일, 본선 14코스 이순신호국길 정기걷기.",
+        "status": "모집/행사 확인",
+        "webapp_location": "NOW / PLACES > 남해",
+        "verified": true
+      },
+      {
+        "region": "남해",
+        "category": "문화",
+        "title": "남해대교 웰컴센터 책·영화 프로그램",
+        "summary": "10월 17일 야외 싱어롱 시네마. 책과 영화 결합 문화 프로그램.",
+        "status": "예정",
+        "webapp_location": "NOW / PLACES > 남해",
+        "verified": true
+      }
+    ],
+    "changed": [],
+    "expiring": [
+      {
+        "region": "하동",
+        "title": "2026 토지문학제",
+        "deadline": "2026-10-11",
+        "note": "행사 종료일까지 NOW 상단 고정 추천"
+      }
+    ],
+    "needs_confirmation": [
+      {
+        "region": "하동",
+        "title": "한 달 여행하기 선정자별 실제 지원 승인액",
+        "note": "개별 선정 결과·증빙 인정 범위는 개인 통지/공고 기준 확인"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-05",
+    "new": [
+      "하동 관광주민증 혜택",
+      "안동 반값여행",
+      "태안 반값여행",
+      "산청 축제",
+      "밀양 프로그램",
+      "옥보영 혜택",
+      "함양 로컬체류"
+    ],
+    "changed": [],
+    "expiring": [
+      "산청한방약초축제 10/11 종료"
+    ],
+    "needs_confirmation": [
+      "하동 10월 클래스",
+      "함양 반값여행 현재 접수",
+      "장흥 반값여행 현재 접수"
+    ]
+  }
+]

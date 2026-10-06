@@ -1,0 +1,9 @@
+{
+  "release": "v6.3",
+  "hadong_nomad_gate": true,
+  "hadong_pet_gate": false,
+  "action_windows": 8,
+  "evidence_records": 63,
+  "js": true,
+  "js_stderr": ""
+}

@@ -1,0 +1,137 @@
+[
+  {
+    "region": "밀양",
+    "score": 100,
+    "official_records": 8,
+    "Aplus": 7,
+    "A": 1,
+    "category_breadth": 4,
+    "last_verified": "2026-10-05"
+  },
+  {
+    "region": "하동",
+    "score": 100,
+    "official_records": 6,
+    "Aplus": 0,
+    "A": 6,
+    "category_breadth": 4,
+    "last_verified": "2026-10-05"
+  },
+  {
+    "region": "태안",
+    "score": 99,
+    "official_records": 10,
+    "Aplus": 9,
+    "A": 1,
+    "category_breadth": 3,
+    "last_verified": "2026-10-05"
+  },
+  {
+    "region": "안동",
+    "score": 99,
+    "official_records": 5,
+    "Aplus": 4,
+    "A": 1,
+    "category_breadth": 3,
+    "last_verified": "2026-10-05"
+  },
+  {
+    "region": "함양",
+    "score": 99,
+    "official_records": 5,
+    "Aplus": 5,
+    "A": 0,
+    "category_breadth": 3,
+    "last_verified": "2026-10-05"
+  },
+  {
+    "region": "영월",
+    "score": 99,
+    "official_records": 4,
+    "Aplus": 4,
+    "A": 0,
+    "category_breadth": 3,
+    "last_verified": "2026-10-05"
+  },
+  {
+    "region": "보은",
+    "score": 86,
+    "official_records": 4,
+    "Aplus": 3,
+    "A": 1,
+    "category_breadth": 2,
+    "last_verified": "2026-10-05"
+  },
+  {
+    "region": "화천",
+    "score": 71,
+    "official_records": 3,
+    "Aplus": 2,
+    "A": 1,
+    "category_breadth": 2,
+    "last_verified": "2026-10-05"
+  },
+  {
+    "region": "산청",
+    "score": 61,
+    "official_records": 3,
+    "Aplus": 0,
+    "A": 3,
+    "category_breadth": 2,
+    "last_verified": "2026-10-05"
+  },
+  {
+    "region": "서천",
+    "score": 56,
+    "official_records": 2,
+    "Aplus": 1,
+    "A": 1,
+    "category_breadth": 2,
+    "last_verified": "2026-10-05"
+  },
+  {
+    "region": "영동",
+    "score": 56,
+    "official_records": 2,
+    "Aplus": 1,
+    "A": 1,
+    "category_breadth": 2,
+    "last_verified": "2026-10-05"
+  },
+  {
+    "region": "단양",
+    "score": 51,
+    "official_records": 2,
+    "Aplus": 0,
+    "A": 2,
+    "category_breadth": 2,
+    "last_verified": "2026-10-05"
+  },
+  {
+    "region": "영천",
+    "score": 48,
+    "official_records": 2,
+    "Aplus": 1,
+    "A": 1,
+    "category_breadth": 1,
+    "last_verified": "2026-10-05"
+  },
+  {
+    "region": "고성",
+    "score": 38,
+    "official_records": 1,
+    "Aplus": 1,
+    "A": 0,
+    "category_breadth": 1,
+    "last_verified": "2026-10-05"
+  },
+  {
+    "region": "옥천",
+    "score": 33,
+    "official_records": 1,
+    "Aplus": 0,
+    "A": 1,
+    "category_breadth": 1,
+    "last_verified": "2026-10-05"
+  }
+]

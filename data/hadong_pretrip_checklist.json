@@ -1,0 +1,67 @@
+{
+  "region": "하동",
+  "target_start": "2026-10-20",
+  "target_end": "2026-11-18",
+  "items": [
+    {
+      "id": "lodging",
+      "label": "등록 숙박업소 확정",
+      "status": "todo",
+      "critical": true
+    },
+    {
+      "id": "pet-policy",
+      "label": "숙소 반려견 6kg 동반조건 서면/메시지 확인",
+      "status": "todo",
+      "critical": true
+    },
+    {
+      "id": "support-evidence",
+      "label": "한달살기 지원금 증빙요건 재확인",
+      "status": "todo",
+      "critical": true
+    },
+    {
+      "id": "insurance",
+      "label": "여행자보험 가입/지원 가능여부 확인",
+      "status": "todo",
+      "critical": false
+    },
+    {
+      "id": "workspace",
+      "label": "하동도서관 업무 루틴 후보 등록",
+      "status": "ready",
+      "critical": false
+    },
+    {
+      "id": "pet-cafe",
+      "label": "카페 매너리 방문 전 반려견 정책 전화 재확인",
+      "status": "todo",
+      "critical": false
+    },
+    {
+      "id": "vet",
+      "label": "근거리 동물병원 후보 1곳 이상 확보",
+      "status": "todo",
+      "critical": true
+    },
+    {
+      "id": "culture",
+      "label": "10/20~11/18 문화·차·책 일정 수집",
+      "status": "partial",
+      "critical": false
+    },
+    {
+      "id": "housing",
+      "label": "월세/빈집/매매 후보 3곳 저장",
+      "status": "todo",
+      "critical": false
+    },
+    {
+      "id": "work",
+      "label": "평생학습·문화기관·영어/책 관련 기회 방문목록",
+      "status": "partial",
+      "critical": false
+    }
+  ]
+}

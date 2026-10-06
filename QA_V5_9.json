@@ -1,0 +1,83 @@
+{
+  "release": "v5.9",
+  "evidence_records": 48,
+  "gate_ready": {
+    "price_value": [
+      "하동"
+    ],
+    "culture_arts": [
+      "밀양",
+      "안동",
+      "영월"
+    ],
+    "benefits": [
+      "하동"
+    ],
+    "nomad_work": [
+      "태안",
+      "보은"
+    ],
+    "pet_friendly": [
+      "밀양",
+      "태안"
+    ]
+  },
+  "settlement_signals": [
+    {
+      "region": "함양",
+      "count": 1,
+      "claims": [
+        "청년 공공임대주택 건립사업 ‘워커인 함양 프로젝트’ 추진을 위해 2026년 사업대상지 용도지역 변경안이 군의회에서 찬성 채택됨"
+      ],
+      "confidence": "높음"
+    }
+  ],
+  "strength_top5": [
+    {
+      "region": "밀양",
+      "score": 100,
+      "official_records": 8,
+      "Aplus": 7,
+      "A": 1,
+      "category_breadth": 4,
+      "last_verified": "2026-10-05"
+    },
+    {
+      "region": "태안",
+      "score": 99,
+      "official_records": 10,
+      "Aplus": 9,
+      "A": 1,
+      "category_breadth": 3,
+      "last_verified": "2026-10-05"
+    },
+    {
+      "region": "함양",
+      "score": 99,
+      "official_records": 5,
+      "Aplus": 5,
+      "A": 0,
+      "category_breadth": 3,
+      "last_verified": "2026-10-05"
+    },
+    {
+      "region": "안동",
+      "score": 99,
+      "official_records": 4,
+      "Aplus": 4,
+      "A": 0,
+      "category_breadth": 3,
+      "last_verified": "2026-10-05"
+    },
+    {
+      "region": "영월",
+      "score": 99,
+      "official_records": 4,
+      "Aplus": 4,
+      "A": 0,
+      "category_breadth": 3,
+      "last_verified": "2026-10-05"
+    }
+  ],
+  "js": true
+}

@@ -1,0 +1,20 @@
+{
+  "version": "9.0.0",
+  "definition_of_done": {
+    "public_product": true,
+    "editorial_design_system": true,
+    "five_core_navigation": true,
+    "89_regions_indexed": true,
+    "four_flagship_archetypes": true,
+    "living_population_layer": true,
+    "benefit_live_status": true,
+    "review_pulse_architecture": true,
+    "daily_update_pipeline": true,
+    "region_dossier_schema": true,
+    "evidence_policy": true,
+    "mobile_css": true,
+    "backup_restore": true,
+    "zero_paid_api": true
+  },
+  "next_phase": "real-user operations and evidence expansion"
+}

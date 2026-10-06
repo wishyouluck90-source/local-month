@@ -1,0 +1,43 @@
+{
+  "product": "LOCAL MONTH",
+  "release": "v4.3-runtime-verified",
+  "status": "ready_for_free_static_deploy",
+  "cost_mode": "ZERO-COST",
+  "core_complete": true,
+  "working_features": [
+    "89개 지역 색인/검색",
+    "15개 베타 상세",
+    "일수·테마 추천",
+    "지역 비교",
+    "월간 행사",
+    "혜택",
+    "Tourism Effort",
+    "리서치 인박스",
+    "로컬 커뮤니티",
+    "앱 내부 알림",
+    "내 한달살기",
+    "백업/복원",
+    "PWA",
+    "오프라인 fallback",
+    "일일 diff",
+    "무료 배포 설정"
+  ],
+  "development_labeled": [
+    "실시간 자동 웹검색",
+    "외부 AI 요약",
+    "서버 계정/동기화",
+    "실시간 댓글",
+    "푸시",
+    "실시간 숙소가격",
+    "최신 정밀 행정경계"
+  ],
+  "deployment_blocker": "새 전용 GitHub 저장소 생성/연결만 남음",
+  "paid_api_dependencies": 0,
+  "runtime_smoke_test": "PASS",
+  "ready_for_public_static_deploy": true,
+  "remaining_external_steps": [
+    "LOCAL MONTH 전용 신규 GitHub 저장소 생성",
+    "무료 정적 배포 연결",
+    "iPhone Safari 실기기 QA"
+  ]
+}

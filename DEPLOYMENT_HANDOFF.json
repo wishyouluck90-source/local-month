@@ -1,0 +1,15 @@
+{
+  "release": "v7.1-deploy-handoff",
+  "public_url_status": "pending user-side repo creation/auth",
+  "one_action_path": "PUBLISH_NOW_MAC.command",
+  "repository_default": "local-month",
+  "expected_pages_url": "https://<github-owner>.github.io/local-month/",
+  "cost": "0원",
+  "touches_existing_repositories": false,
+  "requires": [
+    "GitHub account",
+    "git",
+    "GitHub CLI gh"
+  ],
+  "post_deploy_check": "scripts/check_public_url.sh"
+}

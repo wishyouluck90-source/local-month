@@ -1,0 +1,12 @@
+{
+  "release": "v7.3",
+  "feature_freeze": true,
+  "js": true,
+  "checksums": {
+    "ok": true,
+    "output": "PASS 106 files"
+  },
+  "security_headers": true,
+  "install_guide": true,
+  "paid_api_dependencies": 0
+}

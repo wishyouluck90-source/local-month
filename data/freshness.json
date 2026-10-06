@@ -1,0 +1,92 @@
+{
+  "하동": {
+    "last_verified": "2026-10-05",
+    "confidence": "높음",
+    "evidence_count": 5,
+    "status": "fresh"
+  },
+  "밀양": {
+    "last_verified": "2026-10-05",
+    "confidence": "높음",
+    "evidence_count": 4,
+    "status": "fresh"
+  },
+  "산청": {
+    "last_verified": "2026-10-05",
+    "confidence": "높음",
+    "evidence_count": 4,
+    "status": "fresh"
+  },
+  "함양": {
+    "last_verified": "2026-10-05",
+    "confidence": "높음",
+    "evidence_count": 4,
+    "status": "fresh"
+  },
+  "안동": {
+    "last_verified": "2026-10-05",
+    "confidence": "높음",
+    "evidence_count": 4,
+    "status": "fresh"
+  },
+  "태안": {
+    "last_verified": "2026-10-05",
+    "confidence": "높음",
+    "evidence_count": 4,
+    "status": "fresh"
+  },
+  "화천": {
+    "last_verified": "2026-10-05",
+    "confidence": "높음",
+    "evidence_count": 4,
+    "status": "fresh"
+  },
+  "보은": {
+    "last_verified": "2026-10-05",
+    "confidence": "높음",
+    "evidence_count": 4,
+    "status": "fresh"
+  },
+  "옥천": {
+    "last_verified": "2026-10-05",
+    "confidence": "높음",
+    "evidence_count": 4,
+    "status": "fresh"
+  },
+  "영동": {
+    "last_verified": "2026-10-05",
+    "confidence": "높음",
+    "evidence_count": 4,
+    "status": "fresh"
+  },
+  "영월": {
+    "last_verified": "2026-10-05",
+    "confidence": "보통",
+    "evidence_count": 4,
+    "status": "review"
+  },
+  "단양": {
+    "last_verified": "2026-10-05",
+    "confidence": "보통",
+    "evidence_count": 4,
+    "status": "review"
+  },
+  "고성": {
+    "last_verified": "2026-10-05",
+    "confidence": "높음",
+    "evidence_count": 4,
+    "status": "fresh"
+  },
+  "영천": {
+    "last_verified": "2026-10-05",
+    "confidence": "높음",
+    "evidence_count": 4,
+    "status": "fresh"
+  },
+  "서천": {
+    "last_verified": "2026-10-05",
+    "confidence": "높음",
+    "evidence_count": 4,
+    "status": "fresh"
+  }
+}

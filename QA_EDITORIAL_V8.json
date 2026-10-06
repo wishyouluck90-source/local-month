@@ -1,0 +1,9 @@
+{
+  "js": true,
+  "data": true,
+  "editorial_visibility": true,
+  "pwa_cache_busted": true,
+  "version": "8.0.0-rc1",
+  "deploy_script_syntax": true,
+  "update_script_syntax": true
+}

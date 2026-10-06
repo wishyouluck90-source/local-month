@@ -1,0 +1,21 @@
+LOCAL MONTH — 공개 배포
+
+맥에서 이 폴더를 압축 해제한 뒤:
+
+1. `PUBLISH_NOW_MAC.command` 더블클릭
+2. GitHub 로그인 창이 뜨면 로그인
+3. 끝날 때 표시되는 Pages 주소를 iPhone Safari에서 열기
+
+스크립트가 하는 일:
+- 릴리스 검사
+- 전용 `local-month` 공개 저장소 생성
+- 파일 push
+- GitHub Pages workflow 설정
+- 공개 URL 안내
+
+비용: 0원
+기존 Oopslingo / TennisLand / Bibliotheca 저장소를 건드리지 않습니다.
+
+만약 `gh`가 없다고 나오면 Terminal에서:
+  brew install gh
+후 다시 실행하세요.

@@ -1,0 +1,28 @@
+{
+  "version": "9.1.0-ops",
+  "repository": "wishyouluck90-source/local-month",
+  "branch": "main",
+  "deployment_strategy": "Git push -> Vercel automatic deployment after Git project connection",
+  "daily_change_classes": [
+    "new",
+    "changed",
+    "ended_or_budget_exhausted",
+    "deadline_within_7_days",
+    "needs_recheck"
+  ],
+  "write_policy": {
+    "allowed": [
+      "data/*.json",
+      "verified source metadata",
+      "status/freshness corrections"
+    ],
+    "blocked": [
+      "invented facts",
+      "paid APIs",
+      "protected review scraping",
+      "unverified price claims"
+    ],
+    "large_ui_changes": "manual review required"
+  },
+  "rollback": "revert data commit and redeploy previous valid state"
+}

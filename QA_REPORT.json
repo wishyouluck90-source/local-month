@@ -1,0 +1,17 @@
+{
+  "version": "3.2",
+  "deploy_ready": {
+    "github_pages": true,
+    "vercel_hobby": true,
+    "netlify_static": true
+  },
+  "daily_diff": {
+    "script_exists": true,
+    "sample_diff_generated": true,
+    "script_exit_code": 0
+  },
+  "static_operation": true,
+  "paid_api_dependencies": 0,
+  "database_required": false,
+  "login_required": false
+}

@@ -1,0 +1,14 @@
+{
+  "release": "v7.8",
+  "preferred_deploy": "Vercel CLI direct deploy",
+  "team_slug": "wishyouluck90-3591s-projects",
+  "plan": "hobby",
+  "new_project_name": "local-month",
+  "existing_projects_protected": [
+    "tennisland-ai-os-free-pilot",
+    "tennisland-ai-os-full-pilot"
+  ],
+  "github_repo_required": false,
+  "user_action": "Run DEPLOY_VERCEL_MAC.command once",
+  "post_deploy": "iPhone ON-DEVICE QA 7/7 then PROMOTE_TO_V8.command"
+}

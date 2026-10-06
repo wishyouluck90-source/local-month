@@ -1,0 +1,27 @@
+{
+  "version": "9.0.0",
+  "status": "complete-product-baseline",
+  "design_system": "Editorial / Nomad / Cultural",
+  "core_navigation": [
+    "DISCOVER",
+    "PLACES",
+    "COMPARE",
+    "NOW",
+    "MY MONTH"
+  ],
+  "featured_region": "Hadong",
+  "regions_indexed": 89,
+  "paid_api_dependencies": 0,
+  "internal_ops_hidden_from_customer_ui": true,
+  "data_verified_at": "2026-10-06",
+  "data_patch": "Namhae dossier draft + October culture calendar",
+  "new_layer": "2026 Q1 official living population",
+  "flagship_dossiers": [
+    "하동",
+    "남해",
+    "구례",
+    "고흥"
+  ],
+  "review_pulse_model": "source-linked summaries; no protected-platform scraping",
+  "dossier_schema": "all 89 regions"
+}

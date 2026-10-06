@@ -1,0 +1,24 @@
+{
+  "release": "8.1.0",
+  "status": "operational-product",
+  "complete_definition": {
+    "product_shell": true,
+    "public_production": true,
+    "89_regions_indexed": true,
+    "daily_update_pipeline": true,
+    "evidence_policy": true,
+    "benefit_early_end_handling": true,
+    "living_population_layer": true,
+    "dossier_standard": true,
+    "field_dossier_template": true,
+    "zero_paid_api": true
+  },
+  "ongoing_not_blocking_release": [
+    "지역별 A등급 dossier 확대",
+    "현장 FIELD NOTE 축적",
+    "공개 리뷰의 합법적·출처표시 요약 확대",
+    "숙소 가격 최신화",
+    "반려견 근거 확대"
+  ],
+  "release_principle": "운영 데이터가 계속 변하는 것은 미완성이 아니라 제품의 정상 운영상태"
+}

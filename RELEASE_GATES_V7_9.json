@@ -1,0 +1,29 @@
+{
+  "release": "v7.9",
+  "gate_1_public_web": {
+    "checks": [
+      "index",
+      "app.js",
+      "styles.css",
+      "manifest.json",
+      "sw.js",
+      "89-region JSON",
+      "Evidence Registry",
+      "offline"
+    ],
+    "semantic": [
+      "LOCAL MONTH brand",
+      "89 region count",
+      "standalone manifest",
+      "2+ icons",
+      "Evidence present"
+    ],
+    "pass_required": true
+  },
+  "gate_2_iphone": {
+    "checks": 7,
+    "pass_required": "7/7"
+  },
+  "promotion": "PROMOTE_TO_V8.command",
+  "rule": "Gate 1 PASS + Gate 2 7/7 PASS only"
+}

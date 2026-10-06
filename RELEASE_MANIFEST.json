@@ -1,0 +1,30 @@
+{
+  "release": "v4.0-rc1",
+  "scope": "zero-cost static PWA",
+  "status": "release_candidate",
+  "qa": {
+    "js_syntax": "PASS",
+    "region_integrity": "PASS",
+    "regions": 89,
+    "beta_regions": 15,
+    "events": 8,
+    "benefits": 9,
+    "backup_restore": "PASS",
+    "offline": "PASS",
+    "paid_api_dependencies": 0
+  },
+  "files": [
+    "index.html",
+    "app.js",
+    "styles.css",
+    "manifest.json",
+    "sw.js",
+    "data/regions.json",
+    "data/all_regions_89.json",
+    "data/events.json",
+    "data/benefits.json",
+    "scripts/check_data.py",
+    "scripts/diff_updates.py",
+    "DEPLOY_FREE.md"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "release": "v6.8",
+  "diff_notifications": true,
+  "dedupe": true,
+  "js": true,
+  "js_stderr": "",
+  "features": {
+    "ingestDiffNotifications": true,
+    "seen_key_store": true,
+    "daily_diff_source_tag": true
+  }
+}

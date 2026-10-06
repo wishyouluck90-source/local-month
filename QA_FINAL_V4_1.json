@@ -1,0 +1,36 @@
+{
+  "release": "v4.1-final-candidate",
+  "checks": {
+    "javascript_syntax": true,
+    "html_local_refs_missing": [],
+    "service_worker_missing_assets": [],
+    "regions_89_count": 89,
+    "beta_region_count": 15,
+    "beta_missing_from_89": [],
+    "event_region_mismatches": [],
+    "benefit_region_mismatches": [],
+    "required_files_all_present": true,
+    "paid_api_dependencies": 0
+  },
+  "required_files": {
+    "index.html": true,
+    "app.js": true,
+    "styles.css": true,
+    "manifest.json": true,
+    "sw.js": true,
+    "offline.html": true,
+    "DEPLOY_FREE.md": true,
+    "README.md": true,
+    "RELEASE_NOTES.md": true,
+    "KNOWN_LIMITATIONS.md": true,
+    "data/regions.json": true,
+    "data/all_regions_89.json": true,
+    "data/events.json": true,
+    "data/benefits.json": true,
+    "scripts/check_data.py": true,
+    "scripts/diff_updates.py": true
+  },
+  "known_external_runtime_dependency": [
+    "실제 지도는 공개 GitHub GeoJSON을 네트워크로 불러오는 구조이며 실패 시 89개 텍스트 색인이 fallback"
+  ]
+}

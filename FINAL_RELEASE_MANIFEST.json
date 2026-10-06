@@ -1,0 +1,10 @@
+{
+  "release": "v4.3-runtime-verified",
+  "status": "READY_FOR_PUBLIC_STATIC_DEPLOY",
+  "zero_cost": true,
+  "runtime_smoke_test": "PASS",
+  "region_master": 89,
+  "beta_regions": 15,
+  "paid_api_dependencies": 0,
+  "external_steps_remaining": 3
+}

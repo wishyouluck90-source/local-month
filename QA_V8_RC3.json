@@ -1,0 +1,9 @@
+{
+  "release": "8.0.0-rc3",
+  "css_bytes": 9414,
+  "css_braces_balanced": true,
+  "css_parse_errors": [],
+  "editorial_link": true,
+  "js": true,
+  "deploy_shell": true
+}

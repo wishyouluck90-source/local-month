@@ -1,0 +1,70 @@
+{
+  "release": "v7.4-predeploy-verified",
+  "javascript_syntax": true,
+  "data_integrity": true,
+  "checksum_validation": true,
+  "runtime": [
+    {
+      "path": "/",
+      "status": 200,
+      "content_type": "text/html"
+    },
+    {
+      "path": "/app.js",
+      "status": 200,
+      "content_type": "text/javascript"
+    },
+    {
+      "path": "/styles.css",
+      "status": 200,
+      "content_type": "text/css"
+    },
+    {
+      "path": "/manifest.json",
+      "status": 200,
+      "content_type": "application/json"
+    },
+    {
+      "path": "/data/all_regions_89.json",
+      "status": 200,
+      "content_type": "application/json"
+    },
+    {
+      "path": "/data/evidence_registry.json",
+      "status": 200,
+      "content_type": "application/json"
+    },
+    {
+      "path": "/offline.html",
+      "status": 200,
+      "content_type": "text/html"
+    },
+    {
+      "path": "/version.json",
+      "status": 200,
+      "content_type": "application/json"
+    }
+  ],
+  "runtime_all_200": true,
+  "required_deployment_files": {
+    ".github/workflows/pages.yml": true,
+    ".github/workflows/daily-status.yml": true,
+    "vercel.json": true,
+    "PUBLISH_NOW_MAC.command": true,
+    "scripts/check_public_url.sh": true,
+    "scripts/validate_release.sh": true,
+    "RELEASE_FREEZE.md": true,
+    "PRIVACY_DATA.md": true
+  },
+  "required_files_all_present": true,
+  "secret_scan_hits": [
+    {
+      "file": "scripts/validate_release.sh",
+      "pattern": "AKIA"
+    }
+  ],
+  "paid_api_dependencies": 0,
+  "public_url_created": false,
+  "public_url_blocker": "No available tool can create the new GitHub repository or perform a direct local-source Vercel deployment in this session.",
+  "next_external_action": "Run PUBLISH_NOW_MAC.command once on the user's Mac."
+}

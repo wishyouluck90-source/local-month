@@ -1,0 +1,5 @@
+.vercel/
+.DS_Store
+*.log
+PUBLIC_URL.txt
+LOCAL_MONTH_device_QA.json

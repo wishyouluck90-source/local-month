@@ -1,0 +1,51 @@
+{
+  "source_period": "2026 Q1",
+  "verified_at": "2026-10-06",
+  "scope": "행정안전부 지정 89개 인구감소지역",
+  "definition": "생활인구 = 등록인구 + 월 1회, 하루 3시간 이상 체류한 체류인구",
+  "national_summary": {
+    "monthly_average_living_population": "약 2,382만 명",
+    "february_living_population": "약 2,582만 명",
+    "february_stay_population": "약 2,098만 명",
+    "registered_population": "약 484만 명",
+    "stay_to_registered_ratio_feb": "약 4.3배",
+    "average_stay_days": "약 3.4일",
+    "average_stay_hours": "약 12.1시간",
+    "average_overnight_days": "약 3.9일",
+    "average_card_spend_per_stay_person": "약 127,000원"
+  },
+  "verified_region_signals": [
+    {
+      "region": "화천",
+      "signal": "2026년 1월 전년동월 대비 생활인구 증가폭 상위",
+      "driver": "산천어축제"
+    },
+    {
+      "region": "공주",
+      "signal": "2026년 2월 전년동월 대비 생활인구 증가폭 상위",
+      "driver": "군밤축제"
+    },
+    {
+      "region": "영월",
+      "signal": "2026년 3월 전년동월 대비 생활인구 증가폭 상위",
+      "driver": "지역축제·영화 촬영지 효과"
+    },
+    {
+      "region": "구례",
+      "signal": "2026년 3월 전년동월 대비 생활인구 증가폭 상위",
+      "driver": "산수유꽃축제"
+    }
+  ],
+  "product_use": {
+    "do": [
+      "지역 우선순위 보조지표",
+      "체류매력 설명",
+      "계절성 경고",
+      "재방문/소비 데이터가 확보되면 점수 보정"
+    ],
+    "dont": [
+      "공식 지역별 수치가 없는 경우 숫자 추정",
+      "생활인구 증가를 장기체류 적합성과 동일시"
+    ]
+  }
+}

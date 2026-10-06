@@ -1,0 +1,14 @@
+{
+  "release": "v7.2",
+  "schema_version": 2,
+  "js": true,
+  "js_stderr": "",
+  "features": {
+    "full_backup": true,
+    "restore_all": true,
+    "reset": true,
+    "migration": true,
+    "privacy_doc": true,
+    "version_file": true
+  }
+}

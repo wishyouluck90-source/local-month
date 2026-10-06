@@ -1,0 +1,22 @@
+{
+  "release": "v7.5-deploy-automation",
+  "feature_freeze": true,
+  "publish_flow": [
+    "validate release",
+    "create dedicated local-month repo if absent",
+    "push main",
+    "enable GitHub Pages workflow",
+    "wait for HTTP 200",
+    "open public URL in Safari"
+  ],
+  "github_actions_post_deploy_smoke": [
+    "index HTTP success",
+    "app.js HTTP success",
+    "all_regions_89.json HTTP success",
+    "89 region count assertion"
+  ],
+  "user_actions_remaining_after_script": [
+    "iPhone Safari 7-point QA"
+  ],
+  "paid_api_dependencies": 0
+}

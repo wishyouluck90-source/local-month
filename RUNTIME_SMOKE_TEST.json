@@ -1,0 +1,33 @@
+{
+  "tested_at": "2026-10-05T14:51:28+09:00",
+  "method": "python http.server + curl HEAD",
+  "base_url": "http://127.0.0.1:8765",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "content_type": "text/html"
+    },
+    {
+      "path": "/app.js",
+      "status": 200,
+      "content_type": "text/javascript"
+    },
+    {
+      "path": "/data/all_regions_89.json",
+      "status": 200,
+      "content_type": "application/json"
+    },
+    {
+      "path": "/offline.html",
+      "status": 200,
+      "content_type": "text/html"
+    }
+  ],
+  "result": "PASS",
+  "notes": [
+    "정적 파일 서빙 정상",
+    "89개 지역 데이터 접근 정상",
+    "오프라인 fallback 파일 접근 정상"
+  ]
+}

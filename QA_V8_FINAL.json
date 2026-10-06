@@ -1,0 +1,18 @@
+{
+  "release": "8.0.0",
+  "css_parse_errors": 0,
+  "css_braces_balanced": true,
+  "javascript": true,
+  "data_integrity": true,
+  "deploy_script": true,
+  "navigation": [
+    "DISCOVER",
+    "PLACES",
+    "COMPARE",
+    "NOW",
+    "MY MONTH"
+  ],
+  "hadong_dossier": true,
+  "final_intros": true,
+  "internal_cleanup": true
+}

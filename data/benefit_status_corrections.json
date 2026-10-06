@@ -1,0 +1,13 @@
+{
+  "verified_at": "2026-10-06",
+  "items": [
+    {
+      "program": "디지털 관광주민증 권역별 이벤트 쿠폰",
+      "scheduled_end": "2026-11-22 (권역별 이벤트에 따라 상이)",
+      "availability_status": "사용종료",
+      "status_changed_at": "2026-10-03",
+      "reason": "이벤트 쿠폰 예산 전액 소진",
+      "product_action": "혜택 카드에 '예산소진·사용종료' 표시. 종료된 쿠폰을 현재 혜택 점수에 포함하지 않음."
+    }
+  ]
+}

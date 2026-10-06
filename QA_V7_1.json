@@ -1,0 +1,8 @@
+{
+  "release": "v7.1",
+  "publish_script": true,
+  "existing_repo_risk": false,
+  "publish_shell_syntax": true,
+  "public_check_shell_syntax": true,
+  "js": true
+}

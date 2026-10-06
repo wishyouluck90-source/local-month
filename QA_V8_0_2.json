@@ -1,0 +1,12 @@
+{
+  "release": "8.0.2",
+  "queue_regions": [
+    "남해",
+    "구례",
+    "고흥"
+  ],
+  "benefit_correction": true,
+  "js": true,
+  "data": true,
+  "deploy": true
+}

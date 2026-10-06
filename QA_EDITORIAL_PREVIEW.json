@@ -1,0 +1,30 @@
+{
+  "js": true,
+  "data": true,
+  "required_ids": {
+    "searchInput": true,
+    "searchBtn": true,
+    "stayDays": true,
+    "budget": true,
+    "runReco": true,
+    "recoResult": true,
+    "dailyCards": true,
+    "pipelineStatus": true,
+    "realMap": true,
+    "koreaSvg": true,
+    "mapLoading": true,
+    "mapStatus": true,
+    "mapSelectedTitle": true,
+    "mapSelectedMeta": true,
+    "mapGoRegion": true,
+    "homeRanks": true,
+    "refreshBtn": true,
+    "refreshText": true,
+    "prefDays": true,
+    "prefBudget": true,
+    "prefPet": true,
+    "prefSettlement": true,
+    "savePrefs": true
+  },
+  "all_required_ids": true
+}
