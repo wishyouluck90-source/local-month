@@ -116,7 +116,30 @@
 
 <section class="section"><div class="section-head"><div><div class="eyebrow">BENEFIT CLUSTER</div><h2>보은·옥천·영동</h2></div><p>혜택+체험 권역</p></div><div class="note">관광주민증 연계로 지역별 최대 9만원, 3개 지역 합산 최대 27만원 규모의 혜택과 공예·와인·원예·목공 등 체험형 가맹점을 함께 볼 수 있는 권역입니다.</div></section></section>
 
-<section id="monthly" class="panel"><div class="final-panel-intro"><span class="final-index">04</span><div><div class="kicker">LOCAL NOW</div><h1>이번 달에만<br>가능한 것들.</h1><p>축제보다 중요한 건 타이밍입니다. 모집, 지원, 클래스, 공연과 지역 혜택을 마감일과 함께 봅니다.</p></div></div><div class="hero"><div><div class="eyebrow">LOCAL NOW</div><h1>이번 달,<br>놓치면 아까운 것들.</h1><p>축제·공연·전시·강연·원데이 클래스·웰니스·공공교육을 실제 체류기간과 겹쳐 봅니다.</p></div></div><div class="filters"><button class="chip active" onclick="renderEvents('전체')">전체</button><button class="chip" onclick="renderEvents('문화')">문화</button><button class="chip" onclick="renderEvents('체험')">체험</button><button class="chip" onclick="renderEvents('웰니스')">웰니스</button><button class="chip" onclick="renderEvents('배움')">배움</button></div><div class="event-grid" id="eventGrid"></div><section class="section">
+<section id="monthly" class="panel"><div class="final-panel-intro"><span class="final-index">04</span><div><div class="kicker">LOCAL NOW</div><h1>이번 달에만<br>가능한 것들.</h1><p>축제보다 중요한 건 타이밍입니다. 모집, 지원, 클래스, 공연과 지역 혜택을 마감일과 함께 봅니다.</p></div></div><div class="hero"><div><div class="eyebrow">LOCAL NOW</div><h1>이번 달,<br>놓치면 아까운 것들.</h1><p>축제·공연·전시·강연·원데이 클래스·웰니스·공공교육을 실제 체류기간과 겹쳐 봅니다.</p></div></div><section class="program-desk section" id="programDesk">
+  <div class="program-desk-head">
+    <div><div class="eyebrow">PROGRAM DECISION DESK</div><h2>공고를 찾는 데서 끝내지 않고,<br>내가 갈 수 있는지까지.</h2></div>
+    <p>모집상태·마감·생활 적합도·확인할 조건을 분리해서 봅니다.</p>
+  </div>
+  <div class="program-checker">
+    <div class="checker-copy"><span class="checker-no">01</span><h3>나의 체류 조건</h3><p>정확한 자격조건이 데이터에 없으면 ‘가능’이라고 추측하지 않습니다.</p></div>
+    <div class="checker-fields">
+      <label>체류일수<select id="programDays"><option value="7">7일</option><option value="14">14일</option><option value="30" selected>30일</option></select></label>
+      <label>반려견<select id="programPet"><option value="no">없음</option><option value="yes">동반</option></select></label>
+      <label>차량<select id="programCar"><option value="yes">있음</option><option value="no">없음</option></select></label>
+      <label>SNS 미션<select id="programSns"><option value="ok">가능</option><option value="avoid">가급적 피함</option></select></label>
+    </div>
+    <button class="program-run" id="runProgramMatch">현재 공고와 맞춰보기 →</button>
+  </div>
+  <div class="program-principles">
+    <div><strong>STATUS</strong><span>예정기간보다 실제 접수·종료 상태 우선</span></div>
+    <div><strong>MONEY</strong><span>최대지원금보다 1인/팀·실비·조건부를 분리</span></div>
+    <div><strong>REAL LIFE</strong><span>숙소·업무·교통·반려견을 프로그램과 같이 판단</span></div>
+    <div><strong>SOURCE</strong><span>요약과 공식 원문 근거를 분리</span></div>
+  </div>
+  <div class="program-results" id="programResults"></div>
+</section>
+<div class="filters"><button class="chip active" onclick="renderEvents('전체')">전체</button><button class="chip" onclick="renderEvents('문화')">문화</button><button class="chip" onclick="renderEvents('체험')">체험</button><button class="chip" onclick="renderEvents('웰니스')">웰니스</button><button class="chip" onclick="renderEvents('배움')">배움</button></div><div class="event-grid" id="eventGrid"></div><section class="section">
   <div class="section-head"><div><div class="eyebrow">ACTION DEADLINES</div><h2>놓치면 달라지는 일정</h2></div><p>신청 오픈 · 마감 · 종료</p></div>
   <div class="card" id="deadlineList"></div>
   <div class="row-actions"><button class="btn" id="exportDeadlines">마감일 .ics 받기</button></div>

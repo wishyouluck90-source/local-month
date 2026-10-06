@@ -39,7 +39,7 @@ function applyEditorialVisibility(){
  });
 }
 
-function init(){renderHomeRanks("effort");renderRegions();renderAll89();renderEvents();renderBenefits();renderCompare();renderInbox();renderComments();renderNotifications();renderDaily();renderKoreaMap();renderEvidence();renderDeadlines();renderEvidenceCoverage();renderStrengthRank();renderGateCards();wire();}
+function init(){renderProgramDesk();renderHomeRanks("effort");renderRegions();renderAll89();renderEvents();renderBenefits();renderCompare();renderInbox();renderComments();renderNotifications();renderDaily();renderKoreaMap();renderEvidence();renderDeadlines();renderEvidenceCoverage();renderStrengthRank();renderGateCards();wire();}
 function wire(){
   $$(".nav button").forEach(b=>b.onclick=()=>switchPanel(b.dataset.panel));
   $("#searchBtn").onclick=()=>{const q=$("#searchInput").value.trim();switchPanel("regions");const detailed=REGIONS.filter(r=>r.name.includes(q));renderRegions("전체",q);if(!detailed.length&&q){const hits=searchAll89(q),box=$("#all89Grid");box.style.display="grid";box.innerHTML=hits.length?hits.map(r=>`<div class="region"><div class="region-top"><div><div class="small">${r.province} · 인구감소지역</div><div class="region-name">${r.display_name}</div></div><span class="badge">색인</span></div><p class="small" style="margin-top:8px">상세 데이터 수집 예정</p></div>`).join(""):'<div class="note">일치하는 인구감소지역을 찾지 못했습니다.</div>'}};
@@ -52,6 +52,7 @@ function wire(){
   $("#installBtn").onclick=openInstallGuide;$("#installClose").onclick=()=>$("#installDrawer").classList.remove("open");
   $("#nativeInstall").onclick=runNativeInstall;
   $("#markRead").onclick=()=>{state.notifications.forEach(n=>n.read=true);save();renderNotifications()};
+  if($("#runProgramMatch")) $("#runProgramMatch").onclick=()=>{renderProgramDesk();toast("현재 근거 기준으로 다시 맞췄어요.")};
   $("#addResearch").onclick=addResearch; $("#addComment").onclick=addComment; $("#runReco").onclick=runReco;
   $("#compareClear").onclick=()=>{state.compare=[];save();renderRegions();renderCompare();toast("비교 목록을 비웠어요.")};$("#toggleAll89").onclick=()=>{const e=$("#all89Grid"),o=e.style.display!=="none";e.style.display=o?"none":"grid";$("#toggleAll89").textContent=o?"89개 보기":"접기"};
   $$(".theme").forEach(b=>b.onclick=()=>toggleTheme(b));
@@ -534,3 +535,35 @@ function exportCurrentPlanICS(){
 }
 
 function runReco(){const days=+$("#stayDays").value,budget=$("#budget").value;const ranked=REGIONS.map(r=>({r,s:recoScore(r,days,budget)})).sort((a,b)=>b.s-a.s);const [a,b,c]=ranked;$("#recoResult").innerHTML=`<div class="eyebrow">LOCAL AI MATCH · BETA</div><div class="region-name" style="margin-top:6px">1순위 ${a.r.name}</div><p class="small" style="font-size:12px;line-height:1.7">${days}일 · ${selectedThemes.map(themeLabel).join(" + ")} 기준. ${a.r.strengths.slice(0,4).join(" · ")} 강점이 현재 조건과 잘 맞습니다.</p><div class="plan">${plan(days).map(x=>`<div><strong>${x[0]}</strong><span>${x[1]}</span></div>`).join("")}</div><div class="rank"><div class="rankmain"><strong>2순위 ${b.r.name}</strong><small>${b.r.strengths.slice(0,3).join(" · ")}</small></div><div class="score">${b.s.toFixed(1)}</div></div><div class="rank"><div class="rankmain"><strong>3순위 ${c.r.name}</strong><small>${c.r.strengths.slice(0,3).join(" · ")}</small></div><div class="score">${c.s.toFixed(1)}</div></div><div class="note" style="margin-top:12px">현재는 무료 로컬 추천 엔진입니다. 실시간 AI·웹검색은 ‘개발중’이며 연결 전까지 비용이 발생하지 않습니다.</div>`}
+
+/* v9.3 Program Decision Desk — improves on program-list-only discovery */
+function programRegion(r){return REGIONS.find(x=>x.name===r)||null}
+function programLifestyleFit(region,prefs){
+ const r=programRegion(region); if(!r)return {label:"생활 데이터 수집중",score:null,notes:["지역 상세근거 추가 필요"]};
+ let vals=[],notes=[];
+ if(typeof r.scores.nomad==="number")vals.push(r.scores.nomad);
+ if(prefs.pet==="yes"&&typeof r.scores.pet==="number"){vals.push(r.scores.pet);notes.push(`반려견 지표 ${r.scores.pet}`)}
+ if(prefs.car==="no"){notes.push("차량 없는 생활은 교통 근거 별도 확인 필요")}
+ const sc=vals.length?Math.round(vals.reduce((a,b)=>a+b,0)/vals.length):null;
+ return {label:sc===null?"판단 보류":sc>=80?"생활 적합도 높음":sc>=65?"생활 적합도 보통":"생활 조건 확인 필요",score:sc,notes};
+}
+function deadlineState(d){
+ const now=new Date(); const t=new Date(d.start); const days=Math.ceil((t-now)/86400000);
+ if(d.kind==="close"&&d.status==="open")return days<=3?`마감 ${Math.max(days,0)}일 전`:"접수중";
+ if(d.kind==="open")return days<=7?`오픈 ${Math.max(days,0)}일 전`:"오픈 예정";
+ return d.status==="active"?"진행중":d.status||"확인 필요";
+}
+function renderProgramDesk(){
+ const box=$("#programResults"); if(!box||!DEADLINES.length)return;
+ const prefs={days:+($("#programDays")?.value||30),pet:$("#programPet")?.value||"no",car:$("#programCar")?.value||"yes",sns:$("#programSns")?.value||"ok"};
+ const sorted=[...DEADLINES].sort((a,b)=>new Date(a.start)-new Date(b.start));
+ box.innerHTML=sorted.map((d,i)=>{
+   const fit=programLifestyleFit(d.region,prefs), r=programRegion(d.region);
+   const source=d.source||"공식 원문 확인 필요";
+   const status=deadlineState(d);
+   const pet=prefs.pet==="yes"?(r&&typeof r.scores.pet==="number"?`지역 반려견 지표 ${r.scores.pet} · 프로그램 동반조건은 원문 확인`:"반려견 조건 미확인"):"해당없음";
+   const money="지원금 구조 원문 확인";
+   const eligibility="자격조건 원문 확인 필요";
+   return `<article class="program-result"><div class="pnum">${String(i+1).padStart(2,"0")}</div><div><div class="small">${d.region} · ${d.kind==="open"?"모집 오픈":"마감/혜택"}</div><h3>${d.title}</h3><p>${fit.label}${fit.score!==null?` · ${fit.score}`:""}. 프로그램 자격과 지역 생활 적합도를 섞지 않고 따로 판단합니다.</p><div class="program-warning">${fit.notes.join(" · ")||"공식 조건을 확인한 뒤 지원 판단"}</div></div><div class="program-meta"><div><small>CURRENT STATUS</small><strong class="program-state">${status}</strong></div><div><small>ELIGIBILITY</small><strong>${eligibility}</strong></div><div><small>BENEFIT</small><strong>${money}</strong></div><div><small>PET / LIFE</small><strong>${pet}</strong></div><div><small>SOURCE</small><strong>${source}</strong></div><div><small>VERIFIED</small><strong>Evidence 기준</strong></div></div></article>`
+ }).join("")||'<div class="program-empty">현재 확인된 모집 타임라인이 없습니다.</div>';
+}

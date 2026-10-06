@@ -1,5 +1,5 @@
 {
-  "version": "9.0.0",
+  "version": "9.3.0",
   "status": "complete-product-baseline",
   "design_system": "Editorial / Nomad / Cultural",
   "core_navigation": [
@@ -23,5 +23,6 @@
     "고흥"
   ],
   "review_pulse_model": "source-linked summaries; no protected-platform scraping",
-  "dossier_schema": "all 89 regions"
+  "dossier_schema": "all 89 regions",
+  "feature_patch": "Program Decision Desk + eligibility uncertainty + real-life fit"
 }
