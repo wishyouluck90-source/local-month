@@ -94,7 +94,15 @@ function exportCurrentPlanICS(){if(!currentRecommendation)return toast('먼저 �
 
 
 function isCorrectedBenefit(e){return e.category==='benefit'&&/관광주민증/.test(e.claim+' '+e.source_title)&&/이벤트|쿠폰/.test(e.claim)}
-function liveEvidence(e){return ['A+','A'].includes(e.source_tier)&&!isCorrectedBenefit(e)&&['active','policy','infrastructure','recent'].includes(e.status)&&evidenceAgeState(e.verified_at).label==='최신'}
+function evidenceWithinPeriod(e){
+ if(!e.valid_until)return true;
+ if(!/^\d{4}-\d{2}-\d{2}$/.test(e.valid_until))return false;
+ const end=Date.parse(e.valid_until+'T23:59:59.999+09:00');
+ if(!Number.isFinite(end))return false;
+ const day=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(end));
+ return day===e.valid_until&&Date.now()<=end;
+}
+function liveEvidence(e){return ['A+','A'].includes(e.source_tier)&&!isCorrectedBenefit(e)&&['active','policy','infrastructure','recent'].includes(e.status)&&evidenceAgeState(e.verified_at).label==='최신'&&evidenceWithinPeriod(e)}
 function sourceCard(e){return `<article class="source-card"><p>${escapeHTML(e.claim)}</p>${isCorrectedBenefit(e)?'<p class="program-warning">2026-10-06 정정 기록: 관광주민증 권역 이벤트 쿠폰은 예산소진·사용종료. 이 과거 안내를 현재 혜택으로 판단하지 마세요.</p>':''}<small>${escapeHTML(e.source_tier)} · 기록 확인일 ${escapeHTML(e.verified_at)} · ${evidenceAgeState(e.verified_at).label} · ${e.status==='unconfirmed'?'접수·자격 원문 확인':escapeHTML(e.status)}</small>${safeURL(e.source_url)?`<a class="btn" href="${safeURL(e.source_url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(e.source_title)} ↗</a>`:'<span>원문 확인 필요</span>'}</article>`}
 function renderBenefits(){$('#benefitList').innerHTML='<p>혜택 기록은 실시간 잔여예산을 보장하지 않습니다. 관광주민증 권역 이벤트 쿠폰은 2026-10-06 정정 기록상 예산소진·사용종료입니다.</p>'+BENEFITS.map(b=>`<article class="source-card"><h3>${escapeHTML(b.region)} · ${escapeHTML(b.name)}</h3><p>이용 가능 여부·실제 환급액: 원문 확인</p><button class="btn" data-region="${escapeHTML(b.region)}">지역 근거 확인 →</button></article>`).join('')}
 

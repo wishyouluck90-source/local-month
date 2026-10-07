@@ -1,0 +1,173 @@
+[
+  {
+    "id": "miryang-oct-programs",
+    "before": {
+      "id": "miryang-oct-programs",
+      "region": "밀양",
+      "category": "monthly",
+      "claim": "네이처에코리움 가을 체험 10/3~10/25, Nature-Tech 코딩교육 10/10~10/31, 국제요가컨퍼런스 10/3~10/4가 공식 공지에 노출",
+      "source_title": "선샤인밀양테마파크 공지사항",
+      "source_url": "https://park.miryang.go.kr/park/nmprogram/board/default.php?cb=1",
+      "source_tier": "A",
+      "verified_at": "2026-10-05",
+      "confidence": "높음",
+      "status": "active"
+    },
+    "after": {
+      "id": "miryang-oct-programs",
+      "region": "밀양",
+      "category": "monthly",
+      "claim": "네이처에코리움 가을 체험은 2026년 10월 3~25일 중 주말·공휴일에 운영한다고 공지. 이용객 대상 당일 현장 접수이며 선착순 조기마감 가능. 10월 20일 당일 운영을 뜻하지 않음",
+      "source_title": "선샤인밀양테마파크 네이처에코리움 가을 체험프로그램",
+      "source_url": "https://park.miryang.go.kr/park/nmprogram/board/default.php?cb=1&cr=&ct=&idx=139&ky=&mod=o&op=&page=1&se=139&st=Y&wd=",
+      "source_tier": "A",
+      "verified_at": "2026-10-07",
+      "confidence": "높음",
+      "status": "active",
+      "verification_scope": "공식 웹 안내 재열람; 현장 운영·예약·잔여석 확인 아님",
+      "source_hashes": {
+        "https://park.miryang.go.kr/park/nmprogram/board/default.php?cb=1&cr=&ct=&idx=139&ky=&mod=o&op=&page=1&se=139&st=Y&wd=": "0fab2935eda065c4c6926a4193400c0413292ddf0f7d2af8dc3cad4ce94eb415"
+      },
+      "valid_until": "2026-10-25"
+    },
+    "retrieved_at": "2026-10-07T09:15:24.553976+00:00",
+    "source_sha256": "0fab2935eda065c4c6926a4193400c0413292ddf0f7d2af8dc3cad4ce94eb415",
+    "review_note": "공식 웹 안내 재열람; 현장 운영·예약·잔여석 확인 아님"
+  },
+  {
+    "id": "miryang-cultural-base-2026",
+    "before": {
+      "id": "miryang-cultural-base-2026",
+      "region": "밀양",
+      "category": "culture",
+      "claim": "밀양 공식 문화관광 사이트는 밀양아리랑아트센터·시립박물관·의열기념관·미리벌민속박물관 등 상설 문화관광 기반을 제공",
+      "source_title": "밀양시 문화관광",
+      "source_url": "https://www.miryang.go.kr/tur/index.do?month=10&v=1&year=2026",
+      "source_tier": "A+",
+      "verified_at": "2026-10-05",
+      "confidence": "높음",
+      "status": "active"
+    },
+    "after": {
+      "id": "miryang-cultural-base-2026",
+      "region": "밀양",
+      "category": "culture",
+      "claim": "밀양시 문화관광 사이트가 밀양아리랑아트센터·시립박물관·의열기념관·미리벌민속박물관을 소개. 개별 시설의 방문일 운영 여부는 별도 확인",
+      "source_title": "밀양시 문화관광",
+      "source_url": "https://www.miryang.go.kr/tur/index.do?month=10&v=1&year=2026",
+      "source_tier": "A+",
+      "verified_at": "2026-10-07",
+      "confidence": "높음",
+      "status": "active",
+      "verification_scope": "공식 웹 안내 재열람; 현장 운영·예약·잔여석 확인 아님",
+      "source_hashes": {
+        "https://www.miryang.go.kr/tur/index.do?month=10&v=1&year=2026": "a28dfe4bf771d57d657e6a0bc1e5321404561b46e9d14165df0d73df02bb700c"
+      }
+    },
+    "retrieved_at": "2026-10-07T09:15:24.466673+00:00",
+    "source_sha256": "a28dfe4bf771d57d657e6a0bc1e5321404561b46e9d14165df0d73df02bb700c",
+    "review_note": "공식 웹 안내 재열람; 현장 운영·예약·잔여석 확인 아님"
+  },
+  {
+    "id": "hadong-library-digital-room",
+    "before": {
+      "id": "hadong-library-digital-room",
+      "region": "하동",
+      "category": "nomad",
+      "claim": "하동도서관 디지털정보실은 화~토 09:00~17:50, 일요일 09:00~17:30 이용 가능",
+      "source_title": "경상남도교육청 하동도서관 층별안내",
+      "source_url": "https://hdlib.gne.go.kr/menu.es?mid=a50105000000",
+      "source_tier": "A+",
+      "verified_at": "2026-10-05",
+      "confidence": "높음",
+      "status": "active"
+    },
+    "after": {
+      "id": "hadong-library-digital-room",
+      "region": "하동",
+      "category": "nomad",
+      "claim": "하동도서관 안내상 디지털정보실은 화~토 09:00~17:50, 일요일 09:00~17:30. 공휴일·임시휴관과 방문일 이용 여부는 원문 확인",
+      "source_title": "경상남도교육청 하동도서관 층별안내",
+      "source_url": "https://hdlib.gne.go.kr/menu.es?mid=a50105000000",
+      "source_tier": "A+",
+      "verified_at": "2026-10-07",
+      "confidence": "높음",
+      "status": "active",
+      "verification_scope": "공식 웹 안내 재열람; 현장 운영·예약·잔여석 확인 아님",
+      "source_hashes": {
+        "https://hdlib.gne.go.kr/menu.es?mid=a50105000000": "86c1e2274362f913b89429065118ea06edb9eb701a54d67f819a8814c040603a"
+      }
+    },
+    "retrieved_at": "2026-10-07T09:14:17.086884+00:00",
+    "source_sha256": "86c1e2274362f913b89429065118ea06edb9eb701a54d67f819a8814c040603a",
+    "review_note": "공식 웹 안내 재열람; 현장 운영·예약·잔여석 확인 아님"
+  },
+  {
+    "id": "hadong-library-study-room",
+    "before": {
+      "id": "hadong-library-study-room",
+      "region": "하동",
+      "category": "nomad",
+      "claim": "하동도서관 열람실은 화~토 08:00~22:00, 월요일 09:00~18:00 운영",
+      "source_title": "경상남도교육청 하동도서관 이용안내",
+      "source_url": "https://hdlib.gne.go.kr/menu.es?mid=a50104000000",
+      "source_tier": "A+",
+      "verified_at": "2026-10-05",
+      "confidence": "높음",
+      "status": "active"
+    },
+    "after": {
+      "id": "hadong-library-study-room",
+      "region": "하동",
+      "category": "nomad",
+      "claim": "하동도서관 시간표에 열람실 화~토 08:00~22:00가 안내됨. 월요일 시간표와 휴관 문구가 상충하므로 월요일·공휴일 이용 여부는 도서관 확인 필요",
+      "source_title": "경상남도교육청 하동도서관 이용안내",
+      "source_url": "https://hdlib.gne.go.kr/menu.es?mid=a50104000000",
+      "source_tier": "A+",
+      "verified_at": "2026-10-07",
+      "confidence": "높음",
+      "status": "active",
+      "verification_scope": "공식 웹 안내 재열람; 현장 운영·예약·잔여석 확인 아님",
+      "source_hashes": {
+        "https://hdlib.gne.go.kr/menu.es?mid=a50104000000": "423fe2992aa571d37c9888acf3cc1fa6a7a10a56759ea3d48f9fbfa669861c67"
+      }
+    },
+    "retrieved_at": "2026-10-07T09:14:17.327935+00:00",
+    "source_sha256": "423fe2992aa571d37c9888acf3cc1fa6a7a10a56759ea3d48f9fbfa669861c67",
+    "review_note": "공식 웹 안내 재열람; 현장 운영·예약·잔여석 확인 아님"
+  },
+  {
+    "id": "hadong-library-print-scan",
+    "before": {
+      "id": "hadong-library-print-scan",
+      "region": "하동",
+      "category": "nomad",
+      "claim": "하동도서관은 프린트(실비)와 스캐너 사용이 가능한 디지털정보실 좌석을 운영",
+      "source_title": "경상남도교육청 하동도서관 층별안내",
+      "source_url": "https://hdlib.gne.go.kr/menu.es?mid=a50105000000",
+      "source_tier": "A+",
+      "verified_at": "2026-10-05",
+      "confidence": "높음",
+      "status": "active"
+    },
+    "after": {
+      "id": "hadong-library-print-scan",
+      "region": "하동",
+      "category": "nomad",
+      "claim": "하동도서관 디지털정보실 7·8번 좌석은 유료 인쇄와 스캐너 사용을 안내. 실제 좌석·기기 이용 가능 여부는 방문 전 확인",
+      "source_title": "경상남도교육청 하동도서관 층별안내",
+      "source_url": "https://hdlib.gne.go.kr/menu.es?mid=a50105000000",
+      "source_tier": "A+",
+      "verified_at": "2026-10-07",
+      "confidence": "높음",
+      "status": "active",
+      "verification_scope": "공식 웹 안내 재열람; 현장 운영·예약·잔여석 확인 아님",
+      "source_hashes": {
+        "https://hdlib.gne.go.kr/menu.es?mid=a50105000000": "86c1e2274362f913b89429065118ea06edb9eb701a54d67f819a8814c040603a"
+      }
+    },
+    "retrieved_at": "2026-10-07T09:14:17.086884+00:00",
+    "source_sha256": "86c1e2274362f913b89429065118ea06edb9eb701a54d67f819a8814c040603a",
+    "review_note": "공식 웹 안내 재열람; 현장 운영·예약·잔여석 확인 아님"
+  }
+]

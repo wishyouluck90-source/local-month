@@ -1,5 +1,5 @@
 {
-  "version": "9.4.2",
+  "version": "9.4.3",
   "status": "release",
   "design_system": "Editorial / Nomad / Cultural",
   "core_navigation": [
@@ -14,7 +14,7 @@
   "paid_api_dependencies": 0,
   "internal_ops_hidden_from_customer_ui": true,
   "data_verified_at": "2026-10-07",
-  "data_patch": "Official Oct 7 notices; partial regional verification documented",
+  "data_patch": "Five source-reviewed facility/program records; partial verification only",
   "new_layer": "2026 Q1 official living population",
   "flagship_dossiers": [
     "하동",
@@ -24,7 +24,7 @@
   ],
   "review_pulse_model": "source-linked summaries; no protected-platform scraping",
   "dossier_schema": "all 89 regions",
-  "feature_patch": "Source-linked application notices in NOW; date-only deadline precision",
+  "feature_patch": "Launch-date regression and audited source rechecks",
   "qa_patch": "production version consistency + cache bust + internal ops visibility guard",
   "base_commit": "19eab6a60856d9763731d521a88238cfcf566eb6"
 }
