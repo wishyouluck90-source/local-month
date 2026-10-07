@@ -1,6 +1,6 @@
 {
-  "version": "9.4.0-rc.4",
-  "status": "local-rc-not-deployed",
+  "version": "9.4.1",
+  "status": "release-candidate",
   "design_system": "Editorial / Nomad / Cultural",
   "core_navigation": [
     "DISCOVER",
@@ -13,8 +13,8 @@
   "regions_indexed": 89,
   "paid_api_dependencies": 0,
   "internal_ops_hidden_from_customer_ui": true,
-  "data_verified_at": "2026-10-06",
-  "data_patch": "Namhae dossier draft + October culture calendar",
+  "data_verified_at": "2026-10-07",
+  "data_patch": "Official Oct 7 notices; partial regional verification documented",
   "new_layer": "2026 Q1 official living population",
   "flagship_dossiers": [
     "하동",
@@ -24,7 +24,7 @@
   ],
   "review_pulse_model": "source-linked summaries; no protected-platform scraping",
   "dossier_schema": "all 89 regions",
-  "feature_patch": "Program Decision Desk + eligibility uncertainty + real-life fit",
+  "feature_patch": "Source-linked application notices in NOW; date-only deadline precision",
   "qa_patch": "production version consistency + cache bust + internal ops visibility guard",
-  "base_commit": "c2511a9d8f7fd42212b0e3565fa181c6c69a3f0c"
+  "base_commit": "3ec01d541bfe380cd4f609f734f1079cca633d35"
 }

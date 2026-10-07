@@ -10,11 +10,11 @@
 <meta name="format-detection" content="telephone=no">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
-<link rel="stylesheet" href="styles.css?v=9.4.0-rc.4">
-<link rel="stylesheet" href="editorial-v8.css?v=9.4.0-rc.4">
+<link rel="stylesheet" href="styles.css?v=9.4.1">
+<link rel="stylesheet" href="editorial-v8.css?v=9.4.1">
 <title>LOCAL MONTH — 한달살기 Research OS</title>
 
-<link rel="stylesheet" href="rc.css?v=9.4.0-rc.4">
+<link rel="stylesheet" href="rc.css?v=9.4.1">
 </head>
 <body>
 <a class="skip-link" href="#main">본문으로 건너뛰기</a>
@@ -129,6 +129,11 @@
     <div><strong>SOURCE</strong><span>요약과 공식 원문 근거를 분리</span></div>
   </div>
   <div class="program-results" id="programResults" aria-live="polite"></div>
+  <section aria-labelledby="noticeHeading" class="section">
+    <h2 id="noticeHeading">새 공고와 마감 안내</h2>
+    <p>공식 자료 확인일 기준입니다. 신청 자격과 남은 정원은 원문에서 확인하세요. 시각이 공개되지 않은 마감은 날짜만 표시합니다.</p>
+    <div class="program-results" id="verifiedNotices" aria-live="polite"></div>
+  </section>
 </section>
 <div class="filters"><button class="chip active" onclick="renderEvents('전체')">전체</button><button class="chip" onclick="renderEvents('문화')">문화</button><button class="chip" onclick="renderEvents('체험')">체험</button><button class="chip" onclick="renderEvents('웰니스')">웰니스</button><button class="chip" onclick="renderEvents('배움')">배움</button></div><div class="event-grid" id="eventGrid"></div><section class="section">
   <div class="section-head"><div><div class="eyebrow">ACTION DEADLINES</div><h2>놓치면 달라지는 일정</h2></div><p>신청 오픈 · 마감 · 종료</p></div>
@@ -237,7 +242,7 @@
 <div class="drawer" id="aboutDrawer"><div class="research-lab-note"><span>RESEARCH LAB</span><p>출처·Evidence·업데이트 상태는 사용자 경험과 분리해 운영합니다. 검증되지 않은 정보는 추천에 확정값으로 사용하지 않습니다.</p></div>
   <div class="drawer-head"><strong>LOCAL MONTH</strong><button class="btn" id="aboutClose">닫기</button></div>
   <div class="card" style="margin-top:14px">
-    <div class="eyebrow">VERSION</div><h3 id="appVersion">v9.4.0-rc.4</h3>
+    <div class="eyebrow">VERSION</div><h3 id="appVersion">v9.4.1</h3>
     <p>인구감소지역 한달살기 Total Search & Research OS · 검수 후보 · Evidence-backed · Zero Paid API</p>
   </div>
   <div class="card" style="margin-top:12px">
@@ -261,8 +266,8 @@
   </div>
 </div>
 <div class="toast" role="status" aria-live="polite" id="toast"></div>
-<script src="storage.js?v=9.4.0-rc.4"></script>
-<script defer src="app.js?v=9.4.0-rc.4"></script>
-<script defer src="rc.js?v=9.4.0-rc.4"></script>
+<script src="storage.js?v=9.4.1"></script>
+<script defer src="app.js?v=9.4.1"></script>
+<script defer src="rc.js?v=9.4.1"></script>
 <script>if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js").catch(()=>{})}</script>
 </body></html>
