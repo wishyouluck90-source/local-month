@@ -30,17 +30,31 @@ function noticeTiming(e,now=new Date()){
  const today=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'}).format(now);
  const end=e.application_end||'';
  if(e.status==='closed')return {label:'신규 신청 마감',order:-1};
+ const parseDate=value=>{
+  if(typeof value!=='string'||!/^\d{4}-\d{2}-\d{2}(?:T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2}))?$/.test(value))return null;
+  const day=value.slice(0,10),dateOnly=value.length===10,time=Date.parse(dateOnly?day+'T00:00:00+09:00':value);
+  const calendar=Date.parse(day+'T00:00:00Z');
+  if(!Number.isFinite(time)||!Number.isFinite(calendar)||new Date(calendar).toISOString().slice(0,10)!==day)return null;
+  return {day,dateOnly,time};
+ };
+ const start=e.application_start?parseDate(e.application_start):null,finish=end?parseDate(end):null;
+ if((e.application_start&&!start)||(end&&!finish)||(start&&finish&&start.time>finish.time&&(!finish.dateOnly||start.day>finish.day)))return {label:'일정 원문 확인',order:999};
+ if(start&&(start.dateOnly?start.day>today:start.time>now.getTime())){
+  const when=start.dateOnly?start.day+' · 시작시각 미공개':new Intl.DateTimeFormat('ko-KR',{timeZone:'Asia/Seoul',dateStyle:'medium',timeStyle:'short'}).format(new Date(start.time));
+  return {label:'접수 시작 전 · '+when+' 시작 예정 · 원문 확인',order:100};
+ }
+ if(start?.dateOnly&&start.day===today&&(!finish||finish.dateOnly||finish.time>=now.getTime()))return {label:'오늘 접수 시작 예정 · 시작시각 원문 확인',order:0};
  if(!end)return {label:'일정 미확정 · 원문 확인',order:999};
- const day=end.slice(0,10),days=Math.round((Date.parse(day+'T00:00:00+09:00')-Date.parse(today+'T00:00:00+09:00'))/86400000);
+ const day=finish.dateOnly?finish.day:new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(finish.time)),days=Math.round((Date.parse(day+'T00:00:00+09:00')-Date.parse(today+'T00:00:00+09:00'))/86400000);
  if(!Number.isFinite(days))return {label:'일정 원문 확인',order:999};
  const dateOnly=/^\d{4}-\d{2}-\d{2}$/.test(end);
  const past=dateOnly?day<today:Date.parse(end)<now.getTime();
  const when=dateOnly?day+' · 마감시각 미공개':new Intl.DateTimeFormat('ko-KR',{timeZone:'Asia/Seoul',dateStyle:'medium',timeStyle:'short'}).format(new Date(end));
- return {label:when+' · '+(past?'공고상 마감일 지남 · 상태 재확인':days===0?'오늘 마감 예정 · 원문 확인':days<=7?'D-'+days+' · 마감 예정':'신청 일정'),order:past?998:days};
+ return {label:when+' · '+(past?'공고상 마감일 지남 · 상태 재확인':days===0?'오늘 마감 예정 · 원문 확인':days<=7?'D-'+days+' · 마감 예정':'신청 일정')+(!past&&e.early_close_possible?' · 조기 마감 가능 · 접수 상태 원문 확인':''),order:past?998:days};
 }
 function renderVerifiedNotices(now=new Date()){
  const box=$('#verifiedNotices');if(!box)return;
- const rows=EVIDENCE.filter(e=>['A+','A'].includes(e.source_tier)&&(e.application_end||e.category==='benefit_status'))
+ const rows=EVIDENCE.filter(e=>['A+','A'].includes(e.source_tier)&&(e.application_start||e.application_end||e.category==='benefit_status'))
  .filter(e=>{const age=(now-Date.parse(e.verified_at+'T00:00:00+09:00'))/86400000;return age>=0&&age<=14})
  .map(e=>({e,t:noticeTiming(e,now)})).sort((a,b)=>a.t.order-b.t.order||a.e.id.localeCompare(b.e.id));
  box.innerHTML=rows.map(({e,t})=>`<article class="source-card verified-notice"><small>${escapeHTML(e.region)} · 확인 ${escapeHTML(e.verified_at)}</small><h3>${escapeHTML(e.source_title)}</h3><p class="program-warning">${escapeHTML(t.label)}</p><p>${escapeHTML(e.claim)}</p><div class="row-actions">${safeURL(e.source_url)?`<a class="btn" href="${safeURL(e.source_url)}" target="_blank" rel="noopener noreferrer">공식 공고 확인 ↗</a>`:''}<button class="btn" data-region="${escapeHTML(e.region)}">지역 근거 보기 →</button></div></article>`).join('')||'<p>최근 확인된 신청 공고가 없습니다.</p>';
