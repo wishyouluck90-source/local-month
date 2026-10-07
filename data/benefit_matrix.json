@@ -3,7 +3,7 @@
     "region": "산청",
     "status": "신청접수중",
     "travel_period": "2026-10-01~10-31",
-    "apply": "2026-09-21 10:00~10-11",
+    "apply": "10/11까지 · 마감시각 미공개 · 여행 2일 전 신청",
     "refund_rate": 50,
     "youth_rate": 70,
     "max_person": 100000,
@@ -12,7 +12,9 @@
     "payment": "제로페이(비플페이), 숙박은 카드/현금영수증 예외",
     "visit_rule": "지정관광지 2곳 이상 + 제로페이 가맹점 2곳 이상 소비",
     "source": "KTO 반값여행",
-    "opportunity_score": 72.0
+    "opportunity_score": 72.0,
+    "source_url": "https://sancheongtour.kr/data/editor/2609/scg_oct_extend2_20260930.jpg",
+    "verified_at": "2026-10-07"
   },
   {
     "region": "영천",
@@ -76,9 +78,9 @@
   },
   {
     "region": "고성",
-    "status": "준비중",
-    "travel_period": "2026-11-07~12-20",
-    "apply": "2026-10-14 09:00 예정",
+    "status": "마감",
+    "travel_period": "3차 미정",
+    "apply": "1·2차 마감 · 3차 별도 공지",
     "refund_rate": 50,
     "youth_rate": 70,
     "max_person": 100000,
@@ -87,7 +89,10 @@
     "payment": "제로페이, 숙박 카드/현금영수증 예외",
     "visit_rule": "지정 관광지 2곳 이상",
     "source": "KTO 반값여행",
-    "opportunity_score": 62.0
+    "opportunity_score": 0,
+    "source_url": "https://www.healinggoseong.kr/index.html",
+    "verified_at": "2026-10-07",
+    "score_note": "현재 신청 일정 미확정으로 기회점수 0; 지역 랭킹 점수와 별도"
   },
   {
     "region": "함양",

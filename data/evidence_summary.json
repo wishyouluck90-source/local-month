@@ -4,21 +4,21 @@
     "Aplus": 4,
     "A": 1,
     "latest": "2026-10-05",
-    "active": 5
+    "active": 3
   },
   "밀양": {
     "count": 8,
     "Aplus": 7,
     "A": 1,
     "latest": "2026-10-05",
-    "active": 8
+    "active": 7
   },
   "산청": {
-    "count": 3,
-    "Aplus": 0,
+    "count": 4,
+    "Aplus": 1,
     "A": 3,
-    "latest": "2026-10-05",
-    "active": 2
+    "latest": "2026-10-07",
+    "active": 3
   },
   "보은": {
     "count": 4,
@@ -63,10 +63,10 @@
     "active": 3
   },
   "고성": {
-    "count": 1,
-    "Aplus": 1,
+    "count": 2,
+    "Aplus": 2,
     "A": 0,
-    "latest": "2026-10-05",
+    "latest": "2026-10-07",
     "active": 1
   },
   "서천": {
@@ -74,7 +74,7 @@
     "Aplus": 1,
     "A": 1,
     "latest": "2026-10-05",
-    "active": 2
+    "active": 1
   },
   "태안": {
     "count": 10,
@@ -88,14 +88,14 @@
     "Aplus": 5,
     "A": 0,
     "latest": "2026-10-05",
-    "active": 1
+    "active": 5
   },
   "영월": {
     "count": 4,
     "Aplus": 4,
     "A": 0,
     "latest": "2026-10-05",
-    "active": 4
+    "active": 3
   },
   "단양": {
     "count": 2,
@@ -103,5 +103,61 @@
     "A": 2,
     "latest": "2026-10-05",
     "active": 2
+  },
+  "충남 보령시": {
+    "count": 1,
+    "Aplus": 1,
+    "A": 0,
+    "latest": "2026-10-07",
+    "active": 0
+  },
+  "충남 공주시": {
+    "count": 1,
+    "Aplus": 1,
+    "A": 0,
+    "latest": "2026-10-07",
+    "active": 0
+  },
+  "전북 김제시": {
+    "count": 1,
+    "Aplus": 1,
+    "A": 0,
+    "latest": "2026-10-07",
+    "active": 1
+  },
+  "경기 가평군": {
+    "count": 1,
+    "Aplus": 1,
+    "A": 0,
+    "latest": "2026-10-07",
+    "active": 1
+  },
+  "전남 영암군": {
+    "count": 1,
+    "Aplus": 0,
+    "A": 1,
+    "latest": "2026-10-07",
+    "active": 0
+  },
+  "경남 남해군": {
+    "count": 1,
+    "Aplus": 1,
+    "A": 0,
+    "latest": "2026-10-07",
+    "active": 1
+  },
+  "경기 연천군": {
+    "count": 1,
+    "Aplus": 1,
+    "A": 0,
+    "latest": "2026-10-07",
+    "active": 1
+  },
+  "전북 진안군": {
+    "count": 1,
+    "Aplus": 1,
+    "A": 0,
+    "latest": "2026-10-07",
+    "active": 1
   }
 }

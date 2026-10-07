@@ -1,26 +1,8 @@
 [
   {
-    "region": "산청",
-    "title": "반값여행 2차 신청 마감",
-    "start": "2026-10-11T23:59:00+09:00",
-    "kind": "close",
-    "priority": "high",
-    "status": "open",
-    "source": "KTO 반값여행"
-  },
-  {
     "region": "안동",
     "title": "반값여행 2차 접수 오픈",
     "start": "2026-10-12T10:00:00+09:00",
-    "kind": "open",
-    "priority": "high",
-    "status": "upcoming",
-    "source": "KTO 반값여행"
-  },
-  {
-    "region": "고성",
-    "title": "반값여행 3차 접수 오픈",
-    "start": "2026-10-14T09:00:00+09:00",
     "kind": "open",
     "priority": "high",
     "status": "upcoming",

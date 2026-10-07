@@ -3,7 +3,8 @@
   "covered_regions": 15,
   "coverage_percent": 100.0,
   "uncovered": [],
-  "official_evidence_records": 20,
-  "total_evidence_records": 20,
-  "verified_at": "2026-10-05"
+  "official_evidence_records": 73,
+  "total_evidence_records": 73,
+  "verified_at": "2026-10-07",
+  "scope_note": "기존 beta_regions 커버리지와 89개 일일 전수검증은 다름. verified_at은 집계일이며 개별 근거의 확인일을 대체하지 않음."
 }
