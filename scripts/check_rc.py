@@ -22,10 +22,30 @@ assert 'local-month-'+v in (root/'sw.js').read_text()
 assert 'const APP_VERSION='+repr(v) in (root/'storage.js').read_text()
 assert 'getRegistrations' not in (root/'index.html').read_text()
 assert 'k.startsWith(\'local-month-\')' in (root/'sw.js').read_text()
+additions=json.loads((root/'scripts/release_evidence_additions.json').read_text())
+assert len(additions)==5 and len({r['id'] for r in additions})==5
+baseline_data=lambda name:json.loads(subprocess.check_output(['git','show',baseline_commit+':data/'+name],cwd=root))
+registry=baseline_data('evidence_registry.json')
+assert not {r['id'] for r in additions}&{r['id'] for r in registry}
+for row in additions:
+ assert row['source_url'].startswith('https://') and row['source_hashes'] and row['unknown_conditions']
+ assert row['status']=='unconfirmed', 'new evidence must not imply live availability'
+ assert all(v=='원문 확인' for v in row['decision_desk'].values())
+summary=baseline_data('evidence_summary.json')
+for row in additions:
+ item=summary.setdefault(row['region'],dict(count=0,Aplus=0,A=0,latest=row['verified_at'],active=0))
+ item['count']+=1;item['Aplus']+=row['source_tier']=='A+';item['A']+=row['source_tier']=='A';item['latest']=max(item['latest'],row['verified_at'])
+coverage=baseline_data('evidence_coverage.json')
+coverage['total_evidence_records']+=len(additions)
+coverage['official_evidence_records']+=sum(r['source_tier'] in ['A+','A'] for r in additions)
+expected={'evidence_registry.json':registry+additions,'evidence_summary.json':summary,'evidence_coverage.json':coverage}
 for f in (root/'data').rglob('*.json'):
- baseline=subprocess.check_output(['git','show',baseline_commit+':'+str(f.relative_to(root))],cwd=root)
- assert hashlib.sha256(baseline).digest()==hashlib.sha256(f.read_bytes()).digest(),f
+ if f.name in expected and f.parent==root/'data':
+  assert json.loads(f.read_text())==expected[f.name],f
+ else:
+  baseline=subprocess.check_output(['git','show',baseline_commit+':'+str(f.relative_to(root))],cwd=root)
+  assert hashlib.sha256(baseline).digest()==hashlib.sha256(f.read_bytes()).digest(),f
 names=[]
 for f in ['app.js','rc.js','storage.js']:names.extend(re.findall(r'^function (\w+)\(', (root/f).read_text(),re.M))
 assert len(names)==len(set(names)),'duplicate function declarations'
-print(json.dumps({'static':'PASS','version':v,'regions':89,'source_data':'unchanged from '+baseline_commit,'duplicate_ids':0,'duplicate_functions':0}))
+print(json.dumps({'static':'PASS','version':v,'regions':89,'source_data':'baseline preserved; 5 reviewed additions to '+baseline_commit,'duplicate_ids':0,'duplicate_functions':0}))

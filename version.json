@@ -26,5 +26,5 @@
   "dossier_schema": "all 89 regions",
   "feature_patch": "Source-linked application notices in NOW; date-only deadline precision",
   "qa_patch": "production version consistency + cache bust + internal ops visibility guard",
-  "base_commit": "db97b5528f180899d9b63ee0006a3f7d4b2234de"
+  "base_commit": "19eab6a60856d9763731d521a88238cfcf566eb6"
 }

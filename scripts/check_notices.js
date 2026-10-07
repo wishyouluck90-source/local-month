@@ -23,10 +23,10 @@ for(const invalid of ['2026-02-30','2026-10-08Tbad','2026-10-08T09:00:00',42])as
 assert.equal(notice({application_start:'2026-10-12',application_end:'2026-10-11'},'2026-10-07T00:00:00Z'),'일정 원문 확인');
 assert(notice({application_end:'2026-10-07T16:00:00Z'},'2026-10-07T15:00:00Z').includes('오늘'));
 ctx.renderVerifiedNotices(new Date('2026-10-07T09:00:00+09:00'));
-assert.equal((box.innerHTML.match(/class="source-card verified-notice"/g)||[]).length,15);
-assert.equal((box.innerHTML.match(/D-\d/g)||[]).length,8);
+assert.equal((box.innerHTML.match(/class="source-card verified-notice"/g)||[]).length,19);
+assert.equal((box.innerHTML.match(/D-\d/g)||[]).length,9);
 assert(box.innerHTML.includes('마감시각 미공개'));
 ctx.EVIDENCE=[{id:'test',source_tier:'A',application_end:'2026-10-08',verified_at:'2026-10-07',source_url:'javascript:alert(1)',source_title:'<img onerror=alert(1)>',claim:'x',region:'x'}];ctx.renderVerifiedNotices(new Date('2026-10-07T09:00:00+09:00'));
 assert(!box.innerHTML.includes('href='));assert(!box.innerHTML.includes('<img'));
 ctx.renderVerifiedNotices(new Date('2026-10-23T09:00:00+09:00'));assert(!box.innerHTML.includes('verified-notice'));
-console.log('PASS: future opening, unknown opening time, early close, invalid dates, KST rollover, expiry, 15 notices / 8 urgent, escaping and stale exclusion');
+console.log('PASS: future opening, unknown opening time, early close, invalid dates, KST rollover, expiry, 19 notices / 9 urgent, escaping and stale exclusion');
