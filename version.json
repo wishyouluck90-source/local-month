@@ -1,6 +1,6 @@
 {
-  "version": "9.4.1",
-  "status": "release-candidate",
+  "version": "9.4.2",
+  "status": "release",
   "design_system": "Editorial / Nomad / Cultural",
   "core_navigation": [
     "DISCOVER",
@@ -26,5 +26,5 @@
   "dossier_schema": "all 89 regions",
   "feature_patch": "Source-linked application notices in NOW; date-only deadline precision",
   "qa_patch": "production version consistency + cache bust + internal ops visibility guard",
-  "base_commit": "3ec01d541bfe380cd4f609f734f1079cca633d35"
+  "base_commit": "db97b5528f180899d9b63ee0006a3f7d4b2234de"
 }
