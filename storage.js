@@ -1,4 +1,4 @@
-const APP_VERSION='9.4.4';
+const APP_VERSION='9.4.5';
 function readJSON(key,fallback){try{const value=JSON.parse(localStorage.getItem(key));return value===null?fallback:value}catch{return fallback}}
 function readState(){const value=readJSON('lm_state',{}),out={};for(const key of ['saved','compare','research','comments','notifications','events'])out[key]=Array.isArray(value?.[key])?value[key]:[];out.saved=out.saved.filter(x=>typeof x==='string');out.compare=out.compare.filter(x=>typeof x==='string').slice(0,3);out.research=out.research.filter(x=>x&&typeof x.url==='string'&&typeof x.region==='string');out.comments=out.comments.filter(x=>x&&typeof x.text==='string').map(x=>({...x,helpful:Number.isFinite(x.helpful)?x.helpful:0}));out.notifications=out.notifications.filter(x=>x&&typeof x.text==='string');out.events=out.events.filter(x=>typeof x==='string');return out}
 function escapeHTML(value){return String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}

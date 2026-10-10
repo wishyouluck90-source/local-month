@@ -36,9 +36,14 @@
     "source_title": "산청 동의보감촌 이용정보",
     "source_url": "https://donguibogam-village.sancheong.go.kr/html/sub/02_01.jsp",
     "source_tier": "A",
-    "verified_at": "2026-10-05",
+    "verified_at": "2026-10-10",
     "confidence": "높음",
-    "status": "active"
+    "status": "active",
+    "valid_until": "2026-10-11",
+    "verification_scope": "공식 이용정보의 축제기간 무료입장 안내 재확인. 10월 12일 이후 무료입장 또는 방문일 현장 운영 보장 아님",
+    "source_hashes": {
+      "https://donguibogam-village.sancheong.go.kr/html/sub/02_01.jsp": "0a9899d01459c0c067c4943ec72bf96f112daf0a7ee07dc66181131f08ae2773"
+    }
   },
   {
     "id": "sancheong-herb-pouch",

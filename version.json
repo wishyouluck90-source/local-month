@@ -1,5 +1,5 @@
 {
-  "version": "9.4.4",
+  "version": "9.4.5",
   "status": "release",
   "design_system": "Editorial / Nomad / Cultural",
   "core_navigation": [
@@ -13,8 +13,8 @@
   "regions_indexed": 89,
   "paid_api_dependencies": 0,
   "internal_ops_hidden_from_customer_ui": true,
-  "data_verified_at": "2026-10-08",
-  "data_patch": "Taean access constraints and official deadline source links; partial verification only",
+  "data_verified_at": "2026-10-10",
+  "data_patch": "Sancheong festival free-entry end date verified; partial verification only",
   "new_layer": "2026 Q1 official living population",
   "flagship_dossiers": [
     "하동",

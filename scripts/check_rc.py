@@ -39,7 +39,7 @@ coverage=baseline_data('evidence_coverage.json')
 coverage['total_evidence_records']+=len(additions)
 coverage['official_evidence_records']+=sum(r['source_tier'] in ['A+','A'] for r in additions)
 rechecks=json.loads((root/'scripts/release_evidence_rechecks.json').read_text())
-assert len(rechecks)==10 and len({r['id'] for r in rechecks})==10
+assert len(rechecks)==11 and len({r['id'] for r in rechecks})==11
 for review in rechecks:
  row=next(r for r in registry if r['id']==review['id'])
  assert row==review['before'], 'recheck must match the exact original record'
@@ -47,7 +47,7 @@ for review in rechecks:
  assert all(after[k]==row[k] for k in ['id','region','category','source_tier','status','confidence'])
  assert set(after)-set(row) <= {'source_hashes','verification_scope','valid_until'}
  assert all(after[k]==row[k] for k in row if k not in {'claim','verified_at','source_url','source_title','source_note'})
- assert after['verified_at']==review['retrieved_at'][:10] and after['verified_at'] in {'2026-10-07','2026-10-08'}
+ assert after['verified_at']==review['retrieved_at'][:10] and after['verified_at'] in {'2026-10-07','2026-10-08','2026-10-10'}
  assert re.fullmatch(r'[0-9a-f]{64}',review['source_sha256'])
  assert after['source_hashes']=={after['source_url']:review['source_sha256']}
  assert after['verification_scope']==review['review_note']
@@ -58,9 +58,13 @@ for f in (root/'data').rglob('*.json'):
  if f.name in expected and f.parent==root/'data':
   assert json.loads(f.read_text())==expected[f.name],f
  else:
-  baseline=subprocess.check_output(['git','show',baseline_commit+':'+str(f.relative_to(root))],cwd=root)
+  # Preserve the exact daily pipeline files already published on main; all other data stays pinned.
+  relative=str(f.relative_to(root))
+  daily_files={'data/diff_latest.json','data/snapshots/2026-10-08.json','data/snapshots/2026-10-09.json'}
+  data_commit='63de0db09d6bf631a6b1bd96d77773ee2948e678' if relative in daily_files else baseline_commit
+  baseline=subprocess.check_output(['git','show',data_commit+':'+relative],cwd=root)
   assert hashlib.sha256(baseline).digest()==hashlib.sha256(f.read_bytes()).digest(),f
 names=[]
 for f in ['app.js','rc.js','storage.js']:names.extend(re.findall(r'^function (\w+)\(', (root/f).read_text(),re.M))
 assert len(names)==len(set(names)),'duplicate function declarations'
-print(json.dumps({'static':'PASS','version':v,'regions':89,'source_data':'baseline preserved; 5 reviewed additions and 10 audited rechecks to '+baseline_commit,'duplicate_ids':0,'duplicate_functions':0}))
+print(json.dumps({'static':'PASS','version':v,'regions':89,'source_data':'baseline preserved; 5 reviewed additions and 11 audited rechecks to '+baseline_commit,'duplicate_ids':0,'duplicate_functions':0}))

@@ -357,5 +357,40 @@
     "retrieved_at": "2026-10-08T01:02:10.566083+00:00",
     "source_sha256": "a7dac7d72752771b8aaa807a988ba8bd0858507256496a874a7f62713ee39bea",
     "review_note": "공식 상세 웹 안내 재열람; 현장 이용·잔여석·개별 자격 확인 아님"
+  },
+  {
+    "id": "sancheong-free-entry",
+    "before": {
+      "id": "sancheong-free-entry",
+      "region": "산청",
+      "category": "benefit",
+      "claim": "2026-10-02~10-11 축제기간 주제관 및 한의학박물관 무료입장",
+      "source_title": "산청 동의보감촌 이용정보",
+      "source_url": "https://donguibogam-village.sancheong.go.kr/html/sub/02_01.jsp",
+      "source_tier": "A",
+      "verified_at": "2026-10-05",
+      "confidence": "높음",
+      "status": "active"
+    },
+    "after": {
+      "id": "sancheong-free-entry",
+      "region": "산청",
+      "category": "benefit",
+      "claim": "2026-10-02~10-11 축제기간 주제관 및 한의학박물관 무료입장",
+      "source_title": "산청 동의보감촌 이용정보",
+      "source_url": "https://donguibogam-village.sancheong.go.kr/html/sub/02_01.jsp",
+      "source_tier": "A",
+      "verified_at": "2026-10-10",
+      "confidence": "높음",
+      "status": "active",
+      "valid_until": "2026-10-11",
+      "verification_scope": "공식 이용정보의 축제기간 무료입장 안내 재확인. 10월 12일 이후 무료입장 또는 방문일 현장 운영 보장 아님",
+      "source_hashes": {
+        "https://donguibogam-village.sancheong.go.kr/html/sub/02_01.jsp": "0a9899d01459c0c067c4943ec72bf96f112daf0a7ee07dc66181131f08ae2773"
+      }
+    },
+    "retrieved_at": "2026-10-10T01:03:53.876405+00:00",
+    "source_sha256": "0a9899d01459c0c067c4943ec72bf96f112daf0a7ee07dc66181131f08ae2773",
+    "review_note": "공식 이용정보의 축제기간 무료입장 안내 재확인. 10월 12일 이후 무료입장 또는 방문일 현장 운영 보장 아님"
   }
 ]

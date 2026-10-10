@@ -13,3 +13,9 @@ for(const end of ['2026-02-30','2026-13-01','not-a-date',42])assert(!ctx.liveEvi
 assert(ctx.liveEvidence({...record,valid_until:undefined}),'undated infrastructure keeps the existing freshness guard');
 assert(!ctx.liveEvidence({...record,valid_until:undefined,status:'unconfirmed'}));
 console.log('PASS: published end date overrides freshness, KST boundary, malformed dates, and unconfirmed exclusion');
+
+const sancheong=JSON.parse(fs.readFileSync('data/evidence_registry.json','utf8')).find(r=>r.id==='sancheong-free-entry');
+assert.equal(sancheong.valid_until,'2026-10-11');
+now=Date.parse('2026-10-11T23:59:59.999+09:00');assert(ctx.liveEvidence(sancheong));
+now+=1;assert(!ctx.liveEvidence(sancheong),'Sancheong free entry ends even while its verification is fresh');
+console.log('PASS: actual Sancheong record excludes free-entry evidence from October 12 KST');
