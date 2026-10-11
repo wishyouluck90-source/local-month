@@ -1,28 +1,7 @@
 {
-  "previous": "2026-10-09",
-  "current": "2026-10-10",
+  "previous": "2026-10-10",
+  "current": "2026-10-11",
   "new": [],
-  "changed": [
-    {
-      "before": {
-        "id": "evidence:sancheong-free-entry",
-        "region": "산청",
-        "category": "evidence",
-        "state": "fresh",
-        "title": "2026-10-02~10-11 축제기간 주제관 및 한의학박물관 무료입장",
-        "source_tier": "A",
-        "verified_at": "2026-10-05"
-      },
-      "after": {
-        "id": "evidence:sancheong-free-entry",
-        "region": "산청",
-        "category": "evidence",
-        "state": "fresh",
-        "title": "2026-10-02~10-11 축제기간 주제관 및 한의학박물관 무료입장",
-        "source_tier": "A",
-        "verified_at": "2026-10-10"
-      }
-    }
-  ],
+  "changed": [],
   "removed_or_ended": []
 }
