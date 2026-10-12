@@ -3,6 +3,8 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 echo "[1/4] JavaScript syntax"
 node --check app.js
+node --check media.js
+python3 scripts/check_media.py
 echo "[2/4] Data integrity"
 python3 scripts/check_data.py
 echo "[3/4] Required files"
