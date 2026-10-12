@@ -1,7 +1,7 @@
 {
-  "version": "9.4.6",
+  "version": "9.5.0",
   "status": "release",
-  "design_system": "Editorial / Nomad / Cultural",
+  "design_system": "Travel discovery / category-first / blue and white",
   "core_navigation": [
     "DISCOVER",
     "PLACES",
@@ -24,7 +24,7 @@
   ],
   "review_pulse_model": "source-linked summaries; no protected-platform scraping",
   "dossier_schema": "all 89 regions",
-  "feature_patch": "Launch-date regression and audited source rechecks",
+  "feature_patch": "Full customer interface redesign inspired by Monthler discovery patterns",
   "qa_patch": "production version consistency + cache bust + internal ops visibility guard",
   "base_commit": "19eab6a60856d9763731d521a88238cfcf566eb6"
 }

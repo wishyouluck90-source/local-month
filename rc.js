@@ -107,3 +107,5 @@ function sourceCard(e){return `<article class="source-card"><p>${escapeHTML(e.cl
 function renderBenefits(){$('#benefitList').innerHTML='<p>혜택 기록은 실시간 잔여예산을 보장하지 않습니다. 관광주민증 권역 이벤트 쿠폰은 2026-10-06 정정 기록상 예산소진·사용종료입니다.</p>'+BENEFITS.map(b=>`<article class="source-card"><h3>${escapeHTML(b.region)} · ${escapeHTML(b.name)}</h3><p>이용 가능 여부·실제 환급액: 원문 확인</p><button class="btn" data-region="${escapeHTML(b.region)}">지역 근거 확인 →</button></article>`).join('')}
 
 window.rcLoaded=true;window.dispatchEvent(new Event('rc-loaded'));
+
+function selectTravelTheme(theme){if(!document.querySelector('[data-theme="'+theme+'"]'))return;selectedThemes=[theme];document.querySelectorAll('.theme').forEach(b=>{const active=b.dataset.theme===theme;b.classList.toggle('active',active);b.setAttribute('aria-checked',String(active));});invalidateRecommendation('취향을 선택했어요. 기간과 예산을 고른 뒤 추천받으세요.');switchPanel('home');document.querySelector('.match-section').scrollIntoView({behavior:'smooth',block:'start'});document.querySelector('#stayDays').focus({preventScroll:true});}
