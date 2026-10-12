@@ -19,3 +19,8 @@ assert.equal(sancheong.valid_until,'2026-10-11');
 now=Date.parse('2026-10-11T23:59:59.999+09:00');assert(ctx.liveEvidence(sancheong));
 now+=1;assert(!ctx.liveEvidence(sancheong),'Sancheong free entry ends even while its verification is fresh');
 console.log('PASS: actual Sancheong record excludes free-entry evidence from October 12 KST');
+
+const registry=JSON.parse(fs.readFileSync('data/evidence_registry.json','utf8'));
+for(const [id,end] of [['miryang-pet-center-2026','2026-08-15'],['miryang-pet-payback-2026','2026-09-30'],['miryang-dog-sports-day-2026','2026-10-24']]){const r=registry.find(r=>r.id===id);assert.equal(r.valid_until,end);now=Date.parse(end+'T23:59:59.999+09:00');assert(ctx.liveEvidence(r));now+=1;assert(!ctx.liveEvidence(r));}
+now=Date.parse('2026-10-20T12:00:00+09:00');assert(!ctx.liveEvidence(registry.find(r=>r.id==='miryang-pet-payback-2026')));assert(!ctx.liveEvidence(registry.find(r=>r.id==='miryang-pet-center-2026')));
+console.log('PASS: actual Miryang pool/payback/sports KST boundaries; expired offers excluded on launch day');

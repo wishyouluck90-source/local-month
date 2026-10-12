@@ -392,5 +392,149 @@
     "retrieved_at": "2026-10-10T01:03:53.876405+00:00",
     "source_sha256": "0a9899d01459c0c067c4943ec72bf96f112daf0a7ee07dc66181131f08ae2773",
     "review_note": "공식 이용정보의 축제기간 무료입장 안내 재확인. 10월 12일 이후 무료입장 또는 방문일 현장 운영 보장 아님"
+  },
+  {
+    "id": "miryang-pet-center-2026",
+    "before": {
+      "id": "miryang-pet-center-2026",
+      "region": "밀양",
+      "category": "pet",
+      "claim": "밀양 반려동물지원센터는 2026년 야외수영장 운영과 반려동물 일일 하계캠프 등 실제 프로그램 공지를 지속 게시",
+      "source_title": "선샤인밀양테마파크 반려동물지원센터 공지",
+      "source_url": "https://park.miryang.go.kr/park/nmprogram/board/default.php?cb=1",
+      "source_tier": "A+",
+      "verified_at": "2026-10-05",
+      "confidence": "높음",
+      "status": "active"
+    },
+    "after": {
+      "id": "miryang-pet-center-2026",
+      "region": "밀양",
+      "category": "pet",
+      "claim": "반려동물지원센터 2026년 반려견 수영장은 8월 16일부터 조기 종료한다고 공식 첨부 공지. 종료 공고이며 현재 수영장 운영·반려견 동반 프로그램의 근거가 아님",
+      "source_title": "반려견 수영장 운영 조기종료 안내",
+      "source_url": "https://park.miryang.go.kr/park/nmprogram/board/default.php?cb=1&cr=&ct=&idx=133&ky=&mod=o&op=&page=1&se=133&st=Y&wd=",
+      "source_tier": "A+",
+      "verified_at": "2026-10-12",
+      "confidence": "높음",
+      "status": "active",
+      "source_hashes": {
+        "https://park.miryang.go.kr/park/nmprogram/board/default.php?cb=1&cr=&ct=&idx=133&ky=&mod=o&op=&page=1&se=133&st=Y&wd=": "1ac263d4bbd69fa3f9ec2207bebb27fbe0587ae2d2d0a972616855d727de0899"
+      },
+      "verification_scope": "공식 상세 원문과 명시된 기간·조건 검토; 현장 운영·신청 가능·잔여석 확인 아님; 첨부 PNG 육안 확인, 8월16일부터 종료",
+      "valid_until": "2026-08-15"
+    },
+    "retrieved_at": "2026-10-12T02:51:19.189162+00:00",
+    "source_sha256": "1ac263d4bbd69fa3f9ec2207bebb27fbe0587ae2d2d0a972616855d727de0899",
+    "review_note": "공식 상세 원문과 명시된 기간·조건 검토; 현장 운영·신청 가능·잔여석 확인 아님; 첨부 PNG 육안 확인, 8월16일부터 종료",
+    "attachment": {
+      "url": "https://park.miryang.go.kr/park/nmprogram/data/1/2026/08/6388395e76bc95dc35a96f59a630ab69.png",
+      "sha256": "2705e671ea119fde263b57f02f3fe3c3d527882571fd3604cfb2cb890f91163d",
+      "retrieved_at": "2026-10-12T02:51:52.005912+00:00"
+    }
+  },
+  {
+    "id": "miryang-pet-payback-2026",
+    "before": {
+      "id": "miryang-pet-payback-2026",
+      "region": "밀양",
+      "category": "pet",
+      "claim": "밀양 반려동물지원센터 100% 페이백 행사가 2026-08-31 공식 공지에 진행중으로 노출",
+      "source_title": "선샤인밀양테마파크 공지사항",
+      "source_url": "https://park.miryang.go.kr/park/nmprogram/board/default.php?cb=1",
+      "source_tier": "A+",
+      "verified_at": "2026-10-05",
+      "confidence": "높음",
+      "status": "active"
+    },
+    "after": {
+      "id": "miryang-pet-payback-2026",
+      "region": "밀양",
+      "category": "pet",
+      "claim": "반려동물지원센터 입장료 100% 밀양사랑상품권 페이백의 공고상 기간은 2026년 9월 1~30일로 종료됨. 제로페이 결제 제외, 상품권 소진 시 조기 종료 조건. 목록의 진행중 표기는 현재 혜택 이용 가능 근거가 아님",
+      "source_title": "밀양 반려동물지원센터 페이백 행사 안내",
+      "source_url": "https://park.miryang.go.kr/park/nmprogram/board/default.php?cb=1&cr=&ct=&idx=135&ky=&mod=o&op=&page=1&se=135&st=Y&wd=",
+      "source_tier": "A+",
+      "verified_at": "2026-10-12",
+      "confidence": "높음",
+      "status": "active",
+      "source_hashes": {
+        "https://park.miryang.go.kr/park/nmprogram/board/default.php?cb=1&cr=&ct=&idx=135&ky=&mod=o&op=&page=1&se=135&st=Y&wd=": "53b4f0fe234f39a726019892d910c8c32803d5730437d49630e4b62728461bb6"
+      },
+      "verification_scope": "공식 상세 원문과 명시된 기간·조건 검토; 현장 운영·신청 가능·잔여석 확인 아님",
+      "valid_until": "2026-09-30"
+    },
+    "retrieved_at": "2026-10-12T02:51:19.187894+00:00",
+    "source_sha256": "53b4f0fe234f39a726019892d910c8c32803d5730437d49630e4b62728461bb6",
+    "review_note": "공식 상세 원문과 명시된 기간·조건 검토; 현장 운영·신청 가능·잔여석 확인 아님"
+  },
+  {
+    "id": "miryang-dog-sports-day-2026",
+    "before": {
+      "id": "miryang-dog-sports-day-2026",
+      "region": "밀양",
+      "category": "pet",
+      "claim": "제2회 댕댕이 한마음 운동회가 2026-09-16 공식 공지로 진행중 노출",
+      "source_title": "선샤인밀양테마파크 공지사항",
+      "source_url": "https://park.miryang.go.kr/park/nmprogram/board/default.php?cb=1",
+      "source_tier": "A+",
+      "verified_at": "2026-10-05",
+      "confidence": "높음",
+      "status": "active"
+    },
+    "after": {
+      "id": "miryang-dog-sports-day-2026",
+      "region": "밀양",
+      "category": "pet",
+      "claim": "제2회 댕댕이 한마음 운동회는 2026년 10월 24일 13시 밀양 반려동물지원센터 개최 예정으로 공식 본문 안내. 포스터 QR로 신청하며 현재 신청 가능·잔여석·개별 참가 자격은 원문 확인",
+      "source_title": "제2회 댕댕이 한마음 운동회",
+      "source_url": "https://park.miryang.go.kr/park/nmprogram/board/default.php?cb=1&cr=&ct=&idx=137&ky=&mod=o&op=&page=1&se=137&st=Y&wd=",
+      "source_tier": "A+",
+      "verified_at": "2026-10-12",
+      "confidence": "높음",
+      "status": "active",
+      "source_hashes": {
+        "https://park.miryang.go.kr/park/nmprogram/board/default.php?cb=1&cr=&ct=&idx=137&ky=&mod=o&op=&page=1&se=137&st=Y&wd=": "d56f3adda04976b8e31b61d5b1c67cb7f558b8e282b3f808736e41194ebf8fbb"
+      },
+      "verification_scope": "공식 상세 원문과 명시된 기간·조건 검토; 현장 운영·신청 가능·잔여석 확인 아님",
+      "valid_until": "2026-10-24"
+    },
+    "retrieved_at": "2026-10-12T02:51:19.189305+00:00",
+    "source_sha256": "d56f3adda04976b8e31b61d5b1c67cb7f558b8e282b3f808736e41194ebf8fbb",
+    "review_note": "공식 상세 원문과 명시된 기간·조건 검토; 현장 운영·신청 가능·잔여석 확인 아님"
+  },
+  {
+    "id": "miryang-pet-center-facilities-2026",
+    "before": {
+      "id": "miryang-pet-center-facilities-2026",
+      "region": "밀양",
+      "category": "pet",
+      "claim": "밀양 반려동물지원센터는 실내놀이터·야외놀이터·하절기 반려견 수영장·목욕실·드라이룸을 운영하며 1인+1두 기본 입장료는 10,000원",
+      "source_title": "선샤인밀양테마파크 반려동물지원센터 이용요금",
+      "source_url": "https://park.miryang.go.kr/park/_Sub/sb1070500.php",
+      "source_tier": "A+",
+      "verified_at": "2026-10-05",
+      "confidence": "높음",
+      "status": "active"
+    },
+    "after": {
+      "id": "miryang-pet-center-facilities-2026",
+      "region": "밀양",
+      "category": "pet",
+      "claim": "반려동물지원센터 공식 요금표상 실내·야외 놀이터 입장은 1인+1두 10,000원, 추가 1인·1두당 5,000원. 목욕실·드라이룸은 별도 10,000원. 요금표의 하절기 수영장 표기는 방문일 가동을 보장하지 않음",
+      "source_title": "반려동물지원센터 이용요금",
+      "source_url": "https://park.miryang.go.kr/park/_Sub/sb1070500.php",
+      "source_tier": "A+",
+      "verified_at": "2026-10-12",
+      "confidence": "높음",
+      "status": "active",
+      "source_hashes": {
+        "https://park.miryang.go.kr/park/_Sub/sb1070500.php": "ae39639048e57d7370e41644188fd20bfa51ac0485bc4183ee95f1be9a7ffd36"
+      },
+      "verification_scope": "공식 상세 원문과 명시된 기간·조건 검토; 현장 운영·신청 가능·잔여석 확인 아님"
+    },
+    "retrieved_at": "2026-10-12T02:51:19.136808+00:00",
+    "source_sha256": "ae39639048e57d7370e41644188fd20bfa51ac0485bc4183ee95f1be9a7ffd36",
+    "review_note": "공식 상세 원문과 명시된 기간·조건 검토; 현장 운영·신청 가능·잔여석 확인 아님"
   }
 ]

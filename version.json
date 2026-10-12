@@ -1,5 +1,5 @@
 {
-  "version": "9.5.0",
+  "version": "9.5.1",
   "status": "release",
   "design_system": "Travel discovery / category-first / blue and white",
   "core_navigation": [
@@ -14,7 +14,7 @@
   "paid_api_dependencies": 0,
   "internal_ops_hidden_from_customer_ui": true,
   "data_verified_at": "2026-10-12",
-  "data_patch": "Official KTO application-state snapshot recheck for 25 regions; not live availability confirmation",
+  "data_patch": "Miryang pet source-detail corrections: ended pool and payback excluded; event date and fee conditions clarified",
   "new_layer": "2026 Q1 official living population",
   "flagship_dossiers": [
     "하동",
