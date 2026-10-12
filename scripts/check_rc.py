@@ -54,14 +54,24 @@ for review in rechecks:
  row.clear();row.update(after)
  summary[row['region']]['latest']=max(summary[row['region']]['latest'],row['verified_at'])
 expected={'evidence_registry.json':registry+additions,'evidence_summary.json':summary,'evidence_coverage.json':coverage}
+status_review=json.loads((root/'scripts/release_benefit_status_recheck.json').read_text())
+assert status_review['before']==baseline_data('current_benefit_status.json')
+assert status_review['source_url']=='https://m.visitkorea.or.kr/dgtourcard/tour50.do'
+assert re.fullmatch(r'[0-9a-f]{64}',status_review['source_sha256'])
+assert status_review['after']['as_of']==status_review['retrieved_at'][:10]=='2026-10-12'
+assert status_review['after']['source_sha256']==status_review['source_sha256']
+assert set(status_review['after']['regions'])==set(status_review['before']['regions'])
+assert len(status_review['after']['regions'])==25
+assert all(v in {'마감','준비중','신청접수중'} for v in status_review['after']['regions'].values())
+expected['current_benefit_status.json']=status_review['after']
 for f in (root/'data').rglob('*.json'):
  if f.name in expected and f.parent==root/'data':
   assert json.loads(f.read_text())==expected[f.name],f
  else:
   # Preserve the exact daily pipeline files already published on main; all other data stays pinned.
   relative=str(f.relative_to(root))
-  daily_files={'data/diff_latest.json','data/snapshots/2026-10-08.json','data/snapshots/2026-10-09.json'}
-  data_commit='63de0db09d6bf631a6b1bd96d77773ee2948e678' if relative in daily_files else baseline_commit
+  daily_files={'data/diff_latest.json','data/snapshots/2026-10-08.json','data/snapshots/2026-10-09.json','data/snapshots/2026-10-10.json','data/snapshots/2026-10-11.json'}
+  data_commit='76f1575caef0cb329f7c003a57de59a8c47da8dd' if relative in daily_files else baseline_commit
   baseline=subprocess.check_output(['git','show',data_commit+':'+relative],cwd=root)
   assert hashlib.sha256(baseline).digest()==hashlib.sha256(f.read_bytes()).digest(),f
 names=[]
