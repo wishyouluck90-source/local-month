@@ -1,3 +1,9 @@
+## 2026-10-13 · Daily deployment consistency
+
+- Daily bot commits now explicitly dispatch the existing Pages workflow, keeping Pages aligned with Vercel. Main-only execution and concurrency guard prevent overlapping refreshes.
+- Daily snapshots/diff update only their own checksums; all release and source hashes remain preserved. Release checks accept committed daily artifacts while retaining the pinned evidence guard.
+- Customer assets/version remain v9.6.0. No evidence verification dates or application availability were changed.
+
 ## v9.6.0 · 2026-10-12
 
 - 사진을 중심으로 지역을 탐색하도록 홈·추천·15개 주요 지역·상세·비교·공고·저장 화면에 실제 지역 자료사진 적용. 사진 출처 페이지에 촬영자·원문·공공누리/CC 이용조건 제공.

@@ -70,8 +70,10 @@ for f in (root/'data').rglob('*.json'):
  else:
   # Preserve the exact daily pipeline files already published on main; all other data stays pinned.
   relative=str(f.relative_to(root))
-  daily_files={'data/diff_latest.json','data/snapshots/2026-10-08.json','data/snapshots/2026-10-09.json','data/snapshots/2026-10-10.json','data/snapshots/2026-10-11.json'}
-  data_commit='76f1575caef0cb329f7c003a57de59a8c47da8dd' if relative in daily_files else baseline_commit
+  daily_snapshot=re.fullmatch(r'data/snapshots/(\d{4}-\d{2}-\d{2})\.json',relative)
+  is_daily=relative=='data/diff_latest.json' or (daily_snapshot and daily_snapshot[1]>='2026-10-08')
+  # Daily artifacts must match the committed checkout; source evidence remains pinned above.
+  data_commit='HEAD' if is_daily else baseline_commit
   baseline=subprocess.check_output(['git','show',data_commit+':'+relative],cwd=root)
   assert hashlib.sha256(baseline).digest()==hashlib.sha256(f.read_bytes()).digest(),f
 names=[]

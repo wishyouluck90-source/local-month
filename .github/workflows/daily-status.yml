@@ -7,9 +7,15 @@ on:
 
 permissions:
   contents: write
+  actions: write
+
+concurrency:
+  group: local-month-daily-states
+  cancel-in-progress: false
 
 jobs:
   refresh:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -20,20 +26,38 @@ jobs:
         with:
           python-version: "3.13"
 
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
       - name: Recompute daily snapshot and diff
         run: python3 scripts/run_daily_pipeline.py
 
       - name: Validate data
-        run: python3 scripts/check_data.py
+        run: bash scripts/validate_release.sh
+
+      - name: Refresh derived data checksums
+        run: python3 scripts/update_daily_checksums.py
 
       - name: Commit state changes
+        id: commit
         run: |
-          if git diff --quiet -- data/; then
+          if git diff --quiet -- data/ CHECKSUMS.sha256; then
             echo "No daily state changes"
             exit 0
           fi
           git config user.name "local-month-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/
+          git add data/ CHECKSUMS.sha256
           git commit -m "chore: refresh daily LOCAL MONTH states"
           git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      # GITHUB_TOKEN pushes do not trigger push workflows. Explicit dispatch does.
+      - name: Deploy the committed daily state to Pages
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: gh workflow run pages.yml --ref main
