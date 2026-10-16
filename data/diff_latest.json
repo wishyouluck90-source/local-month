@@ -1,28 +1,7 @@
 {
-  "previous": "2026-10-14",
-  "current": "2026-10-15",
+  "previous": "2026-10-15",
+  "current": "2026-10-16",
   "new": [],
-  "changed": [
-    {
-      "before": {
-        "id": "action:밀양:반값여행",
-        "region": "밀양",
-        "category": "action",
-        "state": "upcoming",
-        "title": "반값여행",
-        "open_at": "2026-10-15T10:00:00+09:00",
-        "close_at": "2026-11-30T23:59:00+09:00"
-      },
-      "after": {
-        "id": "action:밀양:반값여행",
-        "region": "밀양",
-        "category": "action",
-        "state": "open",
-        "title": "반값여행",
-        "open_at": "2026-10-15T10:00:00+09:00",
-        "close_at": "2026-11-30T23:59:00+09:00"
-      }
-    }
-  ],
+  "changed": [],
   "removed_or_ended": []
 }
