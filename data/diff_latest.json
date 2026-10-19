@@ -1,7 +1,28 @@
 {
-  "previous": "2026-10-17",
-  "current": "2026-10-18",
+  "previous": "2026-10-18",
+  "current": "2026-10-19",
   "new": [],
-  "changed": [],
+  "changed": [
+    {
+      "before": {
+        "id": "action:함양:반값여행 3차",
+        "region": "함양",
+        "category": "action",
+        "state": "upcoming",
+        "title": "반값여행 3차",
+        "open_at": "2026-10-19T10:00:00+09:00",
+        "close_at": "2026-11-30T23:59:00+09:00"
+      },
+      "after": {
+        "id": "action:함양:반값여행 3차",
+        "region": "함양",
+        "category": "action",
+        "state": "open",
+        "title": "반값여행 3차",
+        "open_at": "2026-10-19T10:00:00+09:00",
+        "close_at": "2026-11-30T23:59:00+09:00"
+      }
+    }
+  ],
   "removed_or_ended": []
 }
