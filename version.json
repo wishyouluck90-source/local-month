@@ -1,5 +1,5 @@
 {
-  "version": "9.6.0",
+  "version": "9.6.1",
   "status": "release",
   "design_system": "Forest, sage, sand and earth / real destination photography",
   "core_navigation": [
@@ -24,7 +24,7 @@
   ],
   "review_pulse_model": "source-linked summaries; no protected-platform scraping",
   "dossier_schema": "all 89 regions",
-  "feature_patch": "15 licensed real region photos across home, discovery, detail, compare, notices and saved trips; linked image attribution",
+  "feature_patch": "Licensed region context photography on source cards, explicitly distinguished from venue photos",
   "qa_patch": "Full static, local HTTP, mobile, date-boundary, storage and PWA regression required",
   "base_commit": "19eab6a60856d9763731d521a88238cfcf566eb6"
 }

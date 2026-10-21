@@ -114,3 +114,12 @@ html body .region:hover{border-color:#b6cbb7!important}
 html body .app :is(#home,#regions,#rankings,#monthly,#mystay) :is(h1,h2,h3,h4){font-family:-apple-system,BlinkMacSystemFont,"Noto Sans KR",Arial,sans-serif!important;font-weight:750!important}
 html body .section-head{align-items:center!important;gap:16px!important;padding:18px 0!important;margin-bottom:18px!important}
 html body .program-desk-head p{font-size:15px!important;line-height:1.75!important}
+
+/* Source cards: photo context is explicitly distinct from the cited claim. */
+html body .source-card{display:grid!important;grid-template-columns:minmax(180px,260px) minmax(0,1fr);gap:22px;align-items:start}
+html body .source-card .photo-source{margin:0!important}
+html body .source-card .photo-source img{height:170px!important}
+html body .source-copy{min-width:0}
+html body .source-copy>p:first-child{margin-top:0}
+html body .source-card:not(:has(.photo-source)){display:block!important}
+@media(max-width:600px){html body .source-card{grid-template-columns:1fr!important;gap:16px}html body .source-card .photo-source img{height:190px!important}}
