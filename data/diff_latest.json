@@ -1,26 +1,26 @@
 {
-  "previous": "2026-10-24",
-  "current": "2026-10-25",
+  "previous": "2026-10-25",
+  "current": "2026-10-26",
   "new": [],
   "changed": [
     {
       "before": {
-        "id": "evidence:sancheong-free-entry",
-        "region": "산청",
-        "category": "evidence",
-        "state": "fresh",
-        "title": "2026-10-02~10-11 축제기간 주제관 및 한의학박물관 무료입장",
-        "source_tier": "A",
-        "verified_at": "2026-10-10"
+        "id": "action:서천:반값여행 3차",
+        "region": "서천",
+        "category": "action",
+        "state": "upcoming",
+        "title": "반값여행 3차",
+        "open_at": "2026-10-26T10:00:00+09:00",
+        "close_at": "2026-11-30T23:59:00+09:00"
       },
       "after": {
-        "id": "evidence:sancheong-free-entry",
-        "region": "산청",
-        "category": "evidence",
-        "state": "recheck",
-        "title": "2026-10-02~10-11 축제기간 주제관 및 한의학박물관 무료입장",
-        "source_tier": "A",
-        "verified_at": "2026-10-10"
+        "id": "action:서천:반값여행 3차",
+        "region": "서천",
+        "category": "action",
+        "state": "open",
+        "title": "반값여행 3차",
+        "open_at": "2026-10-26T10:00:00+09:00",
+        "close_at": "2026-11-30T23:59:00+09:00"
       }
     }
   ],
