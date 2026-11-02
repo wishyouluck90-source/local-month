@@ -1,7 +1,28 @@
 {
-  "previous": "2026-10-31",
-  "current": "2026-11-01",
+  "previous": "2026-11-01",
+  "current": "2026-11-02",
   "new": [],
-  "changed": [],
+  "changed": [
+    {
+      "before": {
+        "id": "action:태안:반값여행 3차",
+        "region": "태안",
+        "category": "action",
+        "state": "upcoming",
+        "title": "반값여행 3차",
+        "open_at": "2026-11-02T10:00:00+09:00",
+        "close_at": "2026-11-06T23:59:00+09:00"
+      },
+      "after": {
+        "id": "action:태안:반값여행 3차",
+        "region": "태안",
+        "category": "action",
+        "state": "open",
+        "title": "반값여행 3차",
+        "open_at": "2026-11-02T10:00:00+09:00",
+        "close_at": "2026-11-06T23:59:00+09:00"
+      }
+    }
+  ],
   "removed_or_ended": []
 }
